@@ -7,6 +7,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
+import { ErrorHandler } from '@angular/core';
+import { GlobalErrorHandler } from './services/common/global-error-handler';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,12 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
     BrowserModule.withServerTransition({ appId: 'hackathonturkiye' }),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandler
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
