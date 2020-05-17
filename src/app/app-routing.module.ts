@@ -5,8 +5,8 @@ import { NotfoundComponent } from "./notfound/notfound.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
-  { path: '**', component: NotfoundComponent },  // Wildcard route for a 404 page
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `home`
+  { path: '**', component: NotfoundComponent },  // Wrong route for a 404 page
 ];
 
 @NgModule({
