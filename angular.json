@@ -27,8 +27,16 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.js",
-              "./node_modules/jquery/dist/jquery.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/jquery-migrate-1.2.1.min.js",
+              "src/assets/js/jquery.appear.js",
+              "src/assets/js/jquery.fitvids.js",
+              "src/assets/js/jquery.isotope.js",
+              "src/assets/js/jquery.nicescroll.js",
+              "src/assets/js/jquery.nicescroll.min.js",
+              "src/assets/js/modernizrr.js",
+              "src/assets/js/styleswitcher.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {

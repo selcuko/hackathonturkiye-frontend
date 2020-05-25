@@ -9,11 +9,16 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
 import { ErrorHandler } from '@angular/core';
 import { GlobalErrorHandler } from './services/common/global-error-handler';
 
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NotfoundComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'hackathonturkiye' }),
