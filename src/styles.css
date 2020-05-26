@@ -17,7 +17,6 @@ body {
     color: #111;
     background: linear-gradient(180deg, #16222A 1.34%, #3A6073 101.34%);
     line-height: 21px;
-    /*	font-weight: 300;*/
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     text-rendering: optimizeLegibility !important;
@@ -485,18 +484,6 @@ ul.social-list li a:hover i {
     visibility: visible;
     margin-top: 0;
 }
-
-
-
-
-
-/*--------------------------------------------------*/
-/* Start Header Section                             */
-/*--------------------------------------------------*/
-
-/*---------------------------------------------------------*/
-/* Start About Us Section                                  */
-/*---------------------------------------------------------*/
 
 
 
@@ -1329,88 +1316,10 @@ h1.post-title a {
     display: inline-block;
 }
 
-
-
-
-/* End Sidebar Scetion */
-
-
-
-
-
-/***********************************/
-/* Start Contact Section
-/***********************************/
-
-.contact {
-    /* //background: #f9f9f9; */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding-top: 80px;
-    padding-bottom: 100px;
-}
-
-
-
 .form-control {
     border-radius: 0;
     border: 2px solid #111;
 }
-
-.contact .form-group {
-    margin-bottom: 25px;
-}
-
 textarea {
     width: 100%;
-}
-
-.contact .form-group input,
-.contact .form-group textarea,
-.contact .form-group select {
-    padding: 20px;
-}
-
-.contact .form-group input.form-control {
-    height: auto;
-}
-
-.contact .form-group select.form-control {
-    height: 65px;
-}
-
-.contact .form-group textarea.form-control {
-    height: 236px;
-}
-
-.contact::-webkit-input-placeholder {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    color: #bbb;
-}
-
-.contact:-moz-placeholder {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    color: #bbb;
-}
-
-.contact:-ms-input-placeholder {
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    color: #bbb;
-}
-
-.contact .text-danger {
-    color: #e74c3c;
-}
-
-.contact button {
-    font-weight: 400;
-    margin-top: 30px;
 }
