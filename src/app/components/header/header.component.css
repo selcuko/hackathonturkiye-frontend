@@ -10,3 +10,22 @@
 .sticky + .content {
   padding-top: 102px;
 }
+
+.search-bar {
+  padding-top: 6px;
+}
+
+.search-button {
+  height: 34px;
+  border: 1px solid #0000007a;
+  border-radius: 15px;
+}
+
+.search-input {
+  border-radius: 30px;
+  border: 1px solid #0000007a;
+}
+
+.navbar-collapse {
+  border-top: 0;
+}
