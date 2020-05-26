@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -26,7 +28,8 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
     BrowserModule.withServerTransition({ appId: 'hackathonturkiye' }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

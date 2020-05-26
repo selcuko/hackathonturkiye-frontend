@@ -1,0 +1,148 @@
+ul {
+  display: flex;
+}
+
+ul li {
+  margin-right: 15px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #C9F0FF;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul li:last-child {
+  text-decoration: underline;
+}
+
+#contactForm {
+  margin-bottom: 30px;
+}
+
+.post .row {
+  background-color: #E8E8E8;
+  margin-bottom: 25px;
+}
+
+.find-header {
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 15px;
+  letter-spacing: 0.1em;
+  color: #16222A;
+}
+
+.find-section {
+  padding-bottom: 50px;
+}
+
+.readmore {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #4392F1;
+  background: transparent;
+}
+
+.find-img img {
+  width: 546px;
+  height: 257px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.post-text {
+  position: absolute;
+  top: 91%;
+  background: #4392F1;
+  height: 46px;
+  width: 100%;
+  left: 50.1%;
+  transform: translate(-50%, -50%);
+  font-size: 34px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #E8E8E8;
+}
+
+.post-text span {
+  line-height: initial;
+}
+
+.tagcloud a {
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  padding: 5px 8px;
+  background: #4392F1;
+  margin: 15px 10px 15px 0;
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  border: 1px solid black;
+}
+
+.tagcloud a:hover {
+  background: #f2f2f2;
+  color: black;
+  border: 1px solid black;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.find-trophy {
+  background-color: #4392F1;
+  color: white;
+  margin-left: 45px;
+  padding: 7px;
+  border-radius: 30px;
+}
+
+.p-r-0 {
+  padding-right: 0;
+}
+
+table {
+  text-align: center;
+}
+
+.find-table {
+  display: flex;
+  margin-top: 25px;
+  margin-right: 15px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+.find-table-sub {
+  margin-right: 15px;
+}
+
+.find-table-sub p {
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.dolar {
+    font-size: 10px;
+    position: absolute;
+    bottom: -3px;
+    background: green;
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 15px;
+    left: 77%;
+}

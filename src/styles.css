@@ -800,7 +800,7 @@ h3.pricing-title {
 
 .footer-address ul li .fa {
     color: #6a6a6a;
-    font-size: 16px;
+    font-size: 25px;
     margin-right: 5px;
 }
 
@@ -1331,24 +1331,7 @@ h1.post-title a {
 }
 
 
-.sidebar .tagcloud a {
-    display: inline-block;
-    color: #6a6a6a;
-    font-size: 14px;
-    padding: 5px 8px;
-    background: #f2f2f2;
-    margin: 0 1px 5px 0;
-    border-radius: 2px;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-}
 
-.sidebar .tagcloud a:hover {
-    background: #4392F1;
-    color: #fff;
-}
 
 /* End Sidebar Scetion */
 
