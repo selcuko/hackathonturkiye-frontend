@@ -28,6 +28,7 @@
     "bootstrap": "^3.3.2",
     "express": "^4.15.2",
     "jquery": "^2.1.3",
+    "ngx-spinner": "^9.0.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

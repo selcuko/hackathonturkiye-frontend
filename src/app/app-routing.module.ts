@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'brands', loadChildren: () => import('./pages/brands/brands.module').then(m => m.BrandsModule)},
   { path: 'blog', loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule)},
   { path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)},
+  { path: 'find', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule)},
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to `home`
   { path: '**', component: NotfoundComponent },  // Wrong route for a 404 page
 ];

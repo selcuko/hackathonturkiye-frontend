@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeoService } from '../../services/seo/seo.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-home',
@@ -10,14 +11,17 @@ export class HomeComponent implements OnInit {
 
 
   constructor(
+    private spinner: NgxSpinnerService,
     private seoService: SeoService
   ) { }
 
   
 
   ngOnInit(): void {
-    this.seoService.updateTitle('Anasayfa');
-    this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
+    //this.spinner.show();
+    // this.seoService.updateTitle('Anasayfa');
+    // this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
+
 
   }
 
