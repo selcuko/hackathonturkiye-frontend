@@ -83,7 +83,6 @@ h5,
 h6 {
     font-family: 'Oswald', Arial, sans-serif;
     font-weight: 400;
-    text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -164,7 +163,7 @@ h6 {
 
 .page-header p {
     margin-top: 34px;
-    opacity: 0.3;
+    opacity: 0.8;
     color: #C9F0FF;
     font-weight: bold;
     font-size: 24px;
@@ -584,15 +583,9 @@ iframe {
     color: #444;
 }
 
-.panel-title a.collapsed:hover {
-    color: #666;
-}
-
 .panel-title a .control-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    margin-top: -11px;
+    float: right;
+    font-size: 17px;
     transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
@@ -603,11 +596,7 @@ iframe {
     display: block;
 }
 
-.panel-title a i {
-    font-size: 22px;
-    padding-right: 5px;
-    color: #5BB12F;
-}
+
 
 
 
@@ -996,23 +985,6 @@ h1.post-title a {
     font-weight: 300;
 }
 
-.pagination li a {
-    color: #4392F1;
-}
-
-.pagination li a:hover,
-.pagination li a:focus {
-    color: #4392F1;
-}
-
-.pagination li.active a {
-    background: #4392F1;
-    border-color: #4392F1;
-}
-
-.blog-body .pagination {
-    margin-bottom: 70px;
-}
 
 /* End Blog Page Section */
 
@@ -1414,12 +1386,17 @@ textarea {
 }
 
 .contact .form-group input,
-.contact .form-group textarea {
+.contact .form-group textarea,
+.contact .form-group select {
     padding: 20px;
 }
 
 .contact .form-group input.form-control {
     height: auto;
+}
+
+.contact .form-group select.form-control {
+    height: 65px;
 }
 
 .contact .form-group textarea.form-control {

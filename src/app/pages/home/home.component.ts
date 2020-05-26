@@ -8,13 +8,17 @@ import { SeoService } from '../../services/seo/seo.service';
 })
 export class HomeComponent implements OnInit {
 
+
   constructor(
     private seoService: SeoService
   ) { }
 
+  
+
   ngOnInit(): void {
     this.seoService.updateTitle('Anasayfa');
     this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
+
   }
 
 }

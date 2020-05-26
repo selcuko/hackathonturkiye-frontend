@@ -1,0 +1,23 @@
+.send-mail {
+  height: 34px;
+  border: 1px solid #0000007a;
+}
+
+.send-input {
+  border-radius: 3px;
+  border: 1px solid #0000007a;
+}
+
+.section-title {
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #4392F1;
+  width: 96%;
+  position: relative;
+  bottom: -9px;
+}

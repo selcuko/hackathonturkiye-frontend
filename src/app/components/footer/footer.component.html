@@ -3,26 +3,35 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="section-heading-2">
                     <h3 class="section-title">
-                        <span>BÜLTEN İÇİN KAYDOL</span>
+                       BÜLTEN İÇİN KAYDOL
                     </h3>
                 </div>
                 <div class="subscription">
                     <p>İçerikler ve güncel paylaşımlardan ilk önce siz haberdar olun. Haftalık bültenlerimiz ile gündemden uzak kalmayın</p>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your E-mail" id="name" required
-                            data-validation-required-message="Please enter your name.">
-                        <input type="submit" class="btn btn-primary" value="Subscribe">
-                    </div>
+                    <form action="/hms/accommodations" method="GET"> 
+                        <div class="row">
+                          <div class="col-md-10">
+                            <div class="input-group">
+                              <input type="email" class="form-control send-input"  placeholder="Mail" id="sub_email" name="sub-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+                              <div class="input-group-btn">
+                                <button class="btn btn-primary send-mail" type="submit">
+                                  <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="col-md-6">
                     <div class="section-heading-2">
                         <h3 class="section-title">
-                            <span>Hakkımzda</span>
+                           Hakkımzda
                         </h3>
                     </div>
     
@@ -41,7 +50,7 @@
                 <div class="col-md-6">
                     <div class="section-heading-2">
                         <h3 class="section-title">
-                            <span>S.S.S</span>
+                            S.S.S
                         </h3>
                     </div>
                     <div class="contact-us">
@@ -55,56 +64,25 @@
                     
                 </div>
             </div>
-           
-
-            
-
             <div class="col-md-3">
                 <div class="section-heading-2">
                     <h3 class="section-title">
-                        <span>BİZİ SOSYAL MEDYADA TAKİP EDİN</span>
+                    BİZİ SOSYAL MEDYADA TAKİP EDİN
                     </h3>
                 </div>
 
                 <div class="footer-address">
                     <ul>
-                        <li class="footer-contact"><i class="fa fa-instagram"></i></li>
-                        <li class="footer-contact"><i class="fa fa-facebook"></i></li>
-                        <li class="footer-contact"><i class="fa fa-twitter"></i></li>
-                        <li class="footer-contact"><i class="fa fa-linkedin"></i></li>
+                        <li class="footer-contact"><a href="https://www.instagram.com/hackathonturkiye" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li class="footer-contact"><a href="https://www.facebook.com/hackathonturkiye" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li class="footer-contact"><a href="https://twitter.com/turkeyhackathon" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li class="footer-contact"><a href="https://www.linkedin.com/company/hackathonturkiye" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
-            <!--/.col-md-3 -->
-
-
-
-
-            
-            <!--/.col-md-3 -->
-
-
-
-            <div class="col-md-2">
-                <div class="section-heading-2">
-                    <h3 class="section-title">
-                        <span>İLETİŞİM</span>
-                    </h3>
-                </div>
-                <div class="contact-us">
-                    <div class="media">
-                      
-                        <div class="media-body">
-                            <p>Bize ulaşın</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <!--/.col-md-3 -->
+        
         </div>
-        <!--/.row -->
-    </div><!-- /.container -->
+    </div>
 </section>
 <!-- End Footer Section -->
 
