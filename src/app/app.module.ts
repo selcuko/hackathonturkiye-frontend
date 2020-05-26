@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { NgxSpinnerModule } from "ngx-spinner";
+import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     NotfoundComponent,
     HeaderComponent,
     FooterComponent,
+    ScrollTopComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'hackathonturkiye' }),
