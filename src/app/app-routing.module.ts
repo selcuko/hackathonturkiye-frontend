@@ -3,13 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotfoundComponent } from "./pages/notfound/notfound.component";
 
 const routes: Routes = [
-  { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)},
-  { path: 'ourcrew', loadChildren: () => import('./pages/ourcrew/ourcrew.module').then(m => m.OurcrewModule)},
-  { path: 'brands', loadChildren: () => import('./pages/brands/brands.module').then(m => m.BrandsModule)},
+  { path: 'ana-sayfa', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)},
+  { path: 'ekibimiz', loadChildren: () => import('./pages/ourcrew/ourcrew.module').then(m => m.OurcrewModule)},
+  { path: 'basari-hikayeleri', loadChildren: () => import('./pages/brands/brands.module').then(m => m.BrandsModule)},
   { path: 'blog', loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule)},
-  { path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)},
-  { path: 'find', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule)},
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to `home`
+  { path: 'iletisim', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)},
+  { path: 'etkinlikler', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule)},
+  { path: '', redirectTo: '/ana-sayfa', pathMatch: 'full' }, // Redirect to `home`
   { path: '**', component: NotfoundComponent },  // Wrong route for a 404 page
 ];
 
