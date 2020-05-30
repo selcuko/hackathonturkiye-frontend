@@ -353,8 +353,8 @@ ul.social-list li a:hover i {
 .navbar-default .navbar-nav>li>a {
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 16px;    
+    font-size: 14px;
+    line-height: 5px;    
     display: flex;
     align-items: center;
     text-align: center;
@@ -781,13 +781,13 @@ h3.pricing-title {
 }
 
 .footer-address ul li {
-    padding: 8px 18px
+    padding: 7px 17px
 }
 
 .footer-address ul li .fa {
     color: #6a6a6a;
-    font-size: 25px;
-    margin-right: 5px;
+    font-size: 22px;
+    margin-left: 10px;
 }
 
 .footer-address ul li a {
@@ -798,20 +798,15 @@ h3.pricing-title {
     color: #4392F1;
 }
 
-.about-us .media-body {
-    padding: 5px 14px 5px 0px;
-}
-
-.about-us .media-body p {
+.subscription-body p,
+.about-body p,
+.sss-body p
+{
     font-size: 13px;
-    color: #aaa;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.5em;
 }
-
-.about-us h4.media-heading {
-    font-size: 10px;
-    color: #4392F1;
-}
-
 
 .contact-us .media-body {
     padding: 5px 14px 5px 0px;
