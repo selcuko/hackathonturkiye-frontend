@@ -4,3 +4,60 @@
     color: #C9F0FF;
     cursor: pointer;
 }
+
+#team-section {
+    padding-bottom: 180px;
+    color: #C9F0FF;
+    overflow: hidden;
+}
+
+#team-section .row:nth-child(3) {
+   padding-top: 100px;
+}
+
+.team-member {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member .team-details {
+   
+    color: #fff;
+    padding: 0 2px;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.team-member .team-details h4 {
+    font-size: 22px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.team-member .team-details p {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+.team-member .team-details li {
+    display: inline-block;
+    padding-top: 20px;
+}
+
+.team-member .team-details li a {
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid transparent;
+    color: #111;
+    font-size: 16px;
+}
+
+.team-member .team-details li:hover a {
+    background: transparent;
+    color: #fff;
+}
