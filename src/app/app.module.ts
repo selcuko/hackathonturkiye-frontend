@@ -14,7 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
   imports: [
     BrowserModule.withServerTransition({ appId: 'hackathonturkiye' }),
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
     HttpClientModule
