@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://hackathonturkiye.herokuapp.com/'
+  apiUrl: 'http://omerselcuk.engineer:8000/'
 };

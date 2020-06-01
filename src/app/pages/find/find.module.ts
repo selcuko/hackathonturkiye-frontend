@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { FormsModule } from '@angular/forms';
+
 import { FindRoutingModule } from './find-routing.module';
 import { FindComponent } from './find.component';
 
@@ -9,7 +11,8 @@ import { FindComponent } from './find.component';
   declarations: [FindComponent],
   imports: [
     CommonModule,
-    FindRoutingModule
+    FindRoutingModule,
+    FormsModule
   ]
 })
 export class FindModule { }

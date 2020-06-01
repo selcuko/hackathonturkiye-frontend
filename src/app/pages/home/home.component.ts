@@ -20,14 +20,14 @@ postdata:any;
   
 
   ngOnInit(): void {
-    //this.testApi();
+    this.testApi();
     //this.spinner.show();
     // this.seoService.updateTitle('Anasayfa');
     // this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
   }
 
   testApi() {
-    this.httpService.search("events/?limit=10&offset=10").subscribe((reps) => {
+    this.httpService.search("posts").subscribe((reps) => {
       console.log(reps);
     },
       (error: any) => {
