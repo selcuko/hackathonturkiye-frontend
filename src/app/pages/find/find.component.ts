@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TestService } from 'src/app/services/test/test.service';
+import { HttpService } from 'src/app/services/http/http.service';
 
 @Component({
   selector: 'app-find',
@@ -15,7 +15,7 @@ export class FindComponent implements OnInit {
   status: string;
   events: Array<any>;
 
-  constructor(private route: ActivatedRoute, private httpService: TestService) {
+  constructor(private route: ActivatedRoute, private httpService: HttpService) {
 
     this.route.params.subscribe(d => {
       this.eventType = d['etype'] || "";
