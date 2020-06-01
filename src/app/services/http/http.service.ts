@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TestService {
+export class HttpService {
   constructor(private http: HttpClient) { }
 
   search(endpoint: any): Observable<any> {
@@ -15,19 +15,10 @@ export class TestService {
     return this.http.get(url);
   }
 
-  post(serviceName: string, data?: any) {
-    const url = environment.apiUrl + serviceName;
-    return this.http.post(url, data);
-  }
+  contact(endpoint: any, postData:any): Observable<any> {
 
-  put(serviceName: string, data?: any) {
-    const url = environment.apiUrl + serviceName;
-    return this.http.put(url, data);
-  }
-
-  get(serviceName: string, data?: any) {
-    const url = environment.apiUrl + serviceName;
-    return this.http.get(url, data);
+    const url = environment.apiUrl + endpoint;
+    return this.http.post(url, postData);
   }
 
 }

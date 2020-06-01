@@ -24,7 +24,6 @@
     padding-bottom: 100px;
 }
 
-
 .contact .form-group input,
 .contact .form-group textarea,
 .contact .form-group select {
@@ -64,7 +63,7 @@
     color: #bbb;
 }
 
-.contact .text-danger {
+.text-danger {
     color: #e74c3c;
 }
 
