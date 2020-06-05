@@ -2,7 +2,7 @@
 
 <section id="find-section" class="find-section">
   <div class="container">
-    <div class="row">
+    <div class="row mb-1">
 
       <div class="col-md-7 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="600ms">
         <div class="col-md-4">
@@ -64,9 +64,9 @@
         <div class="row">
           <div class="col-md-5 p0">
             <div class="find-img">
-              <img src="../../../assets/images/corporate1.jpg" class="img-responsive" alt="find images">
+              <img src="{{xathon.thumbnail}}" class="img-responsive" alt="find images">
               <div class="post-text">
-                <span>ONLİNE</span>
+                <span>{{xathon.location}}</span>
               </div>
             </div>
           </div>
@@ -77,12 +77,8 @@
               </div>
               <div class="find-tag">
 
-                <div class="tagcloud">
-                  <a href="#">Charity</a>
-                  <a href="#">Children</a>
-                  <a href="#">Education</a>
-                  <a href="#">Elderly</a>
-                  <a href="#">Humanity</a>
+                <div class="tagcloud" *ngIf="xathon.tags">
+                  <a ngHref="eventTag.url" *ngFor="let eventTag of xathon.tags;">{{eventTag.name}}</a>
                 </div>
 
               </div>
@@ -92,9 +88,14 @@
               </div>
 
               <div>
-                <button class="btn btn-primary readmore btn-lg">Şimdi Başvur</button>
+                <a *ngIf="!xathon.has_details" class="btn btn-primary readmore btn-lg"
+                  href="{{xathon.origin_url}}">Şimdi Başvur</a>
+
+                <a *ngIf="xathon.has_details" class="btn btn-primary readmore btn-lg"
+                  href="/etkinlik/{{xathon.slug}}">Detaylar</a>
+
                 <i class="fa fa-trophy fa-2x find-trophy">
-                  <span class="dolar">
+                  <span class="dolar" *ngIf="xathon.prize">
                     <i class="fa fa-dollar fa-sm"></i>
                   </span>
                 </i>

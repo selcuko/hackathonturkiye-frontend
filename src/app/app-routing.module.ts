@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'etkinlikler', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule)},
   { path: 'etkinlikler/:etype', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule)},
   { path: 'etkinlikler/:etype/:etag', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule)},
+  { path: 'etkinlik/:slug', loadChildren: () => import('./pages/event/event.module').then(m => m.EventModule)},
   { path: '', redirectTo: '/ana-sayfa', pathMatch: 'full' }, // Redirect to `home`
   { path: '**', component: NotfoundComponent },  // Wrong route for a 404 page
 ];
