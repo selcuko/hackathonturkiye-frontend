@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http/http.service';
 
 @Component({
@@ -10,16 +10,17 @@ import { HttpService } from 'src/app/services/http/http.service';
 export class FindComponent implements OnInit {
 
   eventType: string = "";
-  eventTag: string;
+  eventLoc: string = "";
   tags: [];
   status: string;
   events: Array<any>;
+  months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
-  constructor(private route: ActivatedRoute, private httpService: HttpService) {
+  constructor(private route: ActivatedRoute, private httpService: HttpService, private router: Router) {
 
     this.route.params.subscribe(d => {
       this.eventType = d['etype'] || "";
-      this.eventTag = d['etag'] || "";
+      this.eventLoc = d['eloc'] || "";
     });
 
     this.route.queryParams.subscribe(d => {
@@ -40,6 +41,61 @@ export class FindComponent implements OnInit {
     //this.spinner.show();
     // this.seoService.updateTitle('Anasayfa');
     // this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
+  }
+
+  navigate() {
+    debugger;
+    this.router.navigate(['/etkinlikler/' + this.eventType + '/' + this.eventLoc]);
+  }
+
+  getDateTurkish(dateTime) {
+    let date = new Date(dateTime);
+    let dateStr = date.getDate() + " ";
+    dateStr += this.months[date.getMonth()] + " ";
+    // dateStr += date.getFullYear();
+    return dateStr;
+  }
+
+  getDateDiffDay(dateTime) {
+    let date = new Date(dateTime);
+    let now = new Date();
+
+    var delta = Math.abs(date.getTime() - now.getTime()) / 1000;
+    var days = Math.floor(delta / 86400);
+    delta -= days * 86400;
+
+    return days;
+  }
+
+  getDateDiffHour(dateTime) {
+    let date = new Date(dateTime);
+    let now = new Date();
+
+    var delta = Math.abs(date.getTime() - now.getTime()) / 1000;
+    var days = Math.floor(delta / 86400);
+    delta -= days * 86400;
+
+    var hours = Math.floor(delta / 3600) % 24;
+    delta -= hours * 3600;
+
+    return hours;
+  }
+
+  getDateDiffMinute(dateTime) {
+    let date = new Date(dateTime);
+    let now = new Date();
+
+    var delta = Math.abs(date.getTime() - now.getTime()) / 1000;
+    var days = Math.floor(delta / 86400);
+    delta -= days * 86400;
+
+    var hours = Math.floor(delta / 3600) % 24;
+    delta -= hours * 3600;
+
+    var minutes = Math.floor(delta / 60) % 60;
+    delta -= minutes * 60;
+
+    return minutes;
   }
 
   getEvents() {

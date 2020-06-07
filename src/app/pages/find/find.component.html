@@ -6,7 +6,7 @@
 
       <div class="col-md-7 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="600ms">
         <div class="col-md-4">
-          <select id="eventCategory" class="form-control" [ngModel]="eventType" required>
+          <select id="eventCategory" class="form-control" [(ngModel)]="eventType" required>
             <option value="">Kategoriye Göre</option>
             <option value="hackathon">Hackathon</option>
             <option value="makeathon">Makeathon</option>
@@ -20,41 +20,27 @@
           </select>
         </div>
         <div class="col-md-4">
-          <select class="form-control" required>
-            <option value="">Etikete Göre</option>
+          <select class="form-control" [(ngModel)]="eventLoc" required>
+            <option value="">Lokasyona Göre</option>
+            <option value="online">Online</option>
+            <option value="istanbul">İstanbul</option>
+            <option value="ankara">Ankara</option>
+            <option value="izmir">İzmir</option>
+            <option value="antalya">Antalya</option>
+            <option value="gaziantep">Gaziantep</option>
           </select>
         </div>
         <div class="col-md-4">
           <select class="form-control" required>
             <option value="">Duruma Göre</option>
+            <option value="soon">Yakında Başlayacaklar</option>
+            <option value="now">Devam Edenler</option>
+            <option value="end">Sonlananlar</option>
           </select>
         </div>
-
-
-
       </div>
-      <div class="col-md-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="600ms">
-        <button type="submit" class="btn btn-info btn-sm">Yarışma Ara</button>
-      </div>
-      <div class="col-md-3 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="600ms">
-        <ul>
-
-          <li>
-            2018
-          </li>
-
-          <li>
-            2019
-          </li>
-
-          <li>
-            2020
-          </li>
-
-          <li>
-            Sıradakiler
-          </li>
-        </ul>
+      <div class="col-md-5 wow zoomIn" data-wow-duration="1s" data-wow-delay="600ms">
+        <button type="submit" class="btn btn-info btn-sm" (click)="navigate()">Yarışma Ara</button>
       </div>
     </div>
 
@@ -113,7 +99,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>21 Haz</td>
+                      <td>{{getDateTurkish(xathon.starts_at)}}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -126,7 +112,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>12 Haz</td>
+                      <td>{{getDateTurkish(xathon.ends_at)}}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -140,9 +126,9 @@
                 <table class="table table-sm table-bordered">
                   <thead>
                     <tr>
-                      <td>03</td>
-                      <td>06</td>
-                      <td>52</td>
+                      <td>{{getDateDiffDay(xathon.starts_at)}}</td>
+                      <td>{{getDateDiffHour(xathon.starts_at)}}</td>
+                      <td>{{getDateDiffMinute(xathon.starts_at)}}</td>
                     </tr>
                   </thead>
                   <tbody>
