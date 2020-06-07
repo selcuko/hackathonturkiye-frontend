@@ -40,7 +40,6 @@
   position: relative;
   display: inline-block;
   margin: 19px 0px 0px 0px;
-  /* top: 256.301px; */
   z-index: 3;
   width: 100%;
   line-height: 1.2em;
@@ -94,11 +93,11 @@ hr:after {
   height: 120px;
 
   background: #FFF;
-  background: linear-gradient(top, #FFF 100%);
-  background: -webkit-linear-gradient(top, #FFF 100%);
-  background: -moz-linear-gradient(top, #FFF 100%);
-  background: -ms-linear-gradient(top, #FFF 100%);
-  background: -o-linear-gradient(top, #FFF 100%);
+  background: linear-gradient(to top, #FFF 100%);
+  background: -webkit-linear-gradient(to top, #FFF 100%);
+  background: -moz-linear-gradient(to top, #FFF 100%);
+  background: -ms-linear-gradient(to top, #FFF 100%);
+  background: -o-linear-gradient(to top, #FFF 100%);
 
   border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -218,6 +217,16 @@ hr:after {
   -webkit-animation: moveclouds 20s linear infinite;
   -moz-animation: moveclouds 20s linear infinite;
   -o-animation: moveclouds 20s linear infinite;
+}
+
+@keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+
+  100% {
+    margin-left: -1000px;
+  }
 }
 
 @-webkit-keyframes moveclouds {
