@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http/http.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-find',
@@ -38,13 +39,13 @@ export class FindComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getEvents();
+    //console.log(moment().format());
     //this.spinner.show();
     // this.seoService.updateTitle('Anasayfa');
     // this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
   }
 
   navigate() {
-    debugger;
     this.router.navigate(['/etkinlikler/' + this.eventType + '/' + this.eventLoc]);
   }
 

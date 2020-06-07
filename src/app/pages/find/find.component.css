@@ -76,11 +76,13 @@ ul li:last-child {
 
 .post-text span {
   line-height: initial;
+  text-transform: uppercase;
 }
 
 .tagcloud a {
   display: inline-block;
   color: white;
+  cursor: pointer;
   font-size: 14px;
   padding: 5px 8px;
   background: #4392F1;

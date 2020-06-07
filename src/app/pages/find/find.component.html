@@ -6,7 +6,7 @@
 
       <div class="col-md-7 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="600ms">
         <div class="col-md-4">
-          <select id="eventCategory" class="form-control" [(ngModel)]="eventType" required>
+          <select id="eventCategory" class="form-control" [(ngModel)]="eventType">
             <option value="">Kategoriye Göre</option>
             <option value="hackathon">Hackathon</option>
             <option value="makeathon">Makeathon</option>
@@ -20,7 +20,7 @@
           </select>
         </div>
         <div class="col-md-4">
-          <select class="form-control" [(ngModel)]="eventLoc" required>
+          <select class="form-control" [(ngModel)]="eventLoc">
             <option value="">Lokasyona Göre</option>
             <option value="online">Online</option>
             <option value="istanbul">İstanbul</option>
@@ -31,7 +31,7 @@
           </select>
         </div>
         <div class="col-md-4">
-          <select class="form-control" required>
+          <select class="form-control">
             <option value="">Duruma Göre</option>
             <option value="soon">Yakında Başlayacaklar</option>
             <option value="now">Devam Edenler</option>
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="col-md-5 wow zoomIn" data-wow-duration="1s" data-wow-delay="600ms">
-        <button type="submit" class="btn btn-info btn-sm" (click)="navigate()">Yarışma Ara</button>
+        <button type="button" class="btn btn-info btn-sm" (click)="navigate()">Yarışma Ara</button>
       </div>
     </div>
 
@@ -50,7 +50,7 @@
         <div class="row">
           <div class="col-md-5 p0">
             <div class="find-img">
-              <img src="{{xathon.thumbnail}}" class="img-responsive" alt="find images">
+              <img src="{{xathon.thumbnail}}" class="img-responsive" alt={{xathon.name}}>
               <div class="post-text">
                 <span>{{xathon.location}}</span>
               </div>
