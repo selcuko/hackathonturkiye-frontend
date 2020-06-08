@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 import { AlertModule } from 'ngx-alerts';
 
@@ -32,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     NgxSpinnerModule,
     HttpClientModule,
-    AlertModule.forRoot({maxMessages: 1, timeout: 2000, position: 'right'})
+    HttpClientJsonpModule,
+    AlertModule.forRoot({maxMessages: 1, timeout: 2000, position: 'left'})
   ],
   providers: [],
   bootstrap: [AppComponent]
