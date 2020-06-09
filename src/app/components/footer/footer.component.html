@@ -11,22 +11,20 @@
                 </div>
                 <div class="subscription-body">
                     <p>İçerikler ve güncel haftalık paylaşımlardan ilk önce siz haberdar olun.</p>
-                    <form action="/hms/accommodations" method="GET">
+                    
                         <div class="row">
                             <div class="col-md-11">
                                 <div class="input-group">
                                     <input type="email" class="form-control send-input" placeholder="Mail"
-                                        id="sub_email" name="sub-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                        required />
+                                        id="sub_email" name="sub-email" [(ngModel)]="submail"/>
                                     <div class="input-group-btn">
-                                        <button class="btn btn-primary send-mail" type="submit">
+                                        <button class="btn btn-primary send-mail" (click)="submit()">
                                             <span class="glyphicon glyphicon-envelope"></span>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
             <div class="col-md-3">

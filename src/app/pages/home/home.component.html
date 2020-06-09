@@ -1,5 +1,5 @@
- <!-- Start Header Section -->
- <div class="page-header">
+<!-- Start Header Section -->
+<div class="page-header">
     <div class="overlay">
         <div class="container">
             <div class="row">
@@ -15,9 +15,9 @@
 
 <!-- Start About Us Section -->
 <section id="about-section" class="about-section">
-<div class="container">
+    <div class="container">
 
-    <div class="row">
+        <!-- <div class="row">
      
         <div class="col-md-7">
             <div class="about-header">
@@ -49,43 +49,56 @@
         </div>
          
          
-     </div>
-    
-    <div class="row">
-       <div class="col-md-5">
-           <div class="about-img">
-               <img style="    width: 546px;
-               height: 257px;" src="../../../assets/images/corporate1.jpg" class="img-responsive" alt="About images">
-           </div>
-       </div>
-       <div class="col-md-7">
-        <div class="about-header">
-            <h3>How We Work ?</h3>
-        </div>
-           <div class="about-text">
-               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-           </div>
-           
-           <div class="about-more">
-            <button class="btn btn-primary readmore btn-lg">Learn More...</button>
-            <div class="media pull-right">
-                <ul>
-                    <li><i class="fa fa-instagram"></i></li>
-                    <li><i class="fa fa-facebook"></i></li>
-                    <li><i class="fa fa-linkedin"></i></li>
-                    <li><i class="fa fa-twitter"></i></li>
-                </ul>
+     </div> -->
+
+        <div *ngIf="list && list.length > 0">
+            <div *ngFor="let item of list.slice(0, 5);">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="about-img">
+                            <img src="https://via.placeholder.com/400x250" class="img-responsive" alt="About images">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="about-header">
+                            <h3>{{item.title}}</h3>
+                        </div>
+                        <div class="about-text">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus
+                                error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                                quae ab illo inventore veritatis et quasi. Sed ut perspiciatis unde omnis iste natus
+                                error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                                quae ab illo inventore veritatis et quasi.</p>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+
+                        <div class="about-more">
+                            <button class="btn btn-primary readmore btn-lg">Daha Fazla...</button>
+                            <div class="media pull-right">
+                                <ul>
+                                    <li><i class="fa fa-instagram"></i></li>
+                                    <li><i class="fa fa-facebook"></i></li>
+                                    <li><i class="fa fa-linkedin"></i></li>
+                                    <li><i class="fa fa-twitter"></i></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
             </div>
-           
         </div>
-       </div>
-        
-        
-        
+        <h3 class="text-danger text-center" *ngIf="list.length == 0"> Kayıt Bulunamadı</h3>
+
+
     </div>
 
-   
-</div>
-</section>
 
+</section>
