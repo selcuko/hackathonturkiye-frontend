@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
     this.spinner.show();
 
     this.httpService.getHighlightPosts('posts/').subscribe((response) => {
+      debugger;
       this.list = response.results;
       this.spinner.hide();
     },
