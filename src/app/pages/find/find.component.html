@@ -7,7 +7,7 @@
       <div class="col-md-7 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="600ms">
         <div class="col-md-4">
           <select id="eventCategory" class="form-control" [(ngModel)]="eventType">
-            <option value="">Kategoriye Göre</option>
+            <option value="xathon">Kategoriye Göre</option>
             <option value="hackathon">Hackathon</option>
             <option value="makeathon">Makeathon</option>
             <option value="ideathon">Ideathon</option>
@@ -21,7 +21,7 @@
         </div>
         <div class="col-md-4">
           <select class="form-control" [(ngModel)]="eventLoc">
-            <option value="">Lokasyona Göre</option>
+            <option value="heryer">Lokasyona Göre</option>
             <option value="online">Online</option>
             <option value="istanbul">İstanbul</option>
             <option value="ankara">Ankara</option>
@@ -74,7 +74,7 @@
               </div>
 
               <div>
-                <a *ngIf="!xathon.has_details" class="btn btn-primary readmore btn-lg"
+                <a *ngIf="!xathon.has_details" target="_blank" class="btn btn-primary readmore btn-lg"
                   href="{{xathon.origin_url}}">Şimdi Başvur</a>
 
                 <a *ngIf="xathon.has_details" class="btn btn-primary readmore btn-lg"
@@ -151,6 +151,6 @@
       </div>
     </div>
 
-    <h3 class="text-danger text-center" *ngIf="events.length == 0"> Kayıt Bulunamadı</h3>
+    <h3 class="text-danger text-center" *ngIf="!events || events.length === 0"> Kayıt Bulunamadı</h3>
   </div>
 </section>

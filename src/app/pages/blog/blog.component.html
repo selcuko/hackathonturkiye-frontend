@@ -25,9 +25,9 @@
                                 <li>-Starter Kit</li>
                                 <li>-Global Hackathonlar</li>
                             </ul>
-                           
-                            
-                            
+
+
+
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                             <img src="../../../assets/images/blog/blog-01.jpg" class="img-responsive" alt="Blog image">
                         </div>
                         <h1 class="post-title"><a href="#">{{item.title}}</a> <span class="pull-right"> {{item.time}} Dk</span> </h1>
-    
+
                         <ul class="post-meta">
                             <li><i class="fa fa-clock-o"></i>October 25 2014</li>
                             <li><i class="fa fa-user"></i><a href="#">{{item.author.username}}</a></li>
@@ -146,7 +146,7 @@
                                 <li><i class="fa fa-twitter"></i></li>
                             </div>
                         </ul>
-    
+
                         <p class="post-content">Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet
                             risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim
                             in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.
@@ -155,9 +155,9 @@
                         <a href="#" class="btn btn-primary readmore">Daha Fazla...<i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
-                
-              
-                <h3 class="text-danger text-center" *ngIf="list.length == 0"> Kayıt Bulunamadı</h3>
+
+
+                <h3 class="text-danger text-center" *ngIf="!list || list.length === 0"> Kayıt Bulunamadı</h3>
 
 
             </div>
@@ -165,10 +165,10 @@
 
             <div class="col-md-3 sidebar right-sidebar">
 
-                    
+
                     <!-- Start Recent Post Widget -->
                     <div class="widget widget-recent-post">
-                        
+
                         <div class="section-heading-2">
                             <h3 class="title-left-side">
                                 <span>En Çok</span>
@@ -176,7 +176,7 @@
                                 <span>Okunanlar</span>
                             </h3>
                         </div>
-                        
+
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
@@ -191,7 +191,7 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
@@ -206,7 +206,7 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
@@ -221,10 +221,10 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                     </div>
                     <!-- End Recent Post Widget -->
-                    
+
             </div>
         </div>
 
