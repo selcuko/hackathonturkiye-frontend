@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http/http.service';
 import * as moment from 'moment';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-find',
@@ -17,7 +18,11 @@ export class FindComponent implements OnInit {
   events: Array<any>;
   months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
-  constructor(private route: ActivatedRoute, private httpService: HttpService, private router: Router) {
+  constructor(
+    private route: ActivatedRoute, 
+    private httpService: HttpService, 
+    private router: Router, 
+    private spinner: NgxSpinnerService) {
 
     this.route.params.subscribe(d => {
       this.eventType = d['etype'] || "";
@@ -40,7 +45,6 @@ export class FindComponent implements OnInit {
   ngOnInit(): void {
     this.getEvents();
     //console.log(moment().format());
-    //this.spinner.show();
     // this.seoService.updateTitle('Anasayfa');
     // this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
   }
@@ -100,7 +104,7 @@ export class FindComponent implements OnInit {
   }
 
   getEvents() {
-
+    this.spinner.show();
     let url = "events";
     if (this.eventType) {
       url += "?etype=" + this.eventType;
@@ -108,9 +112,11 @@ export class FindComponent implements OnInit {
 
     this.httpService.search(url).subscribe((e) => {
       this.events = e.results;
+      this.spinner.hide();
     },
       (error: any) => {
         console.log(error);
+        this.spinner.hide();
       });
   }
 
