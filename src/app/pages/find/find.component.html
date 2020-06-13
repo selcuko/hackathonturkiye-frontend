@@ -151,6 +151,6 @@
       </div>
     </div>
 
-    <h3 class="text-danger text-center" *ngIf="events.length == 0"> Kayıt Bulunamadı</h3>
+    <h3 class="text-danger text-center" *ngIf="!events || events.length === 0"> Kayıt Bulunamadı</h3>
   </div>
 </section>

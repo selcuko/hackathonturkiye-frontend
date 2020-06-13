@@ -18,7 +18,7 @@
     <div class="container">
 
         <!-- <div class="row">
-     
+
         <div class="col-md-7">
             <div class="about-header">
                 <h3>How We Work ?</h3>
@@ -37,9 +37,9 @@
                         <li><i class="fa fa-twitter"></i></li>
                     </ul>
                 </div>
-               
+
             </div>
-            
+
         </div>
         <div class="col-md-5">
             <div class="about-img">
@@ -47,8 +47,8 @@
                 height: 257px;" src="../../../assets/images/corporate1.jpg" class="img-responsive" alt="About images">
             </div>
         </div>
-         
-         
+
+
      </div> -->
 
         <div *ngIf="list && list.length > 0">
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-        <h3 class="text-danger text-center" *ngIf="list.length == 0"> Kayıt Bulunamadı</h3>
+        <h3 class="text-danger text-center" *ngIf="!list || list.length == 0"> Kayıt Bulunamadı</h3>
 
 
     </div>
