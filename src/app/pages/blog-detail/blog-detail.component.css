@@ -185,6 +185,7 @@ h1.post-title a {
 
 .blog-post .post-meta li a {
   color: #5c5c5c;
+  cursor: pointer;
 }
 
 .blog-post .post-meta li a:hover {
@@ -194,6 +195,10 @@ h1.post-title a {
 .blog-post .post-meta li i {
   color: #4392F1;
   margin-right: 10px;
+}
+
+.blog-post .post-meta .tag-area {
+  display: inline-block;
 }
 
 .blog-post p.post-content {
@@ -269,6 +274,7 @@ h1.post-title a {
 
 .blog-author .post-meta li a {
   color: #5c5c5c;
+  font-size: 0.9em;
 }
 
 .blog-author .post-meta li a:hover {

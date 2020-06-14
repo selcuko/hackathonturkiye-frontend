@@ -185,6 +185,7 @@ h1.post-title a {
 
 .blog-post .post-meta li a {
   color: #5c5c5c;
+  cursor: pointer;
 }
 
 .blog-post .post-meta li a:hover {

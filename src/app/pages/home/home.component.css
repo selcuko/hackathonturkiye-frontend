@@ -68,6 +68,7 @@ blog-post ul.post-meta {
 
 .post-meta li a {
   color: #5c5c5c;
+  cursor: pointer;
 }
 
 .post-meta li a:hover {

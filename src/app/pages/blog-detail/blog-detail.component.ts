@@ -22,8 +22,8 @@ export class BlogDetailComponent implements OnInit {
     private seoService: SeoService,
     private alertService: AlertService) {
 
-    this.route.params.subscribe(d => {
-      this.slug = d['slug'] || "";
+    this.route.params.subscribe(url => {
+      this.slug = url['slug'] || "";
     });
   }
 

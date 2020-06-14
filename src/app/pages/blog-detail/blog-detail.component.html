@@ -15,8 +15,11 @@
     
                             <ul class="post-meta">
                                 <li><i class="fa fa-clock-o"></i>October 25 2014</li>
-                                <li><i class="fa fa-user"></i>{{blogdetail.author.username}}</li>
-                                <li><i class="fa fa-tags"></i><a href="#">Women Rights</a></li>
+                                <li><i class="fa fa-user">     
+                                </i><a href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.username}}</a></li>
+                                <div class="tag-area" *ngFor="let tag of blogdetail.tags">
+                                    <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
+                                </div>
                                 <div class="pull-right social">
                                     <li><i class="fa fa-instagram"></i></li>
                                     <li><i class="fa fa-facebook"></i></li>
@@ -36,14 +39,14 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#">{{blogdetail.author.username}}</a> 
+                                <h4 class="media-heading">{{blogdetail.author.first_name}} {{blogdetail.author.last_name}}
                                     <span class="pull-right ">
                                         <ul class="post-meta">
                                             <div class="social">
-                                                <li><a href="{{blogdetail.author.profile.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                                <li><a href="{{blogdetail.author.profile.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="{{blogdetail.author.profile.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="{{blogdetail.author.profile.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                <li *ngIf="blogdetail.author.profile.instagram"><a href="{{blogdetail.author.profile.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                                <li *ngIf="blogdetail.author.profile.facebook"><a href="{{blogdetail.author.profile.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                <li *ngIf="blogdetail.author.profile.linkedin"><a href="{{blogdetail.author.profile.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                <li *ngIf="blogdetail.author.profile.twitter"><a href="{{blogdetail.author.profile.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                             </div>
                                         </ul>
                                     </span>
@@ -55,9 +58,6 @@
                     <!-- End Blog Author Section -->
                     </div>
 
-                    
-    
-    
                     <h3 class="text-danger text-center" *ngIf="!blogdetail"> Kayıt Bulunamadı</h3>
     
     
