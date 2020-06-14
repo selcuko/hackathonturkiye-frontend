@@ -1,1 +1,138 @@
-<p>blog-detail works!</p>
+<!-- Start Blog Page Section -->
+<section class="blog-detail">
+    <div class="container">
+        <div class="row">
+            <!-- Start Blog Body Section -->
+            <div class="col-md-12 col-sm-12 col-xs-12 blog-body">
+                <div class="col-md-9 col-sm-9 col-xs-9 blog-border">
+                    <div *ngIf="blogdetail">
+                        <div class="blog-post">
+                            <div class="post-img">
+                                <img src="{{blogdetail.thumbnail}}" class="img-responsive" alt="{{blogdetail.title}}">
+                            </div>
+                            <h1 class="post-title">{{blogdetail.title}}<span class="time"> {{blogdetail.time}}
+                                    Dk</span> </h1>
+    
+                            <ul class="post-meta">
+                                <li><i class="fa fa-clock-o"></i>October 25 2014</li>
+                                <li><i class="fa fa-user">     
+                                </i><a href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.username}}</a></li>
+                                <div class="tag-area" *ngFor="let tag of blogdetail.tags">
+                                    <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
+                                </div>
+                                <div class="pull-right social">
+                                    <li><i class="fa fa-instagram"></i></li>
+                                    <li><i class="fa fa-facebook"></i></li>
+                                    <li><i class="fa fa-linkedin"></i></li>
+                                    <li><i class="fa fa-twitter"></i></li>
+                                </div>
+                            </ul>
+                            <p class="post-content" [innerHTML]="blogdetail.body"></p>
+                        </div>
+                        <!-- Start Blog Author Section -->
+                    <div class="blog-author">
+                        <h3>Yazar Hakkında</h3>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="../../../assets/images/user.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">{{blogdetail.author.first_name}} {{blogdetail.author.last_name}}
+                                    <span class="pull-right ">
+                                        <ul class="post-meta">
+                                            <div class="social">
+                                                <li *ngIf="blogdetail.author.profile.instagram"><a href="{{blogdetail.author.profile.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                                <li *ngIf="blogdetail.author.profile.facebook"><a href="{{blogdetail.author.profile.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                <li *ngIf="blogdetail.author.profile.linkedin"><a href="{{blogdetail.author.profile.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                <li *ngIf="blogdetail.author.profile.twitter"><a href="{{blogdetail.author.profile.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            </div>
+                                        </ul>
+                                    </span>
+                                </h4>
+                                <p>{{blogdetail.author.profile.bio}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Blog Author Section -->
+                    </div>
+
+                    <h3 class="text-danger text-center" *ngIf="!blogdetail"> Kayıt Bulunamadı</h3>
+    
+    
+                </div>
+                <!-- End Blog Body Section -->
+    
+                <div class="col-md-3 col-sm-3 col-xs-3 sidebar right-sidebar">
+                    <!-- Start Recent Post Widget -->
+                    <div class="widget widget-recent-post">
+    
+                        <div class="section-heading-2">
+                            <h3 class="title-left-side">
+                                <span>En Çok</span>
+                                <br>
+                                <span>Okunanlar</span>
+                            </h3>
+                        </div>
+    
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="img-responsive" src="../../../assets/images/recent-post/post-02.jpg"
+                                        alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="img-responsive"><a href="#">Nulla facilisi integer lacinia sollicitudin massa</a>
+                                </h4>
+                                <ul>
+                                    <li><a href="#">Super User</a></li>
+                                    <li>15 October 2014</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="img-responsive" src="../../../assets/images/recent-post/post-03.jpg"
+                                        alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Quisque cursus metus vitae pharetra auctor sem
+                                        massa</a></h4>
+                                <ul>
+                                    <li><a href="#">Super User</a></li>
+                                    <li>15 October 2014</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="img-responsive" src="../../../assets/images/recent-post/post-04.jpg"
+                                        alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Praesent libero sed cursus ante dapibus diam</a></h4>
+                                <ul>
+                                    <li><a href="#">Super User</a></li>
+                                    <li>15 October 2014</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <!-- End Recent Post Widget -->
+    
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    </section>
+    <!-- End Blog Page Section -->

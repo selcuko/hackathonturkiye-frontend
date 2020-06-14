@@ -1,5 +1,3 @@
-
-
 .send-mail {
   height: 34px;
   border: 1px solid #0000007a;
@@ -10,7 +8,7 @@
   border: 1px solid #0000007a;
 }
 
-.foot-title{
+.foot-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
@@ -47,7 +45,6 @@
   letter-spacing: 0.04em;
 }
 
-
 .footer-section {
   font-weight: 400;
   background: #E8E8E8;
@@ -71,8 +68,7 @@
 
 .subscription-body p,
 .about-body p,
-.sss-body p
-{
+.sss-body p {
   font-weight: 500;
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;

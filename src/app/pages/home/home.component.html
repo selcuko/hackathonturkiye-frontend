@@ -15,38 +15,42 @@
 
 <!-- Start About Us Section -->
 <section id="about-section" class="about-section">
-  <div class="container">
-    <div *ngIf="list && list.length > 0">
-      <div *ngFor="let item of list.slice(0, 5);">
-        <div class="row">
-          <div class="col-md-5">
-            <div class="about-img">
-              <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.thumbnail}}">
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div class="about-header">
-              <h3>{{item.title}}</h3>
-            </div>
-            <div class="about-text">
-              <p>{{item.summary}}</p>
-            </div>
+    <div class="container">
+        <div *ngIf="list && list.length > 0">
+            <div *ngFor="let item of list.slice(0, 5);">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="about-img">
+                            <img src="{{item.thumbnail}}"
+                            class="img-responsive"
+                            alt="{{item.thumbnail}}">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h1 class="post-title"><a href="/blog-detay/{{item.slug}}">{{item.title}}</a> <span class="time"> {{item.time}}
+                            Dk</span> </h1>
 
-            <div class="about-more">
-              <a class="btn btn-primary readmore btn-lg" href="/blog/{{item.slug}}">Daha Fazla...</a>
-              <div class="media pull-right">
-                <ul>
-                  <li><i class="fa fa-instagram"></i></li>
-                  <li><i class="fa fa-facebook"></i></li>
-                  <li><i class="fa fa-linkedin"></i></li>
-                  <li>
-                    <a target="_blank" href="https://twitter.com/intent/tweet?text={{item.title}}+https%3a%2f%2fhackathonturkiye.com%2f{{item.slug}}%2f">
-                      <i class="fa fa-twitter">
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                    <ul class="post-meta">
+                        <li><i class="fa fa-clock-o"></i>October 25 2014</li>
+                        <li><i class="fa fa-user">
+                        </i><a href="/blog/?author__username={{item.author.username}}">{{item.author.username}}</a></li>
+                        <div class="tag-area" *ngFor="let tag of item.tags">
+                            <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
+                        </div>
+                        <div class="pull-right social">
+                            <li><i class="fa fa-instagram"></i></li>
+                            <li><i class="fa fa-facebook"></i></li>
+                            <li><i class="fa fa-linkedin"></i></li>
+                            <li><i class="fa fa-twitter"></i></li>
+                        </div>
+                    </ul>
+
+                    <p class="post-content">{{item.summary}}</p>
+                    <a class="btn btn-primary readmore btn-lg pull-right"
+                                href="/blog-detay/{{item.slug}}">Daha Fazla...</a>
+
+                    </div>
+                </div>
             </div>
           </div>
         </div>

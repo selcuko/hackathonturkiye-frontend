@@ -1,12 +1,14 @@
 <section class="event-detail">
   <div class="container">
-    <div class="event" *ngIf="event">
+    <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="row">
-        <h1>{{event.name}}</h1>
-        <p>
-          {{event.description}}
-        </p>
-        <div [innerHTML]="event.body"></div>
+        <div class="event" *ngIf="event">
+            <h1>{{event.name}}</h1>
+            <p>
+              {{event.description}}
+            </p>
+            <div [innerHTML]="event.body"></div>
+        </div>
       </div>
     </div>
   </div>
