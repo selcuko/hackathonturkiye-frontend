@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'etkinlikler/:etype', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule)},
   { path: 'etkinlikler/:etype/:eloc', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule)},
   { path: 'etkinlik/:slug', loadChildren: () => import('./pages/event/event.module').then(m => m.EventModule)},
-  { path: 'blog-detay/:slug', loadChildren: () => import('./pages/blog-detail/blog-detail.module').then(m => m.BlogDetailModule)},
+  { path: 'blog/:slug', loadChildren: () => import('./pages/blog-detail/blog-detail.module').then(m => m.BlogDetailModule)},
   { path: '', redirectTo: '/ana-sayfa', pathMatch: 'full' }, // Redirect to `home`
   { path: '**', component: NotfoundComponent },  // Wrong route for a 404 page
 ];
