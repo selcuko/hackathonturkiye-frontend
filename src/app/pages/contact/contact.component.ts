@@ -45,13 +45,13 @@ export class ContactComponent implements OnInit {
   submitMessage() {
     if (this.postData.body && this.postData.category.name && this.postData.email && this.postData.contact) {
       if (this.postData.phone && !this.abCepTelefon(this.postData.phone)) {
-        this.alertService.danger(
+        this.alertService.warning(
           'Lütfen doğru bir telefon numarası giriniz'
         );
         return false;
       }
       if (!this.validateEmail()) {
-        this.alertService.danger(
+        this.alertService.warning(
           'Lütfen doğru bir email adresi giriniz'
         );
         return false;
@@ -66,7 +66,7 @@ export class ContactComponent implements OnInit {
     }
 
     else {
-      this.alertService.danger("Lütfen yıldızlı alanları doldurunuz")
+      this.alertService.warning("Lütfen yıldızlı alanları doldurunuz")
     }
 
   }

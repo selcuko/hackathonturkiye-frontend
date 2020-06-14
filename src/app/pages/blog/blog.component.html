@@ -1,143 +1,20 @@
 <!-- Start Blog Page Section -->
 <div class="container">
     <div class="row">
-
-        <!-- Start Sidebar Section -->
-        <div class="col-md-2 sidebar left-sidebar">
-
-            <!-- Start Accordion Section -->
-            <div class="panel-group" id="accordion">
-
-                <h4 class="panel-title main-title">Kategoriler</h4>
-                <!-- Start Accordion 1 -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
-                                <i class="fa fa-plus control-icon"></i> Hackathon
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapse-1" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li> -Tanım</li>
-                                <li>-Starter Kit</li>
-                                <li>-Global Hackathonlar</li>
-                            </ul>
-
-
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End Accordion 1 -->
-
-                <!-- Start Accordion 2 -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
-                                <i class="fa fa-plus control-icon"></i> Gamejam
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapse-2" class="panel-collapse collapse">
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis
-                            metus vitae ligula elementum ut luctus lorem facilisis. Sed non leo nisl, ac euismod nisi.
-                            Aenean augue dolor, facilisis id fringilla ut, tempus vitae nibh.</div>
-                    </div>
-                </div>
-                <!-- End Accordion 2 -->
-
-                <!-- Start Accordion 3 -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-3" class="collapsed">
-                                <i class="fa fa-plus control-icon"></i> Ideathon
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapse-3" class="panel-collapse collapse">
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis
-                            metus vitae ligula elementum ut luctus lorem facilisis. Sed non leo nisl, ac euismod nisi.
-                            Aenean augue dolor, facilisis id fringilla ut, tempus vitae nibh.</div>
-                    </div>
-                </div>
-                <!-- End Accordion 3 -->
-
-                <!-- Start Accordion 4 -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-4" class="collapsed">
-                                <i class="fa fa-plus control-icon"></i> Makeathon
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapse-4" class="panel-collapse collapse">
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis
-                            metus vitae ligula elementum ut luctus lorem facilisis. Sed non leo nisl, ac euismod nisi.
-                            Aenean augue dolor, facilisis id fringilla ut, tempus vitae nibh.</div>
-                    </div>
-                </div>
-                <!-- End Accordion 4 -->
-
-                <!-- Start Accordion 5 -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-5" class="collapsed">
-                                <i class="fa fa-plus control-icon"></i> Designathon
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapse-5" class="panel-collapse collapse">
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis
-                            metus vitae ligula elementum ut luctus lorem facilisis. Sed non leo nisl, ac euismod nisi.
-                            Aenean augue dolor, facilisis id fringilla ut, tempus vitae nibh.</div>
-                    </div>
-                </div>
-                <!-- End Accordion 5 -->
-
-
-                 <!-- Start Accordion 6 -->
-                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-6" class="collapsed">
-                                <i class="fa fa-plus control-icon"></i> Editathon
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapse-6" class="panel-collapse collapse">
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis
-                            metus vitae ligula elementum ut luctus lorem facilisis. Sed non leo nisl, ac euismod nisi.
-                            Aenean augue dolor, facilisis id fringilla ut, tempus vitae nibh.</div>
-                    </div>
-                </div>
-                <!-- End Accordion 6 -->
-
-            </div>
-            <!-- End Accordion section -->
-
-        </div>
-        <!-- End Sidebar Section -->
-
         <!-- Start Blog Body Section -->
-        <div class="col-md-10 blog-body">
+        <div class="col-md-12 blog-body">
             <div class="col-md-9 blog-border">
                 <div *ngIf="list && list.length > 0">
                     <div class="blog-post" *ngFor="let item of list">
                         <div class="post-img">
                             <img src="../../../assets/images/blog/blog-01.jpg" class="img-responsive" alt="Blog image">
                         </div>
-                        <h1 class="post-title"><a href="#">{{item.title}}</a> <span class="pull-right"> {{item.time}} Dk</span> </h1>
+                        <h1 class="post-title"><a href="#">{{item.title}}</a> <span class="time"> {{item.time}}
+                                Dk</span> </h1>
 
                         <ul class="post-meta">
                             <li><i class="fa fa-clock-o"></i>October 25 2014</li>
-                            <li><i class="fa fa-user"></i><a href="#">{{item.author.username}}</a></li>
+                            <li><i class="fa fa-user"></i>{{item.author.username}}</li>
                             <li><i class="fa fa-tags"></i><a href="#">Women Rights</a></li>
                             <div class="pull-right social">
                                 <li><i class="fa fa-instagram"></i></li>
@@ -147,12 +24,8 @@
                             </div>
                         </ul>
 
-                        <p class="post-content">Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet
-                            risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim
-                            in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.
-                            Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan
-                            porttitor, cursus quis, aliquet eget, justo.</p>
-                        <a href="#" class="btn btn-primary readmore">Daha Fazla...<i class="fa fa-angle-right"></i></a>
+                        <p class="post-content">{{item.summary}}</p>
+                        <a href="#" class="btn btn-primary readmore pull-right">Daha Fazla<i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
 
@@ -164,66 +37,69 @@
             <!-- End Blog Body Section -->
 
             <div class="col-md-3 sidebar right-sidebar">
+                <!-- Start Recent Post Widget -->
+                <div class="widget widget-recent-post">
 
-
-                    <!-- Start Recent Post Widget -->
-                    <div class="widget widget-recent-post">
-
-                        <div class="section-heading-2">
-                            <h3 class="title-left-side">
-                                <span>En Çok</span>
-                                <br>
-                                <span>Okunanlar</span>
-                            </h3>
-                        </div>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="img-responsive" src="../../../assets/images/recent-post/post-02.jpg" alt="...">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="img-responsive"><a href="#">Nulla facilisi integer lacinia sollicitudin massa</a></h4>
-                                <ul>
-                                    <li><a href="#">Super User</a></li>
-                                    <li>15 October 2014</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="img-responsive" src="../../../assets/images/recent-post/post-03.jpg" alt="...">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Quisque cursus metus vitae pharetra auctor sem massa</a></h4>
-                                <ul>
-                                    <li><a href="#">Super User</a></li>
-                                    <li>15 October 2014</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="img-responsive" src="../../../assets/images/recent-post/post-04.jpg" alt="...">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Praesent libero sed cursus ante dapibus diam</a></h4>
-                                <ul>
-                                    <li><a href="#">Super User</a></li>
-                                    <li>15 October 2014</li>
-                                </ul>
-                            </div>
-                        </div>
-
+                    <div class="section-heading-2">
+                        <h3 class="title-left-side">
+                            <span>En Çok</span>
+                            <br>
+                            <span>Okunanlar</span>
+                        </h3>
                     </div>
-                    <!-- End Recent Post Widget -->
+
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="img-responsive" src="../../../assets/images/recent-post/post-02.jpg"
+                                    alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="img-responsive"><a href="#">Nulla facilisi integer lacinia sollicitudin massa</a>
+                            </h4>
+                            <ul>
+                                <li><a href="#">Super User</a></li>
+                                <li>15 October 2014</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="img-responsive" src="../../../assets/images/recent-post/post-03.jpg"
+                                    alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#">Quisque cursus metus vitae pharetra auctor sem
+                                    massa</a></h4>
+                            <ul>
+                                <li><a href="#">Super User</a></li>
+                                <li>15 October 2014</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="img-responsive" src="../../../assets/images/recent-post/post-04.jpg"
+                                    alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#">Praesent libero sed cursus ante dapibus diam</a></h4>
+                            <ul>
+                                <li><a href="#">Super User</a></li>
+                                <li>15 October 2014</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Recent Post Widget -->
 
             </div>
         </div>

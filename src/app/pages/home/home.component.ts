@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SeoService } from '../../services/seo/seo.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import { HttpService } from 'src/app/services/http/http.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private spinner: NgxSpinnerService,
     private seoService: SeoService,
-    private httpService: HttpService
+    private httpService: HttpService,
+    private location: Location,
   ) { }
 
 
@@ -23,6 +25,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.seoService.updateTitle('Anasayfa');
     this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
+    this.location.replaceState('/');
     this.getPosts();
   }
 
@@ -30,7 +33,6 @@ export class HomeComponent implements OnInit {
     this.spinner.show();
 
     this.httpService.getHighlightPosts('posts/').subscribe((response) => {
-      debugger;
       this.list = response.results;
       this.spinner.hide();
     },

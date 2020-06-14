@@ -25,100 +25,14 @@
   display: contents;
 }
 
-.panel-group .panel+.panel {
-  margin-top: 0px;
-}
 
 .container {
   margin-top: 20px;
   margin-bottom: 50px;
 }
 
-.social li > i {
+.social li>i {
   color: #16222A;
-}
-
-#accordion {
-  background-color: #fff;
-}
-
-#accordion .main-title{
-  font-weight: 500;
-  font-size: 25px;
-  letter-spacing: 0.02em;
-  color: #16222A;
-  text-align: center;
-}
-
-.panel-group .panel {
-  border-radius: 0;
-}
-
-.panel {
-  border-radius: 0;
-  border: none !important;
-  box-shadow: none !important
-}
-
-.panel-default>.panel-heading {
-  background: transparent;
-  border-radius: none;
-  font-weight: 400;
-}
-
-.panel-body {
-  margin-left: 14%;
-  padding-top: 0;
-  padding: 15px 10px;
-  border: none !important;
-  color: #111;
-  font-size: 16px;
-  background-color: transparent !important;
-}
-
-.panel-heading {
-  padding: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.panel-title {
-  font-size: 14px;
-  font-weight: 400;
-  padding: 10px;
-  color: #666;
-}
-
-.panel-title a {
-  position: relative;
-  display: block;
-  padding: 6px 12px;
-  background-color: #fff;
-  box-shadow: none;
-  -o-box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-}
-
-.panel-title a.collapsed {
-  color: #444;
-}
-
-.panel-title a .control-icon {
-  float: right;
-  font-size: 17px;
-  transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-}
-
-.panel-title a.collapsed .control-icon {
-  display: block;
 }
 
 .sidebar .section-heading-2 {
@@ -138,7 +52,7 @@
 
 
 
-.sidebar  .flickr-list li {
+.sidebar .flickr-list li {
   width: 61px;
   height: 61px;
 }
@@ -291,4 +205,14 @@ h1.post-title a {
   background: #4392F1;
   border: 1px solid #4392F1;
   font-weight: 300;
+}
+
+.time {
+  font-size: 0.7em;
+  color: #5c5c5c;
+  float: right;
+}
+
+.readmore i {
+  margin-left: 10px;
 }
