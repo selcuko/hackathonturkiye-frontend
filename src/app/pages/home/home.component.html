@@ -15,49 +15,58 @@
 
 <!-- Start About Us Section -->
 <section id="about-section" class="about-section">
-    <div class="container">
-        <div *ngIf="list && list.length > 0">
-            <div *ngFor="let item of list.slice(0, 5);">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="about-img">
-                            <img src="{{item.thumbnail}}"
-                            class="img-responsive"
-                            alt="{{item.thumbnail}}">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <h1 class="post-title"><a href="/blog-detay/{{item.slug}}">{{item.title}}</a> <span class="time"> {{item.time}}
-                            Dk</span> </h1>
-
-                    <ul class="post-meta">
-                        <li><i class="fa fa-clock-o"></i>October 25 2014</li>
-                        <li><i class="fa fa-user">
-                        </i><a href="/blog/?author__username={{item.author.username}}">{{item.author.username}}</a></li>
-                        <div class="tag-area" *ngFor="let tag of item.tags">
-                            <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
-                        </div>
-                        <div class="pull-right social">
-                            <li><i class="fa fa-instagram"></i></li>
-                            <li><i class="fa fa-facebook"></i></li>
-                            <li><i class="fa fa-linkedin"></i></li>
-                            <li><i class="fa fa-twitter"></i></li>
-                        </div>
-                    </ul>
-
-                    <p class="post-content">{{item.summary}}</p>
-                    <a class="btn btn-primary readmore btn-lg pull-right"
-                                href="/blog-detay/{{item.slug}}">Daha Fazla...</a>
-
-                    </div>
-                </div>
+  <div class="container">
+    <div *ngIf="list && list.length > 0">
+      <div *ngFor="let item of list.slice(0, 5);">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="about-img">
+              <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.title}}">
             </div>
+          </div>
+          <div class="col-md-7">
+            <h2 class="post-title"><a href="/blog/{{item.slug}}">{{item.title}}</a> <span class="time">
+                {{item.time}}
+                Dk</span> </h2>
+
+            <ul class="post-meta">
+              <li><i class="fa fa-clock-o"></i>October 25 2014</li>
+              <li><i class="fa fa-user">
+                </i><a href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></li>
+              <div class="tag-area" *ngFor="let tag of item.tags">
+                <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
+              </div>
+              <div class="pull-right social">
+                <li>
+                  <a target="_blank"
+                    href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{item.slug}}/&amp;p[title]={{item.title}}&amp;p[images][0]={{item.thumbnail}}&amp;v=1">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank"
+                    href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{item.slug}}/">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank"
+                    href="https://twitter.com/intent/tweet?text={{item.title}}+https://hackathonturkiye.com/blog/{{item.slug}}/">
+                    <i class="fa fa-twitter"> </i>
+                  </a>
+                </li>
+              </div>
+            </ul>
+
+            <p class="post-content">{{item.summary}}</p>
+            <a class="btn btn-primary readmore btn-lg pull-right" href="/blog/{{item.slug}}">Daha Fazla...</a>
+
           </div>
         </div>
       </div>
     </div>
-
-    <h3 class="text-danger text-center" *ngIf="!list || list.length === 0"> Kayıt Bulunamadı</h3>
-
   </div>
+
+  <h3 class="text-danger text-center" *ngIf="!list || list.length === 0"> Kayıt Bulunamadı</h3>
+
 </section>

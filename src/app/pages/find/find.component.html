@@ -7,7 +7,7 @@
       <div class="col-md-7 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="600ms">
         <div class="col-md-4">
           <select id="eventCategory" class="form-control" [(ngModel)]="eventType">
-            <option value="xathon">Kategoriye Göre</option>
+            <option value="xathon" selected>Kategoriye Göre</option>
             <option value="hackathon">Hackathon</option>
             <option value="makeathon">Makeathon</option>
             <option value="ideathon">Ideathon</option>
@@ -21,7 +21,7 @@
         </div>
         <div class="col-md-4">
           <select class="form-control" [(ngModel)]="eventLoc">
-            <option value="heryer">Lokasyona Göre</option>
+            <option value="heryer" selected>Lokasyona Göre</option>
             <option value="online">Online</option>
             <option value="istanbul">İstanbul</option>
             <option value="ankara">Ankara</option>
@@ -59,14 +59,13 @@
           <div class="col-md-7 p0">
             <div class="col-md-7">
               <div class="find-header">
-                <h3>{{xathon.name}}</h3>
+                <h2>{{xathon.name}}</h2>
               </div>
-              <div class="find-tag">
 
+              <div class="find-tag">
                 <div class="tagcloud" *ngIf="xathon.tags">
                   <a ngHref="eventTag.url" *ngFor="let eventTag of xathon.tags;">{{eventTag.name}}</a>
                 </div>
-
               </div>
               <div class="find-text">
                 <p>{{xathon.description}}

@@ -30,7 +30,7 @@
   position: relative;
 }
 
-h1.post-title {
+h2.post-title {
   font-size: 24px;
   font-weight: 400;
   line-height: 110%;
@@ -40,7 +40,7 @@ h1.post-title {
   text-transform: capitalize;
 }
 
-h1.post-title a {
+h2.post-title a {
   color: #5c5c5c;
 }
 
