@@ -25,7 +25,6 @@
   display: contents;
 }
 
-
 .container {
   margin-top: 20px;
   margin-bottom: 50px;
@@ -195,6 +194,11 @@ h1.post-title a {
 .blog-post .post-meta li i {
   color: #4392F1;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.blog-post .post-meta .tag-area {
+  display: inline-block;
 }
 
 .blog-post p.post-content {
@@ -211,8 +215,4 @@ h1.post-title a {
   font-size: 0.7em;
   color: #5c5c5c;
   float: right;
-}
-
-.readmore i {
-  margin-left: 10px;
 }

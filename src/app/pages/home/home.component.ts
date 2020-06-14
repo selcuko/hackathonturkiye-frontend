@@ -3,6 +3,7 @@ import { SeoService } from '../../services/seo/seo.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import { HttpService } from 'src/app/services/http/http.service';
 import { Location } from '@angular/common';
+import { AlertService } from 'ngx-alerts';
 
 @Component({
   selector: 'app-home',
@@ -12,15 +13,14 @@ import { Location } from '@angular/common';
 export class HomeComponent implements OnInit {
 
   list: any;
-
+  
   constructor(
     private spinner: NgxSpinnerService,
     private seoService: SeoService,
     private httpService: HttpService,
     private location: Location,
+    private alertService: AlertService
   ) { }
-
-
 
   ngOnInit(): void {
     this.seoService.updateTitle('Anasayfa');
@@ -31,13 +31,12 @@ export class HomeComponent implements OnInit {
 
   getPosts() {
     this.spinner.show();
-
     this.httpService.getHighlightPosts('posts/').subscribe((response) => {
       this.list = response.results;
       this.spinner.hide();
     },
       (error: any) => {
-        console.log(error);
+        this.alertService.danger(error)
         this.spinner.hide();
       });
   }

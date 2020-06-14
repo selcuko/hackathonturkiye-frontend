@@ -1,0 +1,281 @@
+.blog-body {
+  background: #E8E8E8;
+}
+
+.blog-post {
+  padding: 20px;
+}
+
+.title-left-side {
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 23px;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #16222A !important;
+  margin-top: 18px;
+}
+
+.blog-border {
+  border-right: 1px solid black;
+}
+
+.media-body {
+  display: contents;
+}
+
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.social li>i {
+  color: #16222A;
+}
+
+.sidebar .section-heading-2 {
+  margin-bottom: 30px;
+}
+
+.sidebar .section-heading-2 h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #32313b;
+  font-weight: 400;
+}
+
+.sidebar .widget {
+  margin-bottom: 50px;
+}
+
+
+
+.sidebar .flickr-list li {
+  width: 61px;
+  height: 61px;
+}
+
+
+
+.sidebar .widget-recent-post ul li {
+  display: inline;
+}
+
+.sidebar .widget-recent-post h4.media-heading a {
+  font-size: 16px;
+  color: #323232;
+  text-transform: capitalize;
+}
+
+.sidebar .widget-recent-post h4.media-heading a:hover {
+  color: #4392F1;
+}
+
+.sidebar .widget-recent-post .media-body li,
+.sidebar .widget-recent-post .media-body li a {
+  color: #959595;
+}
+
+.widget-categories li {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #cecece;
+}
+
+.widget-categories li a {
+  color: #323232;
+}
+
+.widget-categories li i {
+  padding-right: 15px;
+}
+
+.widget-categories li a.cat-counter {
+  margin-left: 20px;
+  font-size: 10px;
+  background: #4392F1;
+  color: #fff;
+  padding: 3px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  line-height: 12px;
+  text-align: center;
+  display: inline-block;
+}
+
+.blog-post .post-img {
+  position: relative;
+}
+
+.blog-post .post-img img {
+  margin: 0 0 16px 0;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.blog-post .post-type {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.blog-post .post-type i {
+  padding: 15px;
+  background: #fff;
+  font-size: 16px;
+  color: #4392F1;
+  border-radius: 3px;
+  position: absolute;
+  top: 45%;
+  left: 48%;
+}
+
+.blog-post .post-img:hover .post-type {
+  opacity: 1;
+}
+
+.blog-post .post-img:hover .post-type i {
+  -webkit-animation: fadeInDownBig;
+  animation: fadeInDownBig;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+}
+
+h1.post-title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110%;
+  padding: 10px 0 20px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #ddd;
+  text-transform: capitalize;
+}
+
+h1.post-title a {
+  color: #5c5c5c;
+}
+
+.blog-post ul.post-meta {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.blog-post .post-meta li {
+  display: inline-block;
+  padding-right: 10px;
+  color: #959595;
+}
+
+.blog-post .post-meta li i {
+  cursor: pointer;
+}
+
+.blog-post .post-meta li a {
+  color: #5c5c5c;
+}
+
+.blog-post .post-meta li a:hover {
+  color: #4392F1;
+}
+
+.blog-post .post-meta li i {
+  color: #4392F1;
+  margin-right: 10px;
+}
+
+.blog-post p.post-content {
+  margin-bottom: 30px;
+}
+
+.blog-post a.btn-primary {
+  background: #4392F1;
+  border: 1px solid #4392F1;
+  font-weight: 300;
+}
+
+.time {
+  font-size: 0.7em;
+  color: #5c5c5c;
+  float: right;
+}
+
+.blog-author {
+  border-top: 1px solid lightgray;
+}
+
+.blog-author h3 {
+  color: #32313b;
+  text-transform: capitalize;
+  font-size: 30px;
+  line-height: 33px;
+  margin-top: 10px;
+}
+
+.blog-author .media {
+  margin: 25px 0 16px 0;
+  padding: 8px;
+}
+
+.blog-author .media-left {
+ float: left;
+}
+
+.blog-author .media img {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  border-radius: 8px;
+  border: 6px solid #f2f2f2;
+}
+
+.blog-author .media-body h4 a {
+  text-transform: capitalize;
+  color: #323232;
+  font-size: 20px;
+}
+
+.blog-author .media-body p {
+  color: #778899;
+}
+
+.blog-author ul.post-meta {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.blog-author .post-meta li {
+  display: inline-block;
+  padding-right: 10px;
+  color: #959595;
+}
+
+.blog-author .post-meta li i {
+  cursor: pointer;
+}
+
+.blog-author .post-meta li a {
+  color: #5c5c5c;
+}
+
+.blog-author .post-meta li a:hover {
+  color: #4392F1;
+}
+
+.blog-author .post-meta li i {
+  color: #4392F1;
+  margin-right: 10px;
+}

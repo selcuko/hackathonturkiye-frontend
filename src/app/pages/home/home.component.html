@@ -27,25 +27,27 @@
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="about-header">
-                            <h3>{{item.title}}</h3>
-                        </div>
-                        <div class="about-text">
-                            <p>{{item.summary}}</p>
-                        </div>
+                        <h1 class="post-title"><a href="/blog-detay/{{item.slug}}">{{item.title}}</a> <span class="time"> {{item.time}}
+                            Dk</span> </h1>
 
-                        <div class="about-more">
-                            <a class="btn btn-primary readmore btn-lg"
-                                href="/blog-detay/{{item.slug}}">Daha Fazla...</a>
-                            <div class="media pull-right">
-                                <ul>
-                                    <li><i class="fa fa-instagram"></i></li>
-                                    <li><i class="fa fa-facebook"></i></li>
-                                    <li><i class="fa fa-linkedin"></i></li>
-                                    <li><i class="fa fa-twitter"></i></li>
-                                </ul>
-                            </div>
+                    <ul class="post-meta">
+                        <li><i class="fa fa-clock-o"></i>October 25 2014</li>
+                        <li><i class="fa fa-user"></i>{{item.author.username}}</li>
+                        <div class="tag-area" *ngFor="let tag of item.tags">
+                            <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
                         </div>
+                        <div class="pull-right social">
+                            <li><i class="fa fa-instagram"></i></li>
+                            <li><i class="fa fa-facebook"></i></li>
+                            <li><i class="fa fa-linkedin"></i></li>
+                            <li><i class="fa fa-twitter"></i></li>
+                        </div>
+                    </ul>
+
+                    <p class="post-content">{{item.summary}}</p>
+                    <a class="btn btn-primary readmore btn-lg pull-right"
+                                href="/blog-detay/{{item.slug}}">Daha Fazla...</a>                       
+
                     </div>
                 </div>
             </div>

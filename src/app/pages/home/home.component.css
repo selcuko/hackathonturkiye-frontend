@@ -1,39 +1,89 @@
 .about-section .row {
-    padding: 20px;
-    background-color: #E8E8E8;
-    margin-bottom: 25px;
+  padding: 20px;
+  background-color: #E8E8E8;
+  margin-bottom: 25px;
 }
 
 .about-header {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 140.62%;
-    color: #16222A;
-    margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 140.62%;
+  color: #16222A;
+  margin-bottom: 20px;
 }
 
-.about-section{
-    padding-bottom: 50px;
-}
-
-.about-more .media ul {
-    display: flex
-}
-
-.about-more .media ul li {
-    margin-right: 30px;
+.about-section {
+  padding-bottom: 50px;
 }
 
 .readmore {
-    width: 235px;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #4392F1;
-    background: transparent;
+  width: 235px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #4392F1;
+  background: transparent;
 }
 
 .about-img {
-    position: relative;
+  position: relative;
+}
+
+h1.post-title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110%;
+  padding: 10px 0 20px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #ddd;
+  text-transform: capitalize;
+}
+
+h1.post-title a {
+  color: #5c5c5c;
+}
+
+.time {
+  font-size: 0.7em;
+  color: #5c5c5c;
+  float: right;
+}
+
+blog-post ul.post-meta {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+.post-meta li {
+  display: inline-block;
+  padding-right: 1em;
+  color: #959595;
+}
+
+.post-meta li i {
+  cursor: pointer;
+}
+
+.post-meta li a {
+  color: #5c5c5c;
+}
+
+.post-meta li a:hover {
+  color: #4392F1;
+}
+
+.post-meta .tag-area {
+  display: inline-block;
+}
+
+.post-meta li i {
+  color: #4392F1;
+  margin-right: 0.5em;
+}
+
+p.post-content {
+  margin-bottom: 2em;
+  margin-top: 2em;
 }

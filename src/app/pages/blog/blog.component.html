@@ -1,4 +1,5 @@
 <!-- Start Blog Page Section -->
+<section class="blog">
 <div class="container">
     <div class="row">
         <!-- Start Blog Body Section -->
@@ -7,15 +8,17 @@
                 <div *ngIf="list && list.length > 0">
                     <div class="blog-post" *ngFor="let item of list">
                         <div class="post-img">
-                            <img src="../../../assets/images/blog/blog-01.jpg" class="img-responsive" alt="Blog image">
+                            <img src="{{item.thumbnail}}" class="img-responsive" alt="Blog image">
                         </div>
-                        <h1 class="post-title"><a href="#">{{item.title}}</a> <span class="time"> {{item.time}}
+                        <h1 class="post-title"><a href="/blog-detay/{{item.slug}}">{{item.title}}</a> <span class="time"> {{item.time}}
                                 Dk</span> </h1>
 
                         <ul class="post-meta">
                             <li><i class="fa fa-clock-o"></i>October 25 2014</li>
                             <li><i class="fa fa-user"></i>{{item.author.username}}</li>
-                            <li><i class="fa fa-tags"></i><a href="#">Women Rights</a></li>
+                            <div class="tag-area" *ngFor="let tag of item.tags">
+                                <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
+                            </div>
                             <div class="pull-right social">
                                 <li><i class="fa fa-instagram"></i></li>
                                 <li><i class="fa fa-facebook"></i></li>
@@ -25,7 +28,7 @@
                         </ul>
 
                         <p class="post-content">{{item.summary}}</p>
-                        <a href="#" class="btn btn-primary readmore pull-right">Daha Fazla<i class="fa fa-angle-right"></i></a>
+                        <a href="/blog-detay/{{item.slug}}" class="btn btn-primary readmore pull-right">Daha Fazla</a>
                     </div>
                 </div>
 
@@ -106,4 +109,5 @@
 
     </div>
 </div>
+</section>
 <!-- End Blog Page Section -->
