@@ -13,7 +13,7 @@ import { AlertService } from 'ngx-alerts';
 export class HomeComponent implements OnInit {
 
   list: any;
-  
+
   constructor(
     private spinner: NgxSpinnerService,
     private seoService: SeoService,
@@ -23,8 +23,8 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.seoService.updateTitle('Anasayfa');
-    this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
+    this.seoService.updateTitle('Hackathon Türkiye');
+    this.seoService.updateMeta('description', 'Hackathon, ideathon, makeathon, datathon, game jam yarışmalarına ve içeriklerinden Hackathon Türkiye sayfasından erişebilirsiniz.');
     this.location.replaceState('/');
     this.getPosts();
   }

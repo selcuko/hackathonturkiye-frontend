@@ -11,22 +11,22 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class FindComponent implements OnInit {
 
-  eventType: string = "";
-  eventLoc: string = "";
+  eventType: string = "xathon";
+  eventLoc: string = "heryer";
   tags: [];
   status: string;
   events: Array<any>;
   months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
   constructor(
-    private route: ActivatedRoute, 
-    private httpService: HttpService, 
-    private router: Router, 
+    private route: ActivatedRoute,
+    private httpService: HttpService,
+    private router: Router,
     private spinner: NgxSpinnerService) {
 
     this.route.params.subscribe(d => {
-      this.eventType = d['etype'] || "";
-      this.eventLoc = d['eloc'] || "";
+      this.eventType = d['etype'] || "xathon";
+      this.eventLoc = d['eloc'] || "heryer";
     });
 
     this.route.queryParams.subscribe(d => {
@@ -106,7 +106,7 @@ export class FindComponent implements OnInit {
   getEvents() {
     this.spinner.show();
     let url = "events";
-    if (this.eventType) {
+    if (this.eventType && this.eventType !== "xathon") {
       url += "?etype=" + this.eventType;
     }
 
