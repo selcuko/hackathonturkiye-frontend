@@ -3,14 +3,14 @@
 <div class="container">
     <div class="row">
         <!-- Start Blog Body Section -->
-        <div class="col-md-12 blog-body">
-            <div class="col-md-9 blog-border">
+        <div class="col-md-12 col-sm-12 col-xs-12 blog-body">
+            <!-- <div class="col-md-12 col-sm-12 col-xs-12 blog-border"> -->
                 <div *ngIf="list && list.length > 0">
                     <div class="blog-post" *ngFor="let item of list">
                         <div class="post-img">
                             <img src="{{item.thumbnail}}" class="img-responsive" alt="Blog image">
                         </div>
-                        <h1 class="post-title"><a href="/blog-detay/{{item.slug}}">{{item.title}}</a> <span class="time"> {{item.time}}
+                        <h1 class="post-title"><a href="/blog/{{item.slug}}">{{item.title}}</a> <span class="time"> {{item.time}}
                                 Dk</span> </h1>
 
                         <ul class="post-meta">
@@ -29,7 +29,7 @@
                         </ul>
 
                         <p class="post-content">{{item.summary}}</p>
-                        <a href="/blog-detay/{{item.slug}}" class="btn btn-primary readmore pull-right">Daha Fazla</a>
+                        <a href="/blog/{{item.slug}}" class="btn btn-primary readmore pull-right">Daha Fazla</a>
                     </div>
                 </div>
 
@@ -37,11 +37,10 @@
                 <h3 class="text-danger text-center" *ngIf="!list || list.length === 0"> Kayıt Bulunamadı</h3>
 
 
-            </div>
+            <!-- </div> -->
             <!-- End Blog Body Section -->
 
-            <div class="col-md-3 sidebar right-sidebar">
-                <!-- Start Recent Post Widget -->
+            <!-- <div class="col-md-3 sidebar right-sidebar">
                 <div class="widget widget-recent-post">
 
                     <div class="section-heading-2">
@@ -103,9 +102,8 @@
                     </div>
 
                 </div>
-                <!-- End Recent Post Widget -->
 
-            </div>
+            </div> -->
         </div>
 
     </div>
