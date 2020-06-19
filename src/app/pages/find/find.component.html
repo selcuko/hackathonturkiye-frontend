@@ -7,7 +7,7 @@
       <div class="col-md-7 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="600ms">
         <div class="col-md-4">
           <select id="eventCategory" class="form-control" [(ngModel)]="eventType">
-            <option value="xathon" selected>Kategoriye Göre</option>
+            <option value="hepsi" selected>Kategoriye Göre</option>
             <option value="hackathon">Hackathon</option>
             <option value="makeathon">Makeathon</option>
             <option value="ideathon">Ideathon</option>
@@ -31,11 +31,11 @@
           </select>
         </div>
         <div class="col-md-4">
-          <select class="form-control">
+          <select class="form-control" [(ngModel)]="status"> 
             <option value="">Duruma Göre</option>
-            <option value="soon">Yakında Başlayacaklar</option>
-            <option value="now">Devam Edenler</option>
-            <option value="end">Sonlananlar</option>
+            <option value="yakinda">Yakında Başlayacaklar</option>
+            <option value="devam-eden">Devam Edenler</option>
+            <option value="gecmis">Sonlananlar</option>
           </select>
         </div>
       </div>
@@ -64,7 +64,7 @@
 
               <div class="find-tag">
                 <div class="tagcloud" *ngIf="xathon.tags">
-                  <a ngHref="eventTag.url" *ngFor="let eventTag of xathon.tags;">{{eventTag.name}}</a>
+                  <a ngHref="/tag/eventTag.slug" *ngFor="let eventTag of xathon.tags;">{{eventTag.name}}</a>
                 </div>
               </div>
               <div class="find-text">

@@ -29,8 +29,6 @@ export class BlogDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBlogDetail();
-    this.seoService.updateTitle('Anasayfa');
-    this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
   }
 
   getBlogDetail() {
@@ -39,6 +37,9 @@ export class BlogDetailComponent implements OnInit {
     this.httpService.search(url).subscribe((response) => {
       this.blogdetail = response;
       this.spinner.hide();
+
+      this.seoService.updateTitle(this.blogdetail.title);
+      this.seoService.updateMeta('description', this.blogdetail.summary);
     },
       (error: any) => {
         this.alertService.danger(error);
