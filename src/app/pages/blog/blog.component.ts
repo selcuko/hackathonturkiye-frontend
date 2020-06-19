@@ -33,8 +33,8 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.seoService.updateTitle('Blog');
-    this.seoService.updateMeta('description', 'Blog açıklamasıdır.');
+    this.seoService.updateTitle('Blog | Hackathon Türkiye');
+    this.seoService.updateMeta('description', 'Hackathon, ideathon, datathon, makeathon, code fest, game jam yarışmaları ile ilgili tanımlara, tecrübelerimize blogumuzdan ulaşabilirsiniz.');
   }
 
   getPosts() {

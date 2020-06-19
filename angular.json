@@ -175,6 +175,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hackathonturkiye"
+    }
+  },
+  "defaultProject": "hackathonturkiye",
+  "cli": {
+    "analytics": false
+  }
 }

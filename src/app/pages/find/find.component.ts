@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http/http.service';
-import * as moment from 'moment';
 import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
@@ -11,7 +10,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class FindComponent implements OnInit {
 
-  eventType: string = "xathon";
+  eventType: string = "hepsi";
   eventLoc: string = "heryer";
   tags: [];
   status: string;
@@ -24,90 +23,119 @@ export class FindComponent implements OnInit {
     private router: Router,
     private spinner: NgxSpinnerService) {
 
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
+
     this.route.params.subscribe(d => {
-      this.eventType = d['etype'] || "xathon";
+      this.eventType = d['etype'] || "hepsi";
       this.eventLoc = d['eloc'] || "heryer";
     });
 
     this.route.queryParams.subscribe(d => {
-
-      if (d['etiketler']) {
-        this.tags = d['etiketler'].split(',');
-      }
-      else {
-        this.tags = [];
-      }
-
       this.status = d['durumu'] || "";
     });
 
   }
+
   ngOnInit(): void {
     this.getEvents();
-    //console.log(moment().format());
     // this.seoService.updateTitle('Anasayfa');
     // this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
   }
 
+
+
   navigate() {
-    this.router.navigate(['/etkinlikler/' + this.eventType + '/' + this.eventLoc]);
+
+    let url = '/etkinlikler/';
+    let param = { replaceUrl: true };
+
+    if (this.eventType && this.eventType !== 'hepsi') {
+      url += this.eventType + '/';
+    }
+
+    if (this.eventLoc && this.eventLoc !== 'heryer') {
+
+      if (this.eventType && this.eventType !== 'hepsi') {
+        url += this.eventLoc + '/';
+      }
+      else {
+        url += this.eventType + '/' + this.eventLoc + '/';
+      }
+    }
+
+    if (this.status) {
+      param["queryParams"] = { durumu: this.status };
+    }
+
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate([url], param);
   }
 
   getDateTurkish(dateTime) {
     let date = new Date(dateTime);
     let dateStr = date.getDate() + " ";
     dateStr += this.months[date.getMonth()] + " ";
-    // dateStr += date.getFullYear();
     return dateStr;
   }
 
   getDateDiffDay(dateTime) {
     let date = new Date(dateTime);
     let now = new Date();
-
     var delta = Math.abs(date.getTime() - now.getTime()) / 1000;
     var days = Math.floor(delta / 86400);
     delta -= days * 86400;
-
     return days;
   }
 
   getDateDiffHour(dateTime) {
     let date = new Date(dateTime);
     let now = new Date();
-
     var delta = Math.abs(date.getTime() - now.getTime()) / 1000;
     var days = Math.floor(delta / 86400);
     delta -= days * 86400;
-
     var hours = Math.floor(delta / 3600) % 24;
     delta -= hours * 3600;
-
     return hours;
   }
 
   getDateDiffMinute(dateTime) {
     let date = new Date(dateTime);
     let now = new Date();
-
     var delta = Math.abs(date.getTime() - now.getTime()) / 1000;
     var days = Math.floor(delta / 86400);
     delta -= days * 86400;
-
     var hours = Math.floor(delta / 3600) % 24;
     delta -= hours * 3600;
-
     var minutes = Math.floor(delta / 60) % 60;
     delta -= minutes * 60;
-
     return minutes;
+  }
+
+  getStatus() {
+    if (this.status == "devam-eden") {
+      return "ongoing";
+    }
+    if (this.status == "yakinda") {
+      return "future";
+    }
+    if (this.status == "gecmis") {
+      return "finished";
+    }
+
+    return "future";
   }
 
   getEvents() {
     this.spinner.show();
-    let url = "events";
-    if (this.eventType && this.eventType !== "xathon") {
-      url += "?etype=" + this.eventType;
+    let url = "events?status=" + this.getStatus();
+
+    if (this.eventType && this.eventType !== "hepsi") {
+      url += "&etype=" + this.eventType;
+    }
+    if (this.eventLoc && this.eventLoc !== "heryer") {
+      url += "&location=" + this.eventLoc;
     }
 
     this.httpService.search(url).subscribe((e) => {
