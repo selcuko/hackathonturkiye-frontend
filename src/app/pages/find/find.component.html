@@ -48,7 +48,7 @@
       <div class="post" *ngFor="let xathon of events;">
 
         <div class="row">
-          <div class="col-md-5 p0">
+          <div class="col-md-4 p0">
             <div class="find-img">
               <img src="{{xathon.thumbnail}}" class="img-responsive" alt={{xathon.name}}>
               <div class="post-text">
@@ -56,7 +56,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-7 p0">
+          <div class="col-md-8 p0">
             <div class="col-md-7">
               <div class="find-header">
                 <h2>{{xathon.name}}</h2>
@@ -68,7 +68,7 @@
                 </div>
               </div>
               <div class="find-text">
-                <p>{{xathon.description}}
+                <p>{{getDescription(xathon.description)}}
                 </p>
               </div>
 

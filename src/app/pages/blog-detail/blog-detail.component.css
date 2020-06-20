@@ -75,6 +75,19 @@
   animation-duration: 300ms;
 }
 
+h1.post-title {
+  font-weight: 400;
+  line-height: 110%;
+  padding: 10px 0 20px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #ddd;
+  text-transform: capitalize;
+}
+
+h1.post-title a {
+  color: #5c5c5c;
+}
+
 .blog-post ul.post-meta {
   margin: 0;
   padding: 0;
