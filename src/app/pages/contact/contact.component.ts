@@ -32,9 +32,9 @@ export class ContactComponent implements OnInit {
     return false;
   }
 
-  abCepTelefon(tel) {
+  validatePhone() {
     var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    if (tel.match(phoneno)) {
+    if (this.postData.phone.match(phoneno)) {
       return true;
     }
     else {
@@ -44,7 +44,7 @@ export class ContactComponent implements OnInit {
 
   submitMessage() {
     if (this.postData.body && this.postData.category.name && this.postData.email && this.postData.contact) {
-      if (this.postData.phone && !this.abCepTelefon(this.postData.phone)) {
+      if (this.postData.phone && !this.validatePhone()) {
         this.alertService.warning(
           'Lütfen doğru bir telefon numarası giriniz'
         );
@@ -57,16 +57,18 @@ export class ContactComponent implements OnInit {
         return false;
       }
 
-      this.http.contact("contact/", this.postData).subscribe((reps) => {
-        console.log(reps);
+      this.http.contact('contact/', this.postData).subscribe(() => {
+        this.alertService.success(
+          'Mesajınız başarılı bir şekilde iletilmiştir'
+        );
       },
         (error: any) => {
-          console.log(error);
+          this.alertService.warning(error);
         });
     }
 
     else {
-      this.alertService.warning("Lütfen yıldızlı alanları doldurunuz")
+      this.alertService.warning('Lütfen yıldızlı alanları doldurunuz');
     }
 
   }

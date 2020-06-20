@@ -12,11 +12,12 @@ import { AlertService } from 'ngx-alerts';
 })
 export class EventComponent implements OnInit {
 
+  pageId: string = '';
   slug: string = "";
   event: any;
 
   constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private httpService: HttpService,
     private spinner: NgxSpinnerService,
     private seoService: SeoService,
@@ -28,8 +29,7 @@ export class EventComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getEvent();
-    this.seoService.updateTitle('Anasayfa');
-    this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
+    this.pageId = this.slug;
   }
 
   getEvent() {
@@ -37,6 +37,8 @@ export class EventComponent implements OnInit {
     const url = "events/" + this.slug;
     this.httpService.search(url).subscribe((response) => {
       this.event = response;
+      this.seoService.updateTitle(this.event.name);
+      this.seoService.updateMeta('description', this.event.description);
       this.spinner.hide();
     },
       (error: any) => {

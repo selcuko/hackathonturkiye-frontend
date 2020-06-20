@@ -17,6 +17,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 import { FormsModule } from '@angular/forms';
 
+import { DISQUS_SHORTNAME } from 'ngx-disqus';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { FormsModule } from '@angular/forms';
     HttpClientJsonpModule,
     AlertModule.forRoot({maxMessages: 1, timeout: 2000, position: 'left'})
   ],
-  providers: [],
+  providers: [
+    { provide: DISQUS_SHORTNAME, useValue: 'hackathon-turkiye' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

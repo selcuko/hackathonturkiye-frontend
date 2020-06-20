@@ -16,7 +16,7 @@
 <!-- Start About Us Section -->
 <section id="about-section" class="about-section">
   <div class="container">
-    <div *ngIf="list && list.length > 0">
+    <div *ngIf="list && !loading">
       <div *ngFor="let item of list.slice(0, 5);">
         <div class="row">
           <div class="col-md-5">
@@ -39,12 +39,6 @@
               <div class="pull-right social">
                 <li>
                   <a target="_blank"
-                    href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{item.slug}}/&amp;p[title]={{item.title}}&amp;p[images][0]={{item.thumbnail}}&amp;v=1">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a target="_blank"
                     href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{item.slug}}/">
                     <i class="fa fa-linkedin"></i>
                   </a>
@@ -55,11 +49,17 @@
                     <i class="fa fa-twitter"> </i>
                   </a>
                 </li>
+                <li>
+                  <a target="_blank"
+                    href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{item.slug}}/&amp;p[title]={{item.title}}&amp;p[images][0]={{item.thumbnail}}&amp;v=1">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
               </div>
             </ul>
 
             <p class="post-content">{{item.summary}}</p>
-            <a class="btn btn-primary readmore btn-lg pull-right" href="/blog/{{item.slug}}">Daha Fazla...</a>
+            <a class="btn btn-primary readmore btn-lg pull-right" href="/blog/{{item.slug}}">Daha Fazla</a>
 
           </div>
         </div>
@@ -67,6 +67,6 @@
     </div>
   </div>
 
-  <h3 class="text-danger text-center" *ngIf="!list || list.length === 0"> Kayıt Bulunamadı</h3>
+  <h3 class="text-danger text-center" *ngIf="!list && !loading"> Kayıt Bulunamadı</h3>
 
 </section>
