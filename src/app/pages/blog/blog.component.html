@@ -4,8 +4,7 @@
     <div class="row">
         <!-- Start Blog Body Section -->
         <div class="col-md-12 col-sm-12 col-xs-12 blog-body">
-            <!-- <div class="col-md-12 col-sm-12 col-xs-12 blog-border"> -->
-                <div *ngIf="list && list.length > 0">
+                <div *ngIf="list && !loading">
                     <div class="blog-post" *ngFor="let item of list">
                         <div class="post-img">
                             <img src="{{item.thumbnail}}" class="img-responsive" alt="Blog image">
@@ -20,11 +19,26 @@
                             <div class="tag-area" *ngFor="let tag of item.tags">
                                 <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
                             </div>
-                            <div class="pull-right social">
-                                <li><i class="fa fa-instagram"></i></li>
-                                <li><i class="fa fa-facebook"></i></li>
-                                <li><i class="fa fa-linkedin"></i></li>
-                                <li><i class="fa fa-twitter"></i></li>
+                            <div class="pull-right social">                                
+                                  <li>
+                                    <a target="_blank"
+                                      href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{item.slug}}/">
+                                      <i class="fa fa-linkedin"></i>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a target="_blank"
+                                      href="https://twitter.com/intent/tweet?text={{item.title}}+https://hackathonturkiye.com/blog/{{item.slug}}/">
+                                      <i class="fa fa-twitter"> </i>
+                                    </a>
+                                  </li>
+
+                                  <li>
+                                    <a target="_blank"
+                                      href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{item.slug}}/&amp;p[title]={{item.title}}&amp;p[images][0]={{item.thumbnail}}&amp;v=1">
+                                      <i class="fa fa-facebook"></i>
+                                    </a>
+                                  </li>
                             </div>
                         </ul>
 
@@ -34,76 +48,10 @@
                 </div>
 
 
-                <h3 class="text-danger text-center" *ngIf="!list || list.length === 0"> Kayıt Bulunamadı</h3>
+                <h3 class="text-danger text-center" *ngIf="!list && !loading "> Kayıt Bulunamadı</h3>
 
 
-            <!-- </div> -->
-            <!-- End Blog Body Section -->
-
-            <!-- <div class="col-md-3 sidebar right-sidebar">
-                <div class="widget widget-recent-post">
-
-                    <div class="section-heading-2">
-                        <h3 class="title-left-side">
-                            <span>En Çok</span>
-                            <br>
-                            <span>Okunanlar</span>
-                        </h3>
-                    </div>
-
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <img class="img-responsive" src="../../../assets/images/recent-post/post-02.jpg"
-                                    alt="...">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="img-responsive"><a href="#">Nulla facilisi integer lacinia sollicitudin massa</a>
-                            </h4>
-                            <ul>
-                                <li><a href="#">Super User</a></li>
-                                <li>15 October 2014</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <img class="img-responsive" src="../../../assets/images/recent-post/post-03.jpg"
-                                    alt="...">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading"><a href="#">Quisque cursus metus vitae pharetra auctor sem
-                                    massa</a></h4>
-                            <ul>
-                                <li><a href="#">Super User</a></li>
-                                <li>15 October 2014</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <img class="img-responsive" src="../../../assets/images/recent-post/post-04.jpg"
-                                    alt="...">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading"><a href="#">Praesent libero sed cursus ante dapibus diam</a></h4>
-                            <ul>
-                                <li><a href="#">Super User</a></li>
-                                <li>15 October 2014</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div> -->
+         
         </div>
 
     </div>

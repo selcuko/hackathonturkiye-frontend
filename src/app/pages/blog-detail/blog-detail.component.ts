@@ -11,9 +11,11 @@ import { AlertService } from 'ngx-alerts';
   styleUrls: ['./blog-detail.component.css']
 })
 export class BlogDetailComponent implements OnInit {
-
-  slug: string = "";
+  
+  pageId: string = '';
+  slug: string = '';
   blogdetail: any;
+  loading: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,27 +25,30 @@ export class BlogDetailComponent implements OnInit {
     private alertService: AlertService) {
 
     this.route.params.subscribe(url => {
-      this.slug = url['slug'] || "";
+      this.slug = url['slug'] || '';
     });
   }
 
   ngOnInit(): void {
     this.getBlogDetail();
+    this.pageId = this.slug;
   }
 
   getBlogDetail() {
     this.spinner.show();
-    const url = "posts/" + this.slug;
+    this.loading = true;
+    const url = 'posts/' + this.slug;
     this.httpService.search(url).subscribe((response) => {
       this.blogdetail = response;
-      this.spinner.hide();
-
       this.seoService.updateTitle(this.blogdetail.title);
       this.seoService.updateMeta('description', this.blogdetail.summary);
+      this.spinner.hide();
+      this.loading = false;
     },
       (error: any) => {
         this.alertService.danger(error);
         this.spinner.hide();
+        this.loading = false;
       });
   }
 
