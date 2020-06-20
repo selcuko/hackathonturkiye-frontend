@@ -9,17 +9,25 @@ import { Observable } from 'rxjs';
 export class HttpService {
   constructor(private http: HttpClient) { }
 
-  search(endpoint: any): Observable<any> {
-    const url = environment.apiUrl + endpoint;
+  search(endpoint: any, overrideUrl: boolean = false): Observable<any> {
+
+    let url = environment.apiUrl + endpoint;
+    if (overrideUrl) {
+      url = endpoint;
+    }
+
     return this.http.get(url);
   }
 
-  getHighlightPosts(endpoint: any): Observable<any> {
-    const url = environment.apiUrl + endpoint;
+  getHighlightPosts(endpoint: any, overrideUrl: boolean = false): Observable<any> {
+    let url = environment.apiUrl + endpoint;
+    if (overrideUrl) {
+      url = endpoint;
+    }
     return this.http.get(url);
   }
 
-  contact(endpoint: any, postData:any): Observable<any> {
+  contact(endpoint: any, postData: any): Observable<any> {
     const url = environment.apiUrl + endpoint;
     return this.http.post(url, postData);
   }

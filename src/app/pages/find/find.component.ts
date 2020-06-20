@@ -15,9 +15,7 @@ export class FindComponent implements OnInit {
   tags: [];
   status: string;
   events: Array<any>;
-  page: Int16Array;
-  pageSize: Int16Array;
-  total: Int16Array;
+  next: string;
   months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
   constructor(
@@ -138,6 +136,20 @@ export class FindComponent implements OnInit {
     return "future";
   }
 
+  loadMore(){
+    this.spinner.show();
+
+    this.httpService.search(this.next, true).subscribe((e) => {
+      this.next = e.next;
+      this.events.push(...e.results);
+      this.spinner.hide();
+    },
+      (error: any) => {
+        console.log(error);
+        this.spinner.hide();
+      });
+  }
+
   getEvents() {
     this.spinner.show();
     let url = "events?order_by=-starts_at&status=" + this.getStatus();
@@ -150,6 +162,7 @@ export class FindComponent implements OnInit {
     }
 
     this.httpService.search(url).subscribe((e) => {
+      this.next = e.next;
       this.events = e.results;
       this.spinner.hide();
     },
