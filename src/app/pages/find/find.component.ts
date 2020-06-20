@@ -15,6 +15,9 @@ export class FindComponent implements OnInit {
   tags: [];
   status: string;
   events: Array<any>;
+  page: Int16Array;
+  pageSize: Int16Array;
+  total: Int16Array;
   months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
   constructor(
@@ -89,6 +92,14 @@ export class FindComponent implements OnInit {
     return days;
   }
 
+  getDescription(description) {
+    if (description.length < 100) {
+      return description;
+    }
+
+    return description.substring(0, 97) + '...';
+  }
+
   getDateDiffHour(dateTime) {
     let date = new Date(dateTime);
     let now = new Date();
@@ -129,7 +140,7 @@ export class FindComponent implements OnInit {
 
   getEvents() {
     this.spinner.show();
-    let url = "events?status=" + this.getStatus();
+    let url = "events?order_by=-starts_at&status=" + this.getStatus();
 
     if (this.eventType && this.eventType !== "hepsi") {
       url += "&etype=" + this.eventType;
