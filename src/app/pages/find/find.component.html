@@ -31,7 +31,7 @@
           </select>
         </div>
         <div class="col-md-4">
-          <select class="form-control" [(ngModel)]="status"> 
+          <select class="form-control" [(ngModel)]="status">
             <option value="">Duruma Göre</option>
             <option value="yakinda">Yakında Başlayacaklar</option>
             <option value="devam-eden">Devam Edenler</option>
@@ -148,6 +148,10 @@
 
         </div>
       </div>
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-success" *ngIf="events && next" (click)="loadMore()">Daha Fazla Yükle</button>
     </div>
 
     <h3 class="text-danger text-center" *ngIf="!events || events.length === 0"> Kayıt Bulunamadı</h3>
