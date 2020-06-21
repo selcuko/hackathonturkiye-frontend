@@ -1,3 +1,7 @@
+h1 {
+  font-size: 28px;
+}
+
 ul {
   display: flex;
 }

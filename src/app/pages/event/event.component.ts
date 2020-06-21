@@ -38,7 +38,7 @@ export class EventComponent implements OnInit {
     this.httpService.search(url).subscribe((response) => {
       this.event = response;
       this.seoService.updateTitle(this.event.name);
-      this.seoService.updateMeta('description', this.event.description);
+      this.seoService.addMeta('description', this.event.description);
       this.spinner.hide();
     },
       (error: any) => {

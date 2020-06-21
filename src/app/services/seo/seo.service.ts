@@ -15,6 +15,10 @@ export class SeoService {
   }
 
   updateMeta(name: string, content: string) {
-    this.meta.updateTag({name, content});
+    this.meta.updateTag({ name: name, content: content });
+  }
+
+  addMeta(name: string, content: string) {
+    this.meta.addTag({ name: name, content: content });
   }
 }

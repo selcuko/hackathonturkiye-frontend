@@ -42,7 +42,7 @@ export class FindComponent implements OnInit {
   ngOnInit(): void {
     this.getEvents();
     // this.seoService.updateTitle('Anasayfa');
-    // this.seoService.updateMeta('description', 'Anasayfa açıklamasıdır.');
+    // this.seoService.addMeta('description', 'Anasayfa açıklamasıdır.');
   }
 
 

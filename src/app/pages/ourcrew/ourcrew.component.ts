@@ -11,8 +11,8 @@ export class OurcrewComponent implements OnInit {
   constructor(private seoService: SeoService) { }
 
   ngOnInit(): void {
-    this.seoService.updateTitle('Blog');
-    this.seoService.updateMeta('description', 'Blog açıklamasıdır.');
+    this.seoService.updateTitle('Hackathon Türkiye Ekibi');
+    this.seoService.addMeta('description', 'Hackathon Türkiye topluluğunda aktif olarak görev alan herkesin profiline erişebilirsiniz.');
   }
 
 }
