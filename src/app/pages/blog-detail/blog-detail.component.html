@@ -11,40 +11,46 @@
                         <span class="time"> {{blogdetail.time}} Dk</span>
 
                         <ul class="post-meta">
-                            <li><i class="fa fa-clock-o"></i>October 25 2014</li>
+                            <li><i class="fa fa-clock-o"></i>{{blogdetail.published_at | date:"dd/MM/yyyy"}}</li>
                             <li><i class="fa fa-user">
                                 </i><a
                                     href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.first_name}}</a>
                             </li>
                             <div class="tag-area" *ngFor="let tag of blogdetail.tags">
-                                <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
+                                <li><i class="fa fa-tags"></i><a href="/etiket/{{tag.slug}}">{{tag.name}}</a></li>
                             </div>
-                            <h1 class="post-title">{{blogdetail.title}}<span class="time"> {{blogdetail.time}}
-                                    Dk</span> </h1>
-    
-                            <ul class="post-meta">
-                                <li><i class="fa fa-clock-o"></i>{{blogdetail.published_at | date:"dd/MM/yyyy"}}</li>
-                                <li><i class="fa fa-user">     
-                                </i><a href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.first_name}}</a></li>
-                                <div class="tag-area" *ngFor="let tag of blogdetail.tags">
-                                    <li><i class="fa fa-tags"></i><a href="/etiket/{{tag.slug}}">{{tag.name}}</a></li>
-                                </div>
-                                <div class="pull-right social">
-                                    <li><i class="fa fa-instagram"></i></li>
-                                    <li><i class="fa fa-facebook"></i></li>
-                                    <li><i class="fa fa-linkedin"></i></li>
-                                    <li><i class="fa fa-twitter"></i></li>
-                                </div>
-                            </ul>
-                            <p class="post-content" [innerHTML]="blogdetail.body"></p>
-                        </div>
-                        <!-- Start Blog Author Section -->
+                            <div class="pull-right social">
+                                <li>
+                                    <a target="_blank"
+                                        href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{slug}}/">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://twitter.com/intent/tweet?text={{blogdetail.title}}+https://hackathonturkiye.com/blog/{{slug}}/">
+                                        <i class="fa fa-twitter"> </i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank"
+                                        href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{slug}}/&amp;p[title]={{blogdetail.title}}&amp;p[images][0]={{blogdetail.thumbnail}}&amp;v=1">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                            </div>
+
+                        </ul>
+                        <p class="post-content" [innerHTML]="blogdetail.body"></p>
+                    </div>
+                    <!-- Start Blog Author Section -->
                     <div class="blog-author">
                         <h3>Yazar Hakkında</h3>
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
-                                    <img class="media-object" src="{{blogdetail.author.profile.pic}}" alt="{{blogdetail.author.username}}">
+                                    <img class="media-object" src="{{blogdetail.author.profile.pic}}"
+                                        alt="{{blogdetail.author.username}}">
                                 </a>
                             </div>
                             <div class="media-body">
