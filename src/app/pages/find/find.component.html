@@ -75,7 +75,11 @@
 
               <div class="find-tag">
                 <div class="tagcloud" *ngIf="xathon.tags">
-                  <a ngHref="/tag/eventTag.slug" *ngFor="let eventTag of xathon.tags;">{{eventTag.name}}</a>
+                  <div *ngFor="let eventTag of xathon.tags;">
+                    <a href="/etiket/{{eventTag.slug}}">{{eventTag.name}}</a>
+                    
+                  </div>
+                
                 </div>
               </div>
               <div class="find-text">

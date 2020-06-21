@@ -92,6 +92,10 @@ h2 {
   text-transform: uppercase;
 }
 
+.tagcloud {
+  display: flex;
+}
+
 .tagcloud a {
   display: inline-block;
   color: white;

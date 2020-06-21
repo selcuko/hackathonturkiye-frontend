@@ -1,0 +1,43 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <ul class="nav nav-pills nav-justified">
+            <li class="active"><a data-toggle="pill" href="#find">Yarışma</a></li>
+            <li><a data-toggle="pill" href="#blog">Blog</a></li>
+          </ul>
+    </div>
+</div>
+<div class="container">
+              <div class="tab-content">
+                <div id="find" class="tab-pane fade in active">
+                        <div class="col-md-4" *ngFor="let item of crosses.in_events">            
+                            <div class="search-card">
+                                <img src="{{item.thumbnail}}"
+                                    class="img img-responsive">
+                                <div class="profile-name">JOHN DOE</div>
+                                <div class="profile-username">@johndoesurname</div>
+                                <div class="profile-go">
+                                    <i class="fa fa-forward"></i>
+                                </div>
+                            </div>
+                        </div>
+                    <h3 class="text-danger text-center" *ngIf="!crosses.in_events"> Kayıt Bulunamadı</h3>
+                </div>
+                <div id="blog" class="tab-pane fade">
+                        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let item of crosses.in_posts">            
+                            <div class="search-card">
+                                <img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                                    class="img img-responsive">
+                                <div class="profile-name">{{item.title}}</div>
+                                <div class="profile-username">@{{item.author.username}}</div>
+                                <div class="profile-go">
+                                    <i class="fa fa-forward"></i>
+                                </div>
+                            </div>
+                        </div>
+                    <h3 class="text-danger text-center" *ngIf="!crosses.in_posts"> Kayıt Bulunamadı</h3>
+                </div>
+               
+              </div>
+        
+   
+</div>
