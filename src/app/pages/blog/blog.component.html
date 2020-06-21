@@ -1,57 +1,108 @@
-<!-- Start Blog Page Section -->
-<section class="blog">
+<section id="blog-section">
   <div class="container">
     <div class="row">
-      <!-- Start Blog Body Section -->
-      <div class="col-md-12 col-sm-12 col-xs-12 blog-body">
-        <div *ngIf="list">
-          <div class="blog-post" *ngFor="let item of list">
+      <div class="col-lg-8">
+        <div class="row">
+          <div *ngIf="list">
+            <div class="col-lg-6 col-md-6" *ngFor="let item of list">
+              <aside>
+                <div class="content-header">
+                  <div class="text-center">
+                    <h3><a href="/blog/{{item.slug}}">{{item.title}}</a> </h3>
+                  </div>
+                </div>
+                <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.title}}">
+                <div class="content-title">
+                  <div class="text-center">
+                    <p>{{item.summary}}</p>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <img class="user-small-img"
+                    src="{{item.author.profile.pic}}">
+                  <span><a class="author"
+                      href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></span>
+                  <span class="time"><i class="fa fa-clock-o"></i>{{item.time}} Dk</span>
+                  <span class="pull-right date"><i class="fa fa-calendar"></i>{{item.published_at | date:"dd/MM/yyyy"}}</span>
+                </div>
+              </aside>
+            </div>
+          </div>
+          <h3 class="text-danger text-center" *ngIf="!list && !loading "> Kayıt Bulunamadı</h3>
 
-            <h2 class="post-title"><a href="/blog/{{item.slug}}">{{item.title}}</a></h2>
-            <span class="time"> {{item.time}} Dk</span>
+        </div>
+      </div>
 
-            <ul class="post-meta">
-              <li><i class="fa fa-clock-o"></i>October 25 2014</li>
-              <li><i class="fa fa-user">
-                </i><a href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></li>
-              <div class="tag-area" *ngFor="let tag of item.tags">
-                <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
-              </div>
-              <div class="pull-right social">
-                <li>
-                  <a target="_blank"
-                    href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{item.slug}}/">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a target="_blank"
-                    href="https://twitter.com/intent/tweet?text={{item.title}}+https://hackathonturkiye.com/blog/{{item.slug}}/">
-                    <i class="fa fa-twitter"> </i>
-                  </a>
-                </li>
+      <div class="col-lg-4">
+        <div class="widget-sidebar">
+          <h2 class="title-widget-sidebar">// EN SON OKUNANLAR</h2>
+          <div class="content-widget-sidebar">
+            <ul>
+              <li class="recent-post">
+                <div class="post-img">
+                  <img
+                    src="https://lh3.googleusercontent.com/-ndZJOGgvYQ4/WM1ZI8dH86I/AAAAAAAADeo/l67ZqZnRUO8QXIQi38bEXuxqHfVX0TV2gCJoC/w424-h318-n-rw/thumbnail8.jpg"
+                    class="img-responsive">
+                </div>
+                <a href="#">
+                  <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                </a>
+                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+              </li>
+              <hr>
 
-                <li>
-                  <a target="_blank"
-                    href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{item.slug}}/&amp;p[title]={{item.title}}&amp;p[images][0]={{item.thumbnail}}&amp;v=1">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-              </div>
+              <li class="recent-post">
+                <div class="post-img">
+                  <img
+                    src="https://lh3.googleusercontent.com/-ojLI116-Mxk/WM1ZIwdnuwI/AAAAAAAADeo/4K6VpwIPSfgsmlXJB5o0N8scuI3iW4OpwCJoC/w424-h318-n-rw/thumbnail6.jpg"
+                    class="img-responsive">
+                </div>
+                <a href="#">
+                  <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                </a>
+                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+              </li>
+              <hr>
+
+              <li class="recent-post">
+                <div class="post-img">
+                  <img
+                    src="https://lh3.googleusercontent.com/-TrK1csbtHRs/WM1ZI1SIUNI/AAAAAAAADeo/OkiUjuad6skWl9ugxbiIA_436OwsWKBNgCJoC/w424-h318-n-rw/thumbnail3.jpg"
+                    class="img-responsive">
+                </div>
+                <a href="#">
+                  <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                </a>
+                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+              </li>
+              <hr>
+
+              <li class="recent-post">
+                <div class="post-img">
+                  <img
+                    src="https://lh3.googleusercontent.com/-UKfIhJSBW9M/WM1ZI8ou34I/AAAAAAAADeo/vlLGY29147AYLaxUW29ZXJlun115BhkhgCJoC/w424-h318-n-rw/thumbnail7.jpg"
+                    class="img-responsive">
+                </div>
+                <a href="#">
+                  <h5>Excepteur sint occaecat cupi non proident laborum.</h5>
+                </a>
+                <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+              </li>
+
+
             </ul>
-
-            <p class="post-content">{{item.summary}}</p>
-            <a href="/blog/{{item.slug}}" class="btn btn-primary readmore pull-right">Daha Fazla</a>
           </div>
         </div>
 
-        <h3 class="text-danger text-center" *ngIf="!list && !loading "> Kayıt Bulunamadı</h3>
+       
+
       </div>
 
       <div class="col-md-12 col-sm-12 col-xs-12 text-center m-t-3">
         <button class="btn btn-success" *ngIf="list && next" (click)="loadMore()">Daha Fazla Yükle</button>
       </div>
+
     </div>
   </div>
+
 </section>
-<!-- End Blog Page Section -->

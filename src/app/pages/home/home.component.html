@@ -34,7 +34,7 @@
               <li><i class="fa fa-user">
                 </i><a href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></li>
               <div class="tag-area" *ngFor="let tag of item.tags">
-                <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
+                <li><i class="fa fa-tags"></i><a href="/etiket/{{tag.slug}}">{{tag.name}}</a></li>
               </div>
               <div class="pull-right social">
                 <li>
