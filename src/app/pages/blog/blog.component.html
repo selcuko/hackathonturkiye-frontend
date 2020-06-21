@@ -6,11 +6,9 @@
       <div class="col-md-12 col-sm-12 col-xs-12 blog-body">
         <div *ngIf="list">
           <div class="blog-post" *ngFor="let item of list">
-            <div class="post-img">
-              <img src="{{item.thumbnail}}" class="img-responsive" alt="Blog image">
-            </div>
-            <h1 class="post-title"><a href="/blog/{{item.slug}}">{{item.title}}</a> <span class="time"> {{item.time}}
-                Dk</span> </h1>
+
+            <h2 class="post-title"><a href="/blog/{{item.slug}}">{{item.title}}</a></h2>
+            <span class="time"> {{item.time}} Dk</span>
 
             <ul class="post-meta">
               <li><i class="fa fa-clock-o"></i>October 25 2014</li>
