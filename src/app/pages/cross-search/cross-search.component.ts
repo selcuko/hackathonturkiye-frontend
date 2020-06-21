@@ -43,5 +43,6 @@ export class CrossSearchComponent implements OnInit {
         this.spinner.hide();
       });
   }
+  
 
 }

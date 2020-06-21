@@ -7,37 +7,43 @@
     </div>
 </div>
 <div class="container">
-              <div class="tab-content">
-                <div id="find" class="tab-pane fade in active">
-                        <div class="col-md-4" *ngFor="let item of crosses.in_events">            
-                            <div class="search-card">
-                                <img src="{{item.thumbnail}}"
-                                    class="img img-responsive">
-                                <div class="profile-name">JOHN DOE</div>
-                                <div class="profile-username">@johndoesurname</div>
-                                <div class="profile-go">
-                                    <i class="fa fa-forward"></i>
-                                </div>
-                            </div>
-                        </div>
-                    <h3 class="text-danger text-center" *ngIf="!crosses.in_events"> Kayıt Bulunamadı</h3>
+  <div class="row">
+    <div class="tab-content">
+      <div id="find" class="tab-pane fade in active">
+        <!-- <div *ngIf="list">
+          <div class="col-lg-6 col-md-6" *ngFor="let item of list">
+            <aside>
+              <div class="content-header">
+                <div class="text-center">
+                  <h3><a href="/blog/{{item.slug}}">{{item.title}}</a> </h3>
                 </div>
-                <div id="blog" class="tab-pane fade">
-                        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let item of crosses.in_posts">            
-                            <div class="search-card">
-                                <img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
-                                    class="img img-responsive">
-                                <div class="profile-name">{{item.title}}</div>
-                                <div class="profile-username">@{{item.author.username}}</div>
-                                <div class="profile-go">
-                                    <i class="fa fa-forward"></i>
-                                </div>
-                            </div>
-                        </div>
-                    <h3 class="text-danger text-center" *ngIf="!crosses.in_posts"> Kayıt Bulunamadı</h3>
-                </div>
-               
               </div>
+              <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.title}}">
+              <div class="content-title">
+                <div class="text-center">
+                  <p>{{item.summary}}</p>
+                </div>
+              </div>
+              <div class="content-footer">
+                <img class="user-small-img" src="{{item.author.profile.pic}}">
+                <span><a class="author"
+                    href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></span>
+                <span class="time"><i class="fa fa-clock-o"></i>{{item.time}} Dk</span>
+                <span class="pull-right date"><i
+                    class="fa fa-calendar"></i>{{item.published_at | date:"dd/MM/yyyy"}}</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <h3 class="text-danger text-center" *ngIf="!list && !loading "> Kayıt Bulunamadı</h3> -->
+      </div>
+      <div id="blog" class="tab-pane fade">
+          
+      </div>
+     
+    </div>
+  </div>
+             
         
    
 </div>

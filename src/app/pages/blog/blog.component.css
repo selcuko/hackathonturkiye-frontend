@@ -3,124 +3,147 @@
   margin-bottom: 80px;
 }
 
-.content-title {
-  padding: 5px;
-  background-color: #fff;
-}
-
-.content-header {
-  background-color: #4392F1;
-  padding: 10px;
-  position: relative;
-}
-
-.content-header h3 a {
-  color: white;
-  text-decoration: none;
-  transition: 0.5s;
-}
-
-.content-header h3 a:hover {
-  text-decoration: underline;
-}
-
-.content-footer {
-  background-color: #4392F1;
-  padding: 10px;
-  position: relative;
-  color: white;
-}
-
-aside {
-  margin-top: 30px;
+.card {
+  background-color: #FFF;
+  margin-bottom: 4em;
+  margin-top: 1em;
   -webkit-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
   -moz-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
   box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
 }
 
-aside .content-footer>img {
-  width: 33px;
-  height: 33px;
-  border-radius: 100%;
-  margin-right: 10px;
-  border: 2px solid #fff;
+/* Image on the left side */
+.thumbnail {
+  float: left;
+  position: relative;
+  left: 10px;
+  top: -30px;
+  height: 210px;
+  width: 320px;
+  border-radius: 3%;
+  overflow: hidden;
 }
 
-.user-small-img {
-  cursor: pointer;
+/*object-fit: cover; */
+/*object-position: center; */
+img.left {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Right side of the card */
+.right {
+  margin-left: 60%;
+  margin-right: 15px;
+}
+
+h1 {
+  padding-top: 15px;
+  font-size: 1.3rem;
+  color: #4B4B4B;
 }
 
 .author {
-  font-size: 1em;
+  background-color: #9ECAFF;
+  height: 45px;
+  width: 125px;
+  float: left;
+  margin-top: 4px;
+  border-radius: 20px;
+
+}
+
+.author>img {
+  padding-top: 5px;
+  margin-left: 10px;
+  float: left;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+}
+
+h2 {
+  padding-top: 15px;
+  margin-left: 5em;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.separator {
+  margin-top: 2em;
+  border: 1px solid #C3C3C3;
+}
+
+p {
+  padding-top: 10px;
+  font-size: 1.3rem;
+  color: #4B4B4B;
+}
+
+/* DATE of release */
+h5 {
+  font-size: 6rem;
+  margin-left: 0.2em;
+  color: #C3C3C3;
+}
+
+h6 {
+  font-size: 2rem;
+  margin-left: 0.8em;
+  padding-bottom: 1em;
+  color: #C3C3C3;
+}
+
+/* Floating action button */
+.fab {
+  position: absolute;
+  right: 50px;
+  bottom: 28px;
+  box-sizing: border-box;
+  padding-top: 18px;
+  background-color: #1875D0;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+}
+
+.fab i {
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .right {
+    margin-left: 7%;
+  }
+}
+
+.author_link {
   color: white;
 }
 
-.author:hover {
-  text-decoration: underline;
-}
-
-.widget-sidebar {
-  background-color: #fff;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-.title-widget-sidebar {
-  font-size: 14pt;
-  border-bottom: 2px solid #e5ebef;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  margin-top: 0px;
-}
-
-.title-widget-sidebar:after {
-  border-bottom: 2px solid #4392F1;
-  width: 150px;
-  display: block;
-  position: absolute;
-  content: '';
-  padding-bottom: 10px;
-}
-
-.recent-post {
-  width: 100%;
-  height: 80px;
-  list-style-type: none;
-}
-
-.post-img img {
-  width: 100px;
-  height: 70px;
-  float: left;
-  margin-right: 15px;
-  border: 3px solid #4392F1;
-  transition: 0.5s;
-}
-
-.recent-post a {
-  text-decoration: none;
-  color: #34495E;
-  transition: 0.5s;
-}
-
-.post-img,
-.recent-post a:hover {
+.author_link:hover {
   color: #4392F1;
   text-decoration: underline;
 }
 
-.time {
-  margin-left: 3em;
+.title:hover {
+  text-decoration: underline;
 }
 
 .date {
-  margin-top: 0.4em;
-}
-
-.date i {
-  margin-right: 0.2em;
-}
-
-.time i {
-  margin-right: 0.2em;
+  font-size: 11.2px;
+  margin-left: 12em;
+  display: block;
+  margin-top: 13px !important;
 }
