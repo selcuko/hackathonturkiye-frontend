@@ -13,11 +13,11 @@
                                     Dk</span> </h1>
     
                             <ul class="post-meta">
-                                <li><i class="fa fa-clock-o"></i>October 25 2014</li>
+                                <li><i class="fa fa-clock-o"></i>{{blogdetail.published_at | date:"dd/MM/yyyy"}}</li>
                                 <li><i class="fa fa-user">     
                                 </i><a href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.first_name}}</a></li>
                                 <div class="tag-area" *ngFor="let tag of blogdetail.tags">
-                                    <li><i class="fa fa-tags"></i><a href="#">{{tag.name}}</a></li>
+                                    <li><i class="fa fa-tags"></i><a href="/etiket/{{tag.slug}}">{{tag.name}}</a></li>
                                 </div>
                                 <div class="pull-right social">
                                     <li><i class="fa fa-instagram"></i></li>
@@ -34,7 +34,7 @@
                         <div class="media">
                             <div class="media-left">
                                 <a href="#">
-                                    <img class="media-object" src="../../../assets/images/user.png" alt="...">
+                                    <img class="media-object" src="{{blogdetail.author.profile.pic}}" alt="{{blogdetail.author.username}}">
                                 </a>
                             </div>
                             <div class="media-body">

@@ -1,0 +1,89 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+input,
+p,
+a {
+    margin: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+}
+
+.search-card {
+    max-width: 300px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.search-card img {
+    transition: all linear 0.25s;
+}
+
+.search-card .profile-name {
+    position: absolute;
+    left: 30px;
+    bottom: 70px;
+    font-size: 30px;
+    color: #FFF;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
+
+.search-card .profile-go {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #FFF;
+    transition: all linear 0.25s;
+}
+
+.search-card .profile-username {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: #FFF;
+    font-size: 13px;
+    transition: all linear 0.25s;
+}
+
+
+
+.search-card:hover img {
+    filter: grayscale(100%);
+}
+
+.search-card:hover .profile-name {
+    bottom: 80px;
+}
+
+.search-card:hover .profile-username {
+    bottom: 60px;
+}
+
+.search-card:hover .profile-go {
+    right: 40px;
+}
+
+ul {
+    margin-top: 5rem;
+}
+
+ul li {
+    background-color: lightblue;
+}
