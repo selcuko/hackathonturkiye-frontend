@@ -41,7 +41,7 @@ export class BlogDetailComponent implements OnInit {
     this.httpService.search(url).subscribe((response) => {
       this.blogdetail = response;
       this.seoService.updateTitle(this.blogdetail.title);
-      this.seoService.updateMeta('description', this.blogdetail.summary);
+      this.seoService.addMeta('description', this.blogdetail.summary);
       this.spinner.hide();
       this.loading = false;
     },
