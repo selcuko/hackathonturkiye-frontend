@@ -41,7 +41,7 @@
                             </div>
 
                         </ul>
-                        <p class="post-content" [innerHTML]="blogdetail.body"></p>
+                        <p class="post-content" [innerHTML]="blogdetail.body | safe: 'html'"></p>
                     </div>
                     <!-- Start Blog Author Section -->
                     <div class="blog-author">
