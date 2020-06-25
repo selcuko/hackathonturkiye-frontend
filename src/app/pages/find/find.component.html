@@ -76,7 +76,7 @@
               <div class="find-tag">
                 <div class="tagcloud" *ngIf="xathon.tags">
                   <div *ngFor="let eventTag of xathon.tags;">
-                    <a href="/etiket/{{eventTag.slug}}">{{eventTag.name}}</a>
+                    <a routerLink="/etiket/{{eventTag.slug}}">{{eventTag.name}}</a>
                     
                   </div>
                 
@@ -92,7 +92,7 @@
                   href="{{xathon.origin_url}}">Şimdi Başvur</a>
 
                 <a *ngIf="xathon.has_details" class="btn btn-primary readmore btn-lg"
-                  href="/etkinlik/{{xathon.slug}}">Detaylar</a>
+                routerLink="/etkinlik/{{xathon.slug}}">Detaylar</a>
 
                 <i class="fa fa-trophy fa-2x find-trophy">
                   <span class="dolar" *ngIf="xathon.prize">

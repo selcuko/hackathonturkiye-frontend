@@ -7,17 +7,18 @@
                 <div *ngIf="blogdetail && !loading">
                     <div class="blog-post">
 
-                        <h1 class="post-title">{{blogdetail.title}}</h1>
-                        <span class="time"> {{blogdetail.time}} Dk</span>
+                        <h1 class="post-title">{{blogdetail.title}} <span class="time"> {{blogdetail.time}} Dk</span>
+                        </h1>
+
 
                         <ul class="post-meta">
                             <li><i class="fa fa-clock-o"></i>{{blogdetail.published_at | date:"dd/MM/yyyy"}}</li>
                             <li><i class="fa fa-user">
                                 </i><a
-                                    href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.first_name}}</a>
+                                href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.username}}</a>
                             </li>
                             <div class="tag-area" *ngFor="let tag of blogdetail.tags">
-                                <li><i class="fa fa-tags"></i><a href="/etiket/{{tag.slug}}">{{tag.name}}</a></li>
+                                <li><i class="fa fa-tags"></i><a routerLink="/etiket/{{tag.slug}}">{{tag.name}}</a></li>
                             </div>
                             <div class="pull-right social">
                                 <li>
@@ -48,15 +49,13 @@
                         <h3>Yazar Hakkında</h3>
                         <div class="media">
                             <div class="media-left">
-                                <a href="#">
                                     <img class="media-object" src="{{blogdetail.author.profile.pic}}"
                                         alt="{{blogdetail.author.username}}">
-                                </a>
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">{{blogdetail.author.first_name}}
                                     {{blogdetail.author.last_name}}
-                                    <span class="pull-right ">
+                                    <span class="pull-right">
                                         <ul class="post-meta">
                                             <div class="social">
                                                 <li *ngIf="blogdetail.author.profile.instagram"><a

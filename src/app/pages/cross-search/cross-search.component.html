@@ -1,17 +1,17 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="row">
-        <ul class="nav nav-pills nav-justified">
-            <li class="active"><a data-toggle="pill" href="#find">Yarışma</a></li>
-            <li><a data-toggle="pill" href="#blog">Blog</a></li>
-          </ul>
-    </div>
+  <div class="row">
+    <ul class="nav nav-pills nav-justified">
+      <li class="active"><a data-toggle="pill" href="#blog">Blog</a></li>
+      <li><a data-toggle="pill" href="#find">Yarışma</a></li>
+    </ul>
+  </div>
 </div>
 <div class="container">
   <div class="row">
     <div class="tab-content">
-      <div id="find" class="tab-pane fade in active">
-        <!-- <div *ngIf="list">
-          <div class="col-lg-6 col-md-6" *ngFor="let item of list">
+      <div id="blog" class="tab-pane fade in active">
+        <div *ngIf="crossesPost">
+          <div class="col-lg-6 col-md-6" *ngFor="let item of crossesPost">
             <aside>
               <div class="content-header">
                 <div class="text-center">
@@ -25,9 +25,11 @@
                 </div>
               </div>
               <div class="content-footer">
-                <img class="user-small-img" src="{{item.author.profile.pic}}">
-                <span><a class="author"
-                    href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></span>
+                <div class="author-content">
+                  <img class="user-small-img" src="{{item.author.profile.pic}}">
+                  <span><a class="author"
+                      href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></span>
+                </div>
                 <span class="time"><i class="fa fa-clock-o"></i>{{item.time}} Dk</span>
                 <span class="pull-right date"><i
                     class="fa fa-calendar"></i>{{item.published_at | date:"dd/MM/yyyy"}}</span>
@@ -35,15 +37,44 @@
             </aside>
           </div>
         </div>
-        <h3 class="text-danger text-center" *ngIf="!list && !loading "> Kayıt Bulunamadı</h3> -->
+        <h3 class="text-danger text-center" *ngIf="!crossesPost"> Kayıt Bulunamadı</h3>
       </div>
-      <div id="blog" class="tab-pane fade">
-          
+      <div id="find" class="tab-pane fade">
+        <div *ngIf="crossesEvents">
+          <div class="col-lg-6 col-md-6" *ngFor="let item of crossesEvents">
+            <aside>
+              <div class="content-header">
+                <div class="text-center">
+                  <h3>
+                    <a *ngIf="!item.has_details" target="_blank" class="btn btn-primary readmore btn-lg"
+                      href="{{item.origin_url}}">{{item.name}}</a>
+                    <a *ngIf="item.has_details" class="btn btn-primary readmore btn-lg"
+                      routerLink="/etkinlik/{{item.slug}}">{{item.name}}</a>
+                  </h3>
+                </div>
+              </div>
+              <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.name}}">
+              <div class="content-title">
+                <div class="text-center">
+                  <p>{{item.description}}</p>
+                </div>
+              </div>
+              <div class="content-footer event-footer-content">
+                <div class="author-content">
+                  <span>{{item.location}}</span>
+                </div>
+                <span class="pull-right date">{{getDateTurkish(item.starts_at)}} -
+                  {{getDateTurkish(item.ends_at)}}</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <h3 class="text-danger text-center nf" *ngIf="!crossesEvents"> Kayıt Bulunamadı</h3>
       </div>
-     
+
     </div>
   </div>
-             
-        
-   
+
+
+
 </div>

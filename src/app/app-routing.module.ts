@@ -5,7 +5,6 @@ import { NotfoundComponent } from "./pages/notfound/notfound.component";
 const routes: Routes = [
   { path: 'ana-sayfa', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
   { path: 'ekibimiz', loadChildren: () => import('./pages/ourcrew/ourcrew.module').then(m => m.OurcrewModule) },
-  { path: 'basari-hikayeleri', loadChildren: () => import('./pages/brands/brands.module').then(m => m.BrandsModule) },
   { path: 'blog', loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule) },
   { path: 'blog/?author__username:user', loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule) },
   { path: 'iletisim', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },

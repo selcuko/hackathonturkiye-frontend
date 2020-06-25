@@ -5,10 +5,10 @@
         <div class="card">
           <div class="thumbnail"><img class="left" src="{{item.thumbnail}}" alt="{{item.title}}" /></div>
           <div class="right">
-            <h1><a class="title" href="/blog/{{item.slug}}">{{item.title}}</a></h1>
+            <h1><a class="title"  routerLink="/blog/{{item.slug}}">{{item.title}}</a></h1>
             <div class="author"><img src="{{item.author.profile.pic}}" />
               <h2><a class="author_link"
-                  href="/blog/?author__username={{item.author.username}}">{{item.author.username}}</a></h2>
+                href="/blog/?author__username={{item.author.username}}">{{item.author.username}}</a></h2>
             </div>
             <span class="date"><i class="fa fa-calendar"></i>{{item.published_at | date:"dd/MM/yyyy"}}</span>
             <div class="separator"></div>
@@ -16,7 +16,7 @@
           </div>
           <h5>{{item.time}}</h5>
           <h6>DAKİKA</h6>
-          <div class="fab"><a href="/blog/{{item.slug}}"><i class="fa fa-arrow-right fa-2x"> </i></a></div>
+          <div class="fab"><a routerLink="/blog/{{item.slug}}"><i class="fa fa-arrow-right fa-2x"> </i></a></div>
         </div>
       </div>
       <div class="col-md-12 col-sm-12 col-xs-12 text-center m-t-3">

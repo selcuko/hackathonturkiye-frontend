@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
+import { AlertService } from 'ngx-alerts';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,9 @@ import * as $ from 'jquery';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  searchQuery: string = '';
 
-  constructor() { }
+  constructor(private router: Router, private alertService: AlertService) { }
 
   ngOnInit(): void {
     $(document).ready(() => {
@@ -39,6 +42,15 @@ export class HeaderComponent implements OnInit {
       $(".nav > li.drop > ul.dropdown ul").addClass("sup-dropdown");
 
     })
+  }
+
+  onClick() {
+    if(this.searchQuery === '' || this.searchQuery.length < 3) {
+      this.alertService.danger('Lütfen arama yapabilmek için en az 3 harf giriniz');
+    }
+    else {
+      this.router.navigate(['/etiket/' + this.searchQuery]);
+    }
   }
 
 }

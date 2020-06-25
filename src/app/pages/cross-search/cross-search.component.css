@@ -1,4 +1,3 @@
-
 h1,
 h2,
 h3,
@@ -9,152 +8,168 @@ div,
 input,
 p,
 a {
-    margin: 0px;
+  margin: 0px;
 }
 
 a,
 a:hover,
 a:focus {
-    color: inherit;
+  color: inherit;
 }
 
 ul {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 ul li {
-    background-color: lightblue;
+  background-color: white;
 }
 
-#find, #blog {
+li a {
+  border-radius: 0px;
+}
+
+#find,
+#blog {
   min-height: 55vh;
 }
 
-
+.main {
+  margin-bottom: 3em;
+}
 
 .content-title {
-    padding: 5px;
-    background-color: #fff;
-  }
-  
-  .content-header {
-    background-color: #4392F1;
-    padding: 10px;
-    position: relative;
-  }
-  
-  .content-header h3 a {
-    color: white;
-    text-decoration: none;
-    transition: 0.5s;
-    font-size: 20px;
-  }
-  
-  .content-header h3 a:hover {
-    text-decoration: underline;
-  }
-  
-  .content-footer {
-    background-color: #4392F1;
-    padding: 10px;
-    position: relative;
-    color: white;
-  }
-  
-  aside {
-    margin-top: 30px;
-    -webkit-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
-    -moz-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
-    box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
-  }
-  
-  aside .content-footer>img {
-    width: 33px;
-    height: 33px;
-    border-radius: 100%;
-    margin-right: 10px;
-    border: 2px solid #fff;
-  }
-  
-  .user-small-img {
-    cursor: pointer;
-  }
-  
-  .author {
-    font-size: 1em;
-    color: white;
-  }
-  
-  .author:hover {
-    text-decoration: underline;
-  }
-  
-  .widget-sidebar {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 30px;
-  }
-  
-  .title-widget-sidebar {
-    font-size: 14pt;
-    border-bottom: 2px solid #e5ebef;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    margin-top: 0px;
-  }
-  
-  .title-widget-sidebar:after {
-    border-bottom: 2px solid #4392F1;
-    width: 150px;
-    display: block;
-    position: absolute;
-    content: '';
-    padding-bottom: 10px;
-  }
-  
-  .recent-post {
-    width: 100%;
-    height: 80px;
-    list-style-type: none;
-  }
-  
-  .post-img img {
-    width: 100px;
-    height: 70px;
-    float: left;
-    margin-right: 15px;
-    border: 3px solid #4392F1;
-    transition: 0.5s;
-  }
-  
-  .recent-post a {
-    text-decoration: none;
-    color: #34495E;
-    transition: 0.5s;
-  }
-  
-  .post-img,
-  .recent-post a:hover {
-    color: #4392F1;
-    text-decoration: underline;
-  }
-  
-  .time {
-    margin-left: 3em;
-  }
-  
-  .date {
-    margin-top: 0.4em;
-  }
-  
-  .date i {
-    margin-right: 0.2em;
-  }
-  
-  .time i {
-    margin-right: 0.2em;
-  }
-  
-  .m-t-3 {
-    margin-top: 3%;
-  }
+  padding: 5px;
+  background-color: #fff;
+}
+
+.content-header {
+  background-color: #4392F1;
+  padding: 10px;
+  position: relative;
+}
+
+.content-header h3 a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.content-header h3 a:hover {
+  text-decoration: underline;
+}
+
+.content-footer {
+  background-color: #4392F1;
+  padding: 10px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+aside {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  -webkit-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
+  -moz-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
+  box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
+}
+
+.nf {
+  line-height: 5em;
+}
+
+.event-footer-content {
+  padding: 20px;
+  line-height: 1px;
+}
+
+.event-footer-content .author-content {
+  margin-top: 0;
+}
+
+.author-content {
+  float: left;
+  margin-top: -5px;
+}
+
+.user-small-img {
+  cursor: pointer;
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  margin-right: 10px;
+  border: 2px solid #fff;
+}
+
+.author {
+  font-size: 1em;
+  color: white;
+}
+
+.author:hover {
+  text-decoration: underline;
+}
+
+.widget-sidebar {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.title-widget-sidebar {
+  font-size: 14pt;
+  border-bottom: 2px solid #e5ebef;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  margin-top: 0px;
+}
+
+.title-widget-sidebar:after {
+  border-bottom: 2px solid #4392F1;
+  width: 150px;
+  display: block;
+  position: absolute;
+  content: '';
+  padding-bottom: 10px;
+}
+
+.recent-post {
+  width: 100%;
+  height: 80px;
+  list-style-type: none;
+}
+
+.post-img img {
+  width: 100px;
+  height: 70px;
+  float: left;
+  margin-right: 15px;
+  border: 3px solid #4392F1;
+  transition: 0.5s;
+}
+
+.recent-post a {
+  text-decoration: none;
+  color: #34495E;
+  transition: 0.5s;
+}
+
+.post-img,
+.recent-post a:hover {
+  color: #4392F1;
+  text-decoration: underline;
+}
+
+.date i {
+  margin-right: 0.2em;
+}
+
+.time i {
+  margin-right: 0.2em;
+}
+
+.m-t-3 {
+  margin-top: 3%;
+}
