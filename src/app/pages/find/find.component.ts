@@ -136,7 +136,7 @@ export class FindComponent implements OnInit {
     return "future";
   }
 
-  loadMore(){
+  loadMore() {
     this.spinner.show();
 
     this.httpService.search(this.next, true).subscribe((e) => {
@@ -152,7 +152,13 @@ export class FindComponent implements OnInit {
 
   getEvents() {
     this.spinner.show();
-    let url = "events?order_by=-starts_at&status=" + this.getStatus();
+    let status = this.getStatus();
+    let order_by = "order_by=-starts_at";
+    if (status === "future") {
+      order_by = "order_by=starts_at";
+    }
+
+    let url = "events?" + order_by + "&status=" + status;
 
     if (this.eventType && this.eventType !== "hepsi") {
       url += "&etype=" + this.eventType;
