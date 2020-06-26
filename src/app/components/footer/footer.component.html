@@ -15,15 +15,25 @@
 
                         <div class="row">
                             <div class="col-md-11 col-sm-11 col-xs-11">
-                                <div class="input-group">
-                                    <input type="email" class="form-control send-input" placeholder="Mail"
-                                        id="sub_email" name="sub-email" [(ngModel)]="submail" />
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-primary send-mail" (click)="submit()">
-                                            <span class="glyphicon glyphicon-envelope"></span>
-                                        </button>
+                                <form
+                                    action="https://hackathonturkiye.us18.list-manage.com/subscribe/post?u=e73471f6b46f14749c393649c&amp;id=744a9e6606"
+                                    ngNoForm method="post" id="mc-embedded-subscribe-form"
+                                    name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <div class="input-group">
+                                        <input type="email" value="" name="EMAIL" placeholder="E-Posta"
+                                            class="form-control send-input" id="mce-EMAIL">
+
+                                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input
+                                                type="text" name="b_e73471f6b46f14749c393649c_744a9e6606" tabindex="-1"
+                                                value=""></div>
+                                        <div class="input-group-btn">
+                                            <button type="submit" value="Subscribe" name="subscribe"
+                                                id="mc-embedded-subscribe" class="btn btn-primary send-mail">
+                                                <span class="glyphicon glyphicon-envelope"></span>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
