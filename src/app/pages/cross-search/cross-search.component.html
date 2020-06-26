@@ -37,7 +37,7 @@
             </aside>
           </div>
         </div>
-        <h3 class="text-danger text-center" *ngIf="!crossesPost"> Kayıt Bulunamadı</h3>
+        <h3 class="text-danger text-center nf" *ngIf="crossesPost.length === 0"> Kayıt Bulunamadı</h3>
       </div>
       <div id="find" class="tab-pane fade">
         <div *ngIf="crossesEvents">
@@ -69,7 +69,7 @@
             </aside>
           </div>
         </div>
-        <h3 class="text-danger text-center nf" *ngIf="!crossesEvents"> Kayıt Bulunamadı</h3>
+        <h3 class="text-danger text-center nf" *ngIf="crossesEvents.length === 0"> Kayıt Bulunamadı</h3>
       </div>
 
     </div>
