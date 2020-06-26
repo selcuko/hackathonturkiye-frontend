@@ -152,7 +152,7 @@ export class FindComponent implements OnInit {
 
   getEvents() {
     this.spinner.show();
-    let url = "events?order_by=starts_at&status=" + this.getStatus();
+    let url = "events?order_by=-starts_at&status=" + this.getStatus();
 
     if (this.eventType && this.eventType !== "hepsi") {
       url += "&etype=" + this.eventType;
