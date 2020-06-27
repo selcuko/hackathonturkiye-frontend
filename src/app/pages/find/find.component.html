@@ -50,7 +50,7 @@
           </select>
         </div>
       </div>
-      <div class="col-md-5 wow zoomIn" data-wow-duration="1s" data-wow-delay="600ms">
+      <div class="col-md-5 wow zoomIn search-btn" data-wow-duration="1s" data-wow-delay="600ms">
         <button type="button" class="btn btn-info btn-sm" (click)="navigate()">Yarışma Ara</button>
       </div>
     </div>
@@ -76,7 +76,7 @@
               <div class="find-tag">
                 <div class="tagcloud" *ngIf="xathon.tags">
                   <div *ngFor="let eventTag of xathon.tags;">
-                    <a routerLink="/etiket/{{eventTag.slug}}">{{eventTag.name}}</a>
+                    <a routerLink="/etiket/{{eventTag.slug}}/tag">{{eventTag.name}}</a>
                     
                   </div>
                 

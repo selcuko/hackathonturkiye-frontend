@@ -13,7 +13,9 @@ import { AlertService } from 'ngx-alerts';
 export class CrossSearchComponent implements OnInit {
   
   slug: string = '';
+  srctype: string = '';
   crossesPost: any;
+  searchresults: any;
   crossesEvents: any;
   months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
@@ -31,6 +33,7 @@ export class CrossSearchComponent implements OnInit {
 
       this.route.params.subscribe(url => {
         this.slug = url['param'] || '';
+        this.srctype = url['type'] || '';
       });
   }
 
@@ -40,10 +43,16 @@ export class CrossSearchComponent implements OnInit {
 
   getResults() {
     this.spinner.show();
-    const url = 'tagsearch/' + this.slug;
+    let url: string;
+    this.srctype === 'search' ? url = 'tagsearch/?inexact=' + this.slug : url = 'tagsearch/' + this.slug;
     this.httpService.search(url).subscribe((response) => {
-    this.crossesPost = response.in_posts;
-    this.crossesEvents = response.in_events;
+      if(this.srctype === 'search') {
+       this.searchresults = response.results;
+      }
+      else {
+        this.crossesPost = response.in_posts;
+        this.crossesEvents = response.in_events;
+      }
     this.spinner.hide();
     },
       (error: any) => {

@@ -173,3 +173,15 @@ aside {
 .m-t-3 {
   margin-top: 3%;
 }
+
+.p-10 {
+  padding-top: 9em;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  #find,
+  #blog {
+    min-height: 75vh;
+  }
+}

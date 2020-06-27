@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertService } from 'ngx-alerts';
 
@@ -8,48 +7,25 @@ import { AlertService } from 'ngx-alerts';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent{
   searchQuery: string = '';
-
+  @ViewChild('menu') el: ElementRef;
   constructor(private router: Router, private alertService: AlertService) { }
 
-  ngOnInit(): void {
-    $(document).ready(() => {
-
-      window.onscroll = function () { myFunction() };
-
-      // Get the header
-      var header = document.getElementById("myHeader");
-
-      // Get the offset position of the navbar
-      var sticky = header.offsetTop;
-
-      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-      
-      /*----------------------------------------------------*/
-      /*	Nav Menu & Search
-      /*----------------------------------------------------*/
-
-      $(".nav > li:has(ul)").addClass("drop");
-      $(".nav > li.drop > ul").addClass("dropdown");
-      $(".nav > li.drop > ul.dropdown ul").addClass("sup-dropdown");
-
-    })
+  toggleMenu() {
+    this.el.nativeElement.classList.toggle('collapse');
   }
 
-  onClick() {
+  removeMenu() {
+    this.el.nativeElement.classList.add('collapse');
+  }
+
+  search() {
     if(this.searchQuery === '' || this.searchQuery.length < 3) {
       this.alertService.danger('Lütfen arama yapabilmek için en az 3 harf giriniz');
     }
     else {
-      this.router.navigate(['/etiket/' + this.searchQuery]);
+      this.router.navigate(['/etiket/' + this.searchQuery + '/search']);
     }
   }
 

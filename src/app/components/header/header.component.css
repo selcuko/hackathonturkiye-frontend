@@ -1,16 +1,17 @@
-.sticky {
-  position: fixed;
+.section-header {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 1;
+  z-index: 999;
 }
 
-.sticky+.content {
-  padding-top: 102px;
+.section-header h1 {
+  margin: 0;
+  color: #fff;
 }
 
 .search-bar {
-  padding-top: 2px;
+  padding-top: 0.4em;
 }
 
 .search-button {
@@ -65,7 +66,7 @@
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.04em;
   color: #C9F0FF;
-  padding: 24px 15px 24px;
+  padding: 28px 24px 28px;
   overflow: hidden;
   border-top: 2px solid transparent;
   transition: all 0.3s ease-in-out;
@@ -176,4 +177,18 @@
 .navbar-default .navbar-nav li.drop .dropdown li:hover .sup-dropdown {
   visibility: visible;
   margin-top: 0;
+}
+
+.navbar-brand {
+  padding-top: 0;
+}
+
+.navbar-brand img {
+  height: 76px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-default .navbar-nav>li>a {
+    padding: 28px 14px 28px;
+  }
 }

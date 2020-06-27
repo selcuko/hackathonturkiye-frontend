@@ -18,7 +18,7 @@
                                 href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.username}}</a>
                             </li>
                             <div class="tag-area" *ngFor="let tag of blogdetail.tags">
-                                <li><i class="fa fa-tags"></i><a routerLink="/etiket/{{tag.slug}}">{{tag.name}}</a></li>
+                                <li><i class="fa fa-tags"></i><a routerLink="/etiket/{{tag.slug}}/tag">{{tag.name}}</a></li>
                             </div>
                             <div class="pull-right social">
                                 <li>

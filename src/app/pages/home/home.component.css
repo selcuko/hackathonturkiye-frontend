@@ -34,7 +34,7 @@ h2.post-title {
   font-size: 24px;
   font-weight: 400;
   line-height: 110%;
-  padding: 10px 0 20px 0;
+  padding: 10px 0 25px 0;
   margin: 0 0 20px 0;
   border-bottom: 1px solid #ddd;
   text-transform: capitalize;
@@ -92,7 +92,10 @@ p.post-content {
 
 @media only screen and (max-width: 480px) {
   .page-header h1 {
-    font-size: 48px;
+    font-size: 42px;
     line-height: 52px;
+  }
+  .readmore {
+    width: 300px;
   }
 }

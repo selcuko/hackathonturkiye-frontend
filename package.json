@@ -28,8 +28,6 @@
     "bootstrap": "^3.4.1",
     "express": "^4.15.2",
     "http-proxy": "^1.18.1",
-    "jquery": "^3.5.0",
-    "moment": "^2.26.0",
     "ngx-alerts": "^9.0.2",
     "ngx-disqus": "^2.4.3",
     "ngx-spinner": "^9.0.2",

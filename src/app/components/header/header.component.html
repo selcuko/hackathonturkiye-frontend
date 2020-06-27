@@ -1,26 +1,37 @@
-<header class="clearfix">
+<header class="clearfix section-header">
 
     <!-- Start  Logo & Naviagtion  -->
-    <nav class="navbar navbar-default" role="navigation" id="myHeader">
+    <nav class="navbar navbar-default" role="navigation">
 
         <div class="container">
             <div class="navbar-header">
                 <!-- Stat Toggle Nav Link For Mobiles -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" (click)="toggleMenu()">
                     <i class="fa fa-bars"></i>
                 </button>
+
+                <div class="pull-left hidden-sm hidden-md hidden-lg">
+                    <a class="navbar-brand" routerLink="/ana-sayfa">
+                        <img alt="Hackathon Türkiye" src="../../../assets/images/hackathon_turkiye_logo.svg">
+                      </a>
+                </div>
                 <!-- End Toggle Nav Link For Mobiles -->
 
 
             </div>
             <div>
-                <div class="pull-right search-bar">
+                <div class="pull-left hidden-xs">
+                    <a class="navbar-brand" routerLink="/ana-sayfa">
+                        <img alt="Hackathon Türkiye" src="../../../assets/images/hackathon_turkiye_logo.svg">
+                      </a>
+                </div>
+                <div class="pull-right search-bar hidden-sm">
                     <form class="navbar-form pull-right" role="search">
                         <div class="input-group">
                             <input type="text" class="form-control search-input" id="search" name="search"
                                 placeholder="Ara..." [(ngModel)]="searchQuery">
                             <div class="input-group-btn">
-                                <button (click)="onClick()" class="btn btn-default search-button">
+                                <button (click)="search()" class="btn btn-default search-button">
                                     <span class="glyphicon glyphicon-search"></span>
                                 </button>
                             </div>
@@ -28,24 +39,24 @@
                     </form>
                 </div>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" #menu>
 
                 <!-- Start Navigation List -->
                 <ul class="nav navbar-nav">
                     <li>
-                        <a routerLink="/ana-sayfa" routerLinkActive="active">ANA SAYFA</a>
+                        <a (click)="removeMenu()" routerLink="/ana-sayfa" routerLinkActive="active">ANA SAYFA</a>
                     </li>
                     <li>
-                        <a routerLink="/blog" routerLinkActive="active">BLOG</a>
+                        <a (click)="removeMenu()" routerLink="/blog" routerLinkActive="active">BLOG</a>
                     </li>
                     <li>
-                        <a routerLink="/etkinlikler" routerLinkActive="active">YARIŞMA ARA</a>
+                        <a (click)="removeMenu()" routerLink="/etkinlikler" routerLinkActive="active">YARIŞMA ARA</a>
                     </li>
                     <li>
-                        <a routerLink="/ekibimiz" routerLinkActive="active">EKİBİMİZ</a>
+                        <a (click)="removeMenu()" routerLink="/ekibimiz" routerLinkActive="active">EKİBİMİZ</a>
                     </li>
                     <li>
-                        <a routerLink="/iletisim" routerLinkActive="active">İLETİŞİM / İŞ BİRLİĞİ</a>
+                        <a (click)="removeMenu()" routerLink="/iletisim" routerLinkActive="active">İLETİŞİM / İŞ BİRLİĞİ</a>
                     </li>
 
 

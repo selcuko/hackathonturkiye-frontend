@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AlertModule } from 'ngx-alerts';
 
@@ -14,7 +14,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { NgxSpinnerModule } from "ngx-spinner";
-import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 import { FormsModule } from '@angular/forms';
 
 import { DISQUS_SHORTNAME } from 'ngx-disqus';
@@ -25,7 +24,6 @@ import { DISQUS_SHORTNAME } from 'ngx-disqus';
     NotfoundComponent,
     HeaderComponent,
     FooterComponent,
-    ScrollTopComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'hackathonturkiye' }),
@@ -34,7 +32,6 @@ import { DISQUS_SHORTNAME } from 'ngx-disqus';
     BrowserAnimationsModule,
     NgxSpinnerModule,
     HttpClientModule,
-    HttpClientJsonpModule,
     AlertModule.forRoot({maxMessages: 1, timeout: 2000, position: 'left'})
   ],
   providers: [
