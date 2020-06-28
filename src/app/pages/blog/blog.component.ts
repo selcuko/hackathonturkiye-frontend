@@ -13,7 +13,6 @@ import { AlertService } from 'ngx-alerts';
 export class BlogComponent implements OnInit {
 
   list: any;
-  loading : boolean = false;
   next: string;
   
   constructor(
@@ -41,49 +40,40 @@ export class BlogComponent implements OnInit {
 
   getPosts() {
     this.spinner.show();
-    this.loading = true;
     this.httpService.getHighlightPosts('posts').subscribe((response) => {
       this.list = response.results;
       this.next = response.next;
       this.spinner.hide();
-      this.loading = false;
     },
       (error: any) => {
         this.alertService.danger(error);
         this.spinner.hide();
-        this.loading = false;
       });
   }
 
   loadMore(){
     this.spinner.show();
-    this.loading = true;
     this.httpService.getHighlightPosts(this.next, true).subscribe((response) => {
       this.spinner.hide();
-      this.loading = false;
       this.next = response.next;
       this.list.push(...response.results);
     },
       (error: any) => {
         this.alertService.danger(error);
         this.spinner.hide();
-        this.loading = false;
       });
   }
 
   getUserPosts(username: any) {
     this.spinner.show();
-    this.loading = true;
     this.httpService.getHighlightPosts('posts/?author__username=' + username).subscribe((response) => {
       this.list = response.results;
       this.next = response.next;
       this.spinner.hide();
-      this.loading = false;
     },
       (error: any) => {
         this.alertService.danger(error);
         this.spinner.hide();
-        this.loading = false;
       });
   }
 

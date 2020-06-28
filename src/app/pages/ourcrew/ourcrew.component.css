@@ -28,6 +28,11 @@ h1 {
   overflow: hidden;
 }
 
+.team-member img {
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
 .team-member .team-details {
   color: #fff;
   padding: 0 2px;

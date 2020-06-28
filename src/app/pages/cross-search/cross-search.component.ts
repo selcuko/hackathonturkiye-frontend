@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http/http.service';
 import { SeoService } from '../../services/seo/seo.service';
@@ -11,7 +11,11 @@ import { AlertService } from 'ngx-alerts';
   styleUrls: ['./cross-search.component.css']
 })
 export class CrossSearchComponent implements OnInit {
-  
+  @ViewChild('blog') el_blog: ElementRef;
+  @ViewChild('find') el_find: ElementRef;
+  @ViewChild('blog_selector') el_blog_selector: ElementRef;
+  @ViewChild('find_selector') el_find_selector: ElementRef;
+
   slug: string = '';
   srctype: string = '';
   crossesPost: any;
@@ -39,6 +43,24 @@ export class CrossSearchComponent implements OnInit {
 
   ngOnInit(): void {
    this.getResults();
+  }
+
+  openBlog() {
+    this.el_blog.nativeElement.classList.add('in');
+    this.el_blog.nativeElement.classList.add('active');
+    this.el_blog_selector.nativeElement.classList.add('active');
+    this.el_find.nativeElement.classList.remove('in');
+    this.el_find.nativeElement.classList.remove('active');
+    this.el_find_selector.nativeElement.classList.remove('active');
+  }
+
+  openFind() {
+    this.el_blog_selector.nativeElement.classList.remove('active');
+    this.el_blog.nativeElement.classList.remove('in');
+    this.el_blog.nativeElement.classList.remove('active');
+    this.el_find.nativeElement.classList.add('in');
+    this.el_find.nativeElement.classList.add('active');
+    this.el_find_selector.nativeElement.classList.add('active');
   }
 
   getResults() {

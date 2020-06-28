@@ -1,15 +1,15 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="row">
     <ul class="nav nav-pills nav-justified">
-      <li class="active"><a data-toggle="pill" href="#blog">Blog</a></li>
-      <li><a data-toggle="pill" href="#find">Yarışma</a></li>
+      <li #blog_selector class="active"><a (click)="openBlog()">Blog</a></li>
+      <li #find_selector><a (click)="openFind()">Yarışma</a></li>
     </ul>
   </div>
 </div>
 <div class="container">
   <div class="row">
     <div class="tab-content">
-      <div id="blog" class="tab-pane fade in active">
+      <div #blog class="tab-pane fade in active">
         <div *ngIf="srctype !== 'search' && crossesPost">
           <div class="p-10">
             <div class="col-lg-6 col-md-6" *ngFor="let item of crossesPost">
@@ -80,7 +80,7 @@
           Kayıt Bulunamadı
         </h3>
       </div>
-      <div id="find" class="tab-pane fade">
+      <div #find class="tab-pane fade">
         <div *ngIf="srctype !== 'search' && crossesEvents">
           <div class="p-10">
             <div class="col-lg-6 col-md-6" *ngFor="let item of crossesEvents">
