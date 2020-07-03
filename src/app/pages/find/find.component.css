@@ -139,7 +139,6 @@ table {
 }
 
 .find-table {
-  display: flex;
   margin-top: 25px;
   margin-right: 15px;
 }
@@ -187,6 +186,6 @@ table {
   .search-btn {
     margin-top: 1em;
     text-align: center;
-  } 
+  }
 }
 
