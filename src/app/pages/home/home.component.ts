@@ -13,7 +13,7 @@ import { AlertService } from 'ngx-alerts';
 export class HomeComponent implements OnInit {
 
   list: any;
-  loading : boolean = false;
+  loading: boolean = false;
 
   constructor(
     private spinner: NgxSpinnerService,
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
   getPosts() {
     this.spinner.show();
     this.loading = true;
-    this.httpService.getHighlightPosts('posts/').subscribe((response) => {
+    this.httpService.getPosts('posts/?highlighted=5').subscribe((response) => {
       this.list = response.results;
       this.spinner.hide();
       this.loading = false;

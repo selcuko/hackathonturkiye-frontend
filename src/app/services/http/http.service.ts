@@ -19,7 +19,7 @@ export class HttpService {
     return this.http.get(url);
   }
 
-  getHighlightPosts(endpoint: any, overrideUrl: boolean = false): Observable<any> {
+  getPosts(endpoint: any, overrideUrl: boolean = false): Observable<any> {
     let url = environment.apiUrl + endpoint;
     if (overrideUrl) {
       url = endpoint;

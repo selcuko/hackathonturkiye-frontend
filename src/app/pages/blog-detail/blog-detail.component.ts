@@ -4,15 +4,12 @@ import { HttpService } from 'src/app/services/http/http.service';
 import { SeoService } from '../../services/seo/seo.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import { AlertService } from 'ngx-alerts';
-import { Pipe, PipeTransform } from '@angular/core';
-import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
-
 import { SafePipe } from 'src/app/pages/blog-detail/safe';
 
 @Component({
   selector: 'app-blog-detail',
   templateUrl: './blog-detail.component.html',
-  styleUrls: ['./blog-detail.component.css'],  
+  styleUrls: ['./blog-detail.component.css'],
   providers: [SafePipe]
 })
 export class BlogDetailComponent implements OnInit {

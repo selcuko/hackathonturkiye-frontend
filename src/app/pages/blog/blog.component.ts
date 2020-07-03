@@ -14,7 +14,7 @@ export class BlogComponent implements OnInit {
 
   list: any;
   next: string;
-  
+
   constructor(
     private route: ActivatedRoute,
     private spinner: NgxSpinnerService,
@@ -40,7 +40,7 @@ export class BlogComponent implements OnInit {
 
   getPosts() {
     this.spinner.show();
-    this.httpService.getHighlightPosts('posts').subscribe((response) => {
+    this.httpService.getPosts('posts/').subscribe((response) => {
       this.list = response.results;
       this.next = response.next;
       this.spinner.hide();
@@ -53,7 +53,7 @@ export class BlogComponent implements OnInit {
 
   loadMore(){
     this.spinner.show();
-    this.httpService.getHighlightPosts(this.next, true).subscribe((response) => {
+    this.httpService.getPosts(this.next, true).subscribe((response) => {
       this.spinner.hide();
       this.next = response.next;
       this.list.push(...response.results);
@@ -66,7 +66,7 @@ export class BlogComponent implements OnInit {
 
   getUserPosts(username: any) {
     this.spinner.show();
-    this.httpService.getHighlightPosts('posts/?author__username=' + username).subscribe((response) => {
+    this.httpService.getPosts('posts/?author__username=' + username).subscribe((response) => {
       this.list = response.results;
       this.next = response.next;
       this.spinner.hide();
