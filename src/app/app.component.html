@@ -1,13 +1,15 @@
 <app-header></app-header>
 <router-outlet>
+  <app-google-analytics-gtag></app-google-analytics-gtag>
     <ngx-alerts></ngx-alerts>
-    <ngx-spinner      
-    size = "medium" 
-    type = "square-jelly-box" 
+    <ngx-spinner
+    size = "medium"
+    type = "square-jelly-box"
     >
-    <p style="color: white"> 
+    <p style="color: white">
         Yükleniyor
     </p>
 </ngx-spinner>
 </router-outlet>
+
 <app-footer></app-footer>

@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertModule } from 'ngx-alerts';
 
 import { HeaderComponent } from './components/header/header.component';
+import { GoogleAnalyticsGTagComponent } from './components/analytics/google-analytics.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 
 import { NgxSpinnerModule } from "ngx-spinner";
@@ -24,6 +26,7 @@ import { DISQUS_SHORTNAME } from 'ngx-disqus';
     NotfoundComponent,
     HeaderComponent,
     FooterComponent,
+    GoogleAnalyticsGTagComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'hackathonturkiye' }),
