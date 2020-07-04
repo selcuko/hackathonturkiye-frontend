@@ -48,6 +48,14 @@
         <changefreq>weekly</changefreq>
     </url>
     <url>
+        <loc>https://hackathonturkiye.com/blog/hackathon-maceralari-1-codethebank</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/hack4humanity-hackathon-maceralari-2</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
         <loc>https://hackathonturkiye.com/blog/inghackathon2016-hackathon-maceralari-3</loc>
         <changefreq>weekly</changefreq>
     </url>
@@ -1225,6 +1233,30 @@
     </url>
     <url>
         <loc>https://hackathonturkiye.com/etkinlik/hacknbreak-2020</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/designathon-nedir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/hackathonlarda-en-cok-kullanilan-diller</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/ctf-capture-the-flag-nedir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/ideathon-nedir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/hackathonlarda-iyi-fikir-nasil-bulunur</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/workshop-nedir</loc>
         <changefreq>weekly</changefreq>
     </url>
 </urlset>
