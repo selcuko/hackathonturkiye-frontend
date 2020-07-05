@@ -88,7 +88,7 @@
               </div>
 
               <div>
-                <a *ngIf="!xathon.has_details" target="_blank" class="btn btn-primary readmore btn-lg"
+                <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="btn btn-primary readmore btn-lg"
                   href="{{xathon.origin_url}}">Şimdi Başvur</a>
 
                 <a *ngIf="xathon.has_details" class="btn btn-primary readmore btn-lg"
@@ -109,30 +109,16 @@
                   <thead>
                     <tr>
                       <td>Başlangıç</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>{{getDateTurkish(xathon.starts_at)}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <table class="table table-sm table-bordered">
-                  <thead>
-                    <tr>
                       <td>Bitiş</td>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
+                      <td>{{getDateTurkish(xathon.starts_at)}}</td>
                       <td>{{getDateTurkish(xathon.ends_at)}}</td>
                     </tr>
                   </tbody>
                 </table>
-
-
-
               </div>
 
               <div class="find-table-sub table-responsive">

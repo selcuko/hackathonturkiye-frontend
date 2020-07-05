@@ -4,12 +4,27 @@
       <div class="row">
         <div class="event" *ngIf="event">
           <h1>{{event.name}}</h1>
-          <p>
+          <p class="line">
             {{event.description}}
           </p>
-          <div [innerHTML]="event.body"></div>
-          <disqus [identifier]="pageId"></disqus>
 
+          <img src="{{event.thumbnail}}" class="img-responsive" alt={{event.name}}>
+
+          <div [innerHTML]="event.body" class="ebody"></div>
+
+          <hr>
+
+          <div class="apply">
+            <a target="_blank" rel="nofollow" class="btn btn-primary readmore btn-lg" href="{{event.origin_url}}">Şimdi
+              Başvur</a>
+          </div>
+
+          <hr>
+
+          <div class="line">
+            <disqus [identifier]="pageId"></disqus>
+          </div>
+           
         </div>
       </div>
     </div>

@@ -8,3 +8,22 @@
   background-color: #E8E8E8;
   padding: 20px;
 }
+
+.apply {
+  margin-top: 2%;
+}
+
+.img-responsive {
+  width: 40%;
+  float: left;
+  padding-right: 2%;
+}
+
+.ebody {
+  padding-left: 1%;
+}
+
+.line {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
