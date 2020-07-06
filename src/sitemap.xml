@@ -84,39 +84,39 @@
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/acik-kaynak</loc>
+        <loc>https://hackathonturkiye.com/etiket/acik-kaynak/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/covid19</loc>
+        <loc>https://hackathonturkiye.com/etiket/covid19/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/dogal-dil-isleme</loc>
+        <loc>https://hackathonturkiye.com/etiket/dogal-dil-isleme/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/egitim</loc>
+        <loc>https://hackathonturkiye.com/etiket/egitim/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/frontend</loc>
+        <loc>https://hackathonturkiye.com/etiket/frontend/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/kadin</loc>
+        <loc>https://hackathonturkiye.com/etiket/kadin/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/mobil</loc>
+        <loc>https://hackathonturkiye.com/etiket/mobil/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/oyun</loc>
+        <loc>https://hackathonturkiye.com/etiket/oyun/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/robotik</loc>
+        <loc>https://hackathonturkiye.com/etiket/robotik/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
@@ -124,231 +124,231 @@
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/etiket/zplay</loc>
+        <loc>https://hackathonturkiye.com/etiket/zplay/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/hackathon</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/hackathon</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/hackathon/online</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/hackathon/online</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/hackathon/istanbul</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/hackathon/istanbul</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/hackathon/ankara</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/hackathon/ankara</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/hackathon/izmir</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/hackathon/izmir</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/hackathon/antalya</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/hackathon/antalya</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/hackathon/gaziantep</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/hackathon/gaziantep</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/makeathon</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/makeathon</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/makeathon/online</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/makeathon/online</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/makeathon/istanbul</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/makeathon/istanbul</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/makeathon/ankara</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/makeathon/ankara</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/makeathon/izmir</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/makeathon/izmir</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/makeathon/antalya</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/makeathon/antalya</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/makeathon/gaziantep</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/makeathon/gaziantep</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/ideathon</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/ideathon</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/ideathon/online</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/ideathon/online</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/ideathon/istanbul</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/ideathon/istanbul</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/ideathon/ankara</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/ideathon/ankara</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/ideathon/izmir</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/ideathon/izmir</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/ideathon/antalya</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/ideathon/antalya</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/ideathon/gaziantep</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/ideathon/gaziantep</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/datathon</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/datathon</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/datathon/online</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/datathon/online</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/datathon/istanbul</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/datathon/istanbul</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/datathon/ankara</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/datathon/ankara</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/datathon/izmir</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/datathon/izmir</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/datathon/antalya</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/datathon/antalya</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/datathon/gaziantep</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/datathon/gaziantep</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/gamejam</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/gamejam</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/gamejam/online</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/gamejam/online</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/gamejam/istanbul</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/gamejam/istanbul</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/gamejam/ankara</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/gamejam/ankara</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/gamejam/izmir</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/gamejam/izmir</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/gamejam/antalya</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/gamejam/antalya</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/gamejam/gaziantep</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/gamejam/gaziantep</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/educathon</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/educathon</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/educathon/online</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/educathon/online</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/educathon/istanbul</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/educathon/istanbul</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/educathon/ankara</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/educathon/ankara</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/educathon/izmir</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/educathon/izmir</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/educathon/antalya</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/educathon/antalya</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/educathon/gaziantep</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/educathon/gaziantep</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/webinar</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/webinar</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/webinar/online</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/webinar/online</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/webinar/istanbul</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/webinar/istanbul</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/webinar/ankara</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/webinar/ankara</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/webinar/izmir</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/webinar/izmir</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/webinar/antalya</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/webinar/antalya</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/webinar/gaziantep</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/webinar/gaziantep</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/workshop</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/workshop</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/workshop/online</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/workshop/online</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/workshop/istanbul</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/workshop/istanbul</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/workshop/ankara</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/workshop/ankara</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/workshop/izmir</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/workshop/izmir</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/workshop/antalya</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/workshop/antalya</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://localhost:4000/etkinlikler/workshop/gaziantep</loc>
+        <loc>https://hackathonturkiye.com/etkinlikler/workshop/gaziantep</loc>
         <changefreq>weekly</changefreq>
     </url>
     <url>
