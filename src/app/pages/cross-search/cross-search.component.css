@@ -49,14 +49,14 @@ li a {
   position: relative;
 }
 
-.content-header h3 a {
+.content-header h2 a {
   color: white;
   text-decoration: none;
   transition: 0.5s;
   font-size: 20px;
 }
 
-.content-header h3 a:hover {
+.content-header h2 a:hover {
   text-decoration: underline;
 }
 
@@ -69,8 +69,8 @@ li a {
 }
 
 aside {
-  margin-top: 2em;
-  margin-bottom: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
   -webkit-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
   -moz-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
   box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
@@ -175,7 +175,7 @@ aside {
 }
 
 .p-10 {
-  padding-top: 9em;
+  padding-top: 3em;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -184,4 +184,16 @@ aside {
   #blog {
     min-height: 75vh;
   }
+}
+
+h1 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 28px;
+    color: #C9F0FF;
+    font-family: 'Lora', serif;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-variant: small-caps;
 }
