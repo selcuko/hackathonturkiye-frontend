@@ -1,3 +1,5 @@
+<h1>{{slug}}</h1>
+
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="row">
     <ul class="nav nav-pills nav-justified">
@@ -16,7 +18,7 @@
               <aside>
                 <div class="content-header">
                   <div class="text-center">
-                    <h3><a href="/blog/{{item.slug}}">{{item.title}}</a> </h3>
+                    <h2><a href="/blog/{{item.slug}}">{{item.title}}</a> </h2>
                   </div>
                 </div>
                 <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.title}}">
@@ -38,7 +40,7 @@
               </aside>
             </div>
           </div>
-          
+
         </div>
         <div *ngIf="srctype === 'search' ">
           <div *ngFor="let search of searchresults" class="p-10">
@@ -46,7 +48,7 @@
               <aside>
                 <div class="content-header">
                   <div class="text-center">
-                    <h3><a href="/blog/{{item.slug}}">{{item.title}}</a> </h3>
+                    <h2><a href="/blog/{{item.slug}}">{{item.title}}</a> </h2>
                   </div>
                 </div>
                 <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.title}}">
@@ -67,18 +69,18 @@
                 </div>
               </aside>
             </div>
-            <h3 class="text-danger text-center nf" *ngIf="search.in_posts.length === 0">
+            <h2 class="text-danger text-center nf" *ngIf="search.in_posts.length === 0">
               Kayıt Bulunamadı
-            </h3>
+            </h2>
           </div>
-        
+
         </div>
-        <h3 class="text-danger text-center nf" *ngIf="srctype !== 'search' && crossesPost.length === 0">
+        <h2 class="text-danger text-center nf" *ngIf="srctype !== 'search' && crossesPost.length === 0">
           Kayıt Bulunamadı
-        </h3>
-        <h3 class="text-danger text-center nf" *ngIf="srctype === 'search' && searchresults.length === 0">
+        </h2>
+        <h2 class="text-danger text-center nf" *ngIf="srctype === 'search' && searchresults.length === 0">
           Kayıt Bulunamadı
-        </h3>
+        </h2>
       </div>
       <div #find class="tab-pane fade">
         <div *ngIf="srctype !== 'search' && crossesEvents">
@@ -87,12 +89,12 @@
               <aside>
                 <div class="content-header">
                   <div class="text-center">
-                    <h3>
+                    <h2>
                       <a *ngIf="!item.has_details" target="_blank" class="btn btn-primary readmore btn-lg"
                         href="{{item.origin_url}}">{{item.name}}</a>
                       <a *ngIf="item.has_details" class="btn btn-primary readmore btn-lg"
                         routerLink="/etkinlik/{{item.slug}}">{{item.name}}</a>
-                    </h3>
+                    </h2>
                   </div>
                 </div>
                 <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.name}}">
@@ -111,7 +113,7 @@
               </aside>
             </div>
           </div>
-         
+
         </div>
         <div *ngIf="srctype === 'search' ">
           <div *ngFor="let search of searchresults" class="p-10">
@@ -119,12 +121,12 @@
               <aside>
                 <div class="content-header">
                   <div class="text-center">
-                    <h3>
+                    <h2>
                       <a *ngIf="!item.has_details" target="_blank" class="btn btn-primary readmore btn-lg"
                         href="{{item.origin_url}}">{{item.name}}</a>
                       <a *ngIf="item.has_details" class="btn btn-primary readmore btn-lg"
                         routerLink="/etkinlik/{{item.slug}}">{{item.name}}</a>
-                    </h3>
+                    </h2>
                   </div>
                 </div>
                 <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.name}}">
@@ -142,22 +144,18 @@
                 </div>
               </aside>
             </div>
-            <h3 class="text-danger text-center nf" *ngIf="search.in_events.length === 0">
+            <h2 class="text-danger text-center nf" *ngIf="search.in_events.length === 0">
               Kayıt Bulunamadı
-            </h3>
+            </h2>
           </div>
         </div>
-        <h3 class="text-danger text-center nf" *ngIf="srctype !== 'search' && crossesEvents.length === 0">
+        <h2 class="text-danger text-center nf" *ngIf="srctype !== 'search' && crossesEvents.length === 0">
           Kayıt Bulunamadı
-        </h3>
-        <h3 class="text-danger text-center nf" *ngIf="srctype === 'search' && searchresults.length === 0">
+        </h2>
+        <h2 class="text-danger text-center nf" *ngIf="srctype === 'search' && searchresults.length === 0">
           Kayıt Bulunamadı
-        </h3>
+        </h2>
       </div>
-
     </div>
   </div>
-
-
-
 </div>
