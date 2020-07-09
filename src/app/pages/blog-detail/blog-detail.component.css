@@ -206,3 +206,12 @@ h1.post-title a {
   color: #4392F1;
   margin-right: 10px;
 }
+
+.user-small-img {
+  cursor: pointer;
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  margin-right: 10px;
+  border: 2px solid #fff;
+}

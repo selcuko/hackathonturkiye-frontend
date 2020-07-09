@@ -1259,4 +1259,20 @@
         <loc>https://hackathonturkiye.com/blog/workshop-nedir</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/anti-darbe-hackaton</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/arcelik-hackbot</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/case-camp-hackathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/mng-kargo-apizone-hackathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
