@@ -57,7 +57,9 @@
 }
 
 .footer-address ul li {
-  padding: 7px 17px
+  display: table-caption;
+  width: 100%;
+  margin-left: 10px;
 }
 
 .footer-address ul li .fa {
@@ -81,17 +83,4 @@
 
 .nz {
   z-index: 0;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .footer-address ul li {
-    padding: 7px 18px
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .footer-address ul li {
-    padding: 7px 10px
-  }  
 }

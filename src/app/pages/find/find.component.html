@@ -52,7 +52,7 @@
         </div>
       </div>
       <div class="col-md-5 wow zoomIn search-btn" data-wow-duration="1s" data-wow-delay="600ms">
-        <button type="button" class="btn btn-info btn-sm" (click)="navigate()">Yarışma Ara</button>
+        <button type="button" class="btn btn-primary btn-sm search" (click)="navigate()">Yarışma Ara</button>
       </div>
     </div>
 
@@ -88,7 +88,7 @@
                 </p>
               </div>
 
-              <div>
+              <div class="detail">
                 <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="btn btn-primary readmore btn-lg"
                   href="{{xathon.origin_url}}">Şimdi Başvur</a>
 
@@ -102,7 +102,7 @@
                 </i>
               </div>
             </div>
-            <div class="col-md-5 p0">
+            <div class="col-md-5 p0" *ngIf="isItFinished(xathon.ends_at)">
 
               <div class="find-table table-responsive">
 
@@ -141,6 +141,12 @@
                   </tbody>
                 </table>
               </div>
+
+            </div>
+
+            <div class="col-md-5 img-finished" *ngIf="!isItFinished(xathon.ends_at)">
+
+            <img class="img-responsive" src="../../../assets/images/finished.svg">
 
             </div>
 

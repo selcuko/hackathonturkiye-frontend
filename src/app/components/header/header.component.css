@@ -192,3 +192,17 @@
     padding: 28px 14px 28px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-brand img {
+    height: 65px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .navbar-brand img {
+    height: 65px;
+  }
+
+}
