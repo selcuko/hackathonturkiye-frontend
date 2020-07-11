@@ -90,6 +90,18 @@ export class FindComponent implements OnInit {
     return days;
   }
 
+  isItFinished(date: any) {
+    let end_date = new Date(date);
+    let now = new Date();
+
+    var Difference_In_Time = end_date.getTime() - now.getTime();
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+    if (Difference_In_Days > 0) {
+      return true;
+    }
+  }
+
   getDescription(description) {
     if (description.length < 100) {
       return description;

@@ -159,6 +159,11 @@ table {
   color: #000000;
 }
 
+.img-finished {
+  text-align: center;
+  padding: 30px;
+}
+
 .dolar {
   font-size: 10px;
   position: absolute;
@@ -170,14 +175,27 @@ table {
   left: 77%;
 }
 
+.search {
+  height: 34px;
+  border: 1px solid #0000007a;
+  padding: 5px;
+  font-size: 14px;
+}
+
 .container {
   margin-top: 20px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .search-btn {
-      margin-top: 1em;
-      text-align: center;
+    margin-top: 1em;
+    text-align: center;
+  }
+  .detail {
+    text-align: center;
+  }
+  .img-finished {
+    padding: 65px;
   }
 }
 
@@ -187,5 +205,10 @@ table {
     margin-top: 1em;
     text-align: center;
   }
+  .detail {
+    text-align: center;
+  }
+  .img-finished {
+    padding: 135px;
+  }
 }
-
