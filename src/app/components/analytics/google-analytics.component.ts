@@ -17,7 +17,7 @@ export class GoogleAnalyticsGTagComponent {
     // BROWSER
     if (isPlatformBrowser(this.platformId)) {
       const script = this.renderer.createElement('script') as HTMLScriptElement;
-      script.src = `https://googletagmanager.com/gtag/js?id=${this.trackingCode}`;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${this.trackingCode}`;
       script.async = true;
       this.renderer.appendChild(this.el.nativeElement, script);
 
