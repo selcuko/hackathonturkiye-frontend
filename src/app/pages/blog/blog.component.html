@@ -22,8 +22,8 @@
 
             <ul class="post-meta">
               <li><i class="fa fa-clock-o"></i>{{item.published_at | date:"dd/MM/yyyy"}}</li>
-              <li><i class="fa fa-user">
-                </i><a href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></li>
+              <li><img class="user-small-img" src="{{item.author.profile.pic}}">
+                <a href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></li>
               <div class="tag-area" *ngFor="let tag of item.tags">
                 <li><i class="fa fa-tags"></i><a routerLink="/etiket/{{tag.slug}}/tag">{{tag.name}}</a></li>
               </div>
