@@ -29,5 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### For ssr
 
-npm run build:ssr
+npm run build:ssr  
 npm run serve:ssr
