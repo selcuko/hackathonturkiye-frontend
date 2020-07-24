@@ -1307,4 +1307,12 @@
         <loc>https://hackathonturkiye.com/etkinlik/idea</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/digix-global-ai-challenge</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/chatbot-nedir-neden-onemlidir-ve-faydalari-nelerdir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
