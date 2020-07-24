@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http/http.service';
 import { NgxSpinnerService } from "ngx-spinner";
+import { SeoService } from 'src/app/services/seo/seo.service';
 
 @Component({
   selector: 'app-find',
@@ -22,6 +23,7 @@ export class FindComponent implements OnInit {
     private route: ActivatedRoute,
     private httpService: HttpService,
     private router: Router,
+    private seoService: SeoService,
     private spinner: NgxSpinnerService) {
 
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
@@ -37,12 +39,22 @@ export class FindComponent implements OnInit {
       this.status = d['durumu'] || "";
     });
 
+    let title = this.status;
+    if (this.eventLoc != "heryer") {
+      title += ' ' + this.eventLoc;
+    }
+    if (this.eventType != "hepsi") {
+      title += ' ' + this.eventType;
+    } else {
+      title +=  ' ' + "Hackathonlar";
+    }
+
+    this.seoService.updateTitle(title);
+    this.seoService.addMeta('description', 'Hackathon Türkiye etkinlik arama sayfasında kendinize uygun hackathon, ideathon, makeathon, datathon, game jam ve benzeri etkinlikleri bulabilirsiniz. ' + title);
   }
 
   ngOnInit(): void {
     this.getEvents();
-    // this.seoService.updateTitle('Anasayfa');
-    // this.seoService.addMeta('description', 'Anasayfa açıklamasıdır.');
   }
 
 
