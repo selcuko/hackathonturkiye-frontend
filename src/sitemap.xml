@@ -1315,4 +1315,20 @@
         <loc>https://hackathonturkiye.com/blog/chatbot-nedir-neden-onemlidir-ve-faydalari-nelerdir</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/game-jam-nedir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/hackathonlar-icin-13-ilginc-fikir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/hackathonlarda-yapilanlar-sunumlarda-nelere-dikkat-edilmelidir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/spor-ve-blockchain-bulusursa</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
