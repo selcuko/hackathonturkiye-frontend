@@ -1339,8 +1339,28 @@
         <loc>https://hackathonturkiye.com/blog/turkiyede-her-sene-duzenlenen-hackathonlar</loc>
         <changefreq>weekly</changefreq>
     </url>
-        <url>
+    <url>
         <loc>https://hackathonturkiye.com/etkinlik/genc-ideathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/licence-to-clean</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/healtech-hackathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/covid-19-sonrasi-hayat</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/makeathon-nedir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/en-cok-kullanilan-online-is-birligi-araclari</loc>
         <changefreq>weekly</changefreq>
     </url>
 </urlset>
