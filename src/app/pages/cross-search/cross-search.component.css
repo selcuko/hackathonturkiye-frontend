@@ -38,15 +38,69 @@ li a {
   margin-bottom: 3em;
 }
 
+.page-header {
+  border: none;
+  margin: 40px 0 20px !important;
+}
+
+.page-header h1 {
+  font-weight: bold;
+  line-height: 56px;
+  color: #c9f0ff;
+  font-family: "Lora", serif;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+a.about-button {
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  margin-top: 28px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 0 0 rgba(196, 101, 97, 0.25),
+    0 -2px 0 0 rgba(76, 201, 189, 0.25), 2px 0 0 0 rgba(196, 101, 97, 0.25),
+    -2px 0 0 0 rgba(76, 201, 189, 0.25), 2px -2px 0 0 rgba(136, 151, 143, 0.5),
+    -2px 2px 0 0 rgba(136, 151, 143, 0.5), 2px 2px 0 0 rgba(255, 51, 51, 0.75),
+    -2px -2px 0 0 rgba(16, 251, 234, 0.75);
+}
+a.about-button:before {
+  display: none;
+}
+
+.page-header .mobile-back {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.page-header .desktop-back {
+  position: fixed;
+  margin-top: 1em;
+}
+
 .content-title {
   padding: 5px;
   background-color: #fff;
 }
 
 .content-header {
-  background-color: #4392F1;
+  background-color: #4392f1;
   padding: 10px;
   position: relative;
+}
+
+.tab-content {
+  margin-top: 7.5em;
 }
 
 .content-header h2 a {
@@ -61,7 +115,7 @@ li a {
 }
 
 .content-footer {
-  background-color: #4392F1;
+  background-color: #4392f1;
   padding: 10px;
   position: relative;
   color: white;
@@ -77,7 +131,7 @@ aside {
 }
 
 .nf {
-  line-height: 9em;
+  line-height: 20em;
   width: 111%;
 }
 
@@ -128,11 +182,11 @@ aside {
 }
 
 .title-widget-sidebar:after {
-  border-bottom: 2px solid #4392F1;
+  border-bottom: 2px solid #4392f1;
   width: 150px;
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   padding-bottom: 10px;
 }
 
@@ -147,19 +201,19 @@ aside {
   height: 70px;
   float: left;
   margin-right: 15px;
-  border: 3px solid #4392F1;
+  border: 3px solid #4392f1;
   transition: 0.5s;
 }
 
 .recent-post a {
   text-decoration: none;
-  color: #34495E;
+  color: #34495e;
   transition: 0.5s;
 }
 
 .post-img,
 .recent-post a:hover {
-  color: #4392F1;
+  color: #4392f1;
   text-decoration: underline;
 }
 
@@ -180,7 +234,6 @@ aside {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
   #find,
   #blog {
     min-height: 75vh;
@@ -188,13 +241,13 @@ aside {
 }
 
 h1 {
-    margin-top: 40px;
-    font-weight: bold;
-    font-size: 28px;
-    color: #C9F0FF;
-    font-family: 'Lora', serif;
-    text-align: center;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-variant: small-caps;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #c9f0ff;
+  font-family: "Lora", serif;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant: small-caps;
 }

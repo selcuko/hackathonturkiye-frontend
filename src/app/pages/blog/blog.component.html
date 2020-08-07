@@ -2,7 +2,17 @@
   <div class="overlay">
     <div class="container">
       <div class="row">
+        <a
+          routerLink="/ana-sayfa"
+          class="about-button text-center hidden-md hidden-lg mobile-back"
+          >Ana Sayfa</a
+        >
         <div class="col-md-12">
+          <a
+            routerLink="/ana-sayfa"
+            class="about-button text-left hidden-xs hidden-sm desktop-back"
+            >Ana Sayfa</a
+          >
           <h1>Hackathon Blog</h1>
         </div>
       </div>
@@ -16,46 +26,84 @@
       <div *ngFor="let item of list">
         <div class="row">
           <div class="col-md-7 col-sm-6 col-xs-12">
-            <h2 class="post-title"><a routerLink="/blog/{{item.slug}}">{{item.title}}</a> <span class="time">
-                {{item.time}}
-                Dk</span> </h2>
+            <h2 class="post-title">
+              <a routerLink="/blog/{{ item.slug }}">{{ item.title }}</a>
+              <span class="time">
+                {{ item.time }}
+                Dk</span
+              >
+            </h2>
 
             <ul class="post-meta">
-              <li><i class="fa fa-clock-o"></i>{{item.published_at | date:"dd/MM/yyyy"}}</li>
-              <li><img class="user-small-img" src="{{item.author.profile.pic}}">
-                <a href="/blog/?author__username={{item.author.username}}">{{item.author.first_name}}</a></li>
+              <li>
+                <i class="fa fa-clock-o"></i
+                >{{ item.published_at | date: "dd/MM/yyyy" }}
+              </li>
+              <li>
+                <img
+                  class="user-small-img"
+                  src="{{ item.author.profile.pic }}"
+                />
+                <a href="/blog/?author__username={{ item.author.username }}">{{
+                  item.author.first_name
+                }}</a>
+              </li>
               <div class="tag-area" *ngFor="let tag of item.tags">
-                <li><i class="fa fa-tags"></i><a routerLink="/etiket/{{tag.slug}}/tag">{{tag.name}}</a></li>
+                <li>
+                  <i class="fa fa-tags"></i
+                  ><a routerLink="/etiket/{{ tag.slug }}/tag">{{ tag.name }}</a>
+                </li>
               </div>
               <div class="pull-right social hidden-xs hidden-sm">
                 <li>
-                  <a target="_blank"
-                    href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{item.slug}}/">
+                  <a
+                    target="_blank"
+                    href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{
+                      item.slug
+                    }}/"
+                  >
                     <i class="fa fa-linkedin fnt-1em"></i>
                   </a>
                 </li>
                 <li>
-                  <a target="_blank"
-                    href="https://twitter.com/intent/tweet?text={{item.title}}+https://hackathonturkiye.com/blog/{{item.slug}}/">
+                  <a
+                    target="_blank"
+                    href="https://twitter.com/intent/tweet?text={{
+                      item.title
+                    }}+https://hackathonturkiye.com/blog/{{ item.slug }}/"
+                  >
                     <i class="fa fa-twitter fnt-1em"> </i>
                   </a>
                 </li>
                 <li>
-                  <a target="_blank"
-                    href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{item.slug}}/&amp;p[title]={{item.title}}&amp;p[images][0]={{item.thumbnail}}&amp;v=1">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{
+                      item.slug
+                    }}/&amp;p[title]={{ item.title }}&amp;p[images][0]={{
+                      item.thumbnail
+                    }}&amp;v=1"
+                  >
                     <i class="fa fa-facebook fnt-1em"></i>
                   </a>
                 </li>
               </div>
             </ul>
 
-            <p class="post-content">{{item.summary}}</p>
-            <a class="btn btn-primary readmore btn-lg" routerLink="/blog/{{item.slug}}">Daha Fazla</a>
-
+            <p class="post-content">{{ item.summary }}</p>
+            <a
+              class="btn btn-primary readmore btn-lg"
+              routerLink="/blog/{{ item.slug }}"
+              >Daha Fazla</a
+            >
           </div>
           <div class="col-md-5 col-sm-6 col-xs-12">
             <div class="about-img">
-              <img src="{{item.thumbnail}}" class="img-responsive" alt="{{item.title}}">
+              <img
+                src="{{ item.thumbnail }}"
+                class="img-responsive"
+                alt="{{ item.title }}"
+              />
             </div>
           </div>
         </div>
@@ -63,8 +111,9 @@
     </div>
   </div>
   <div class="text-center">
-    <button class="btn btn-success" *ngIf="list && next" (click)="loadMore()">Daha Fazla Yükle</button>
+    <button class="btn btn-success" *ngIf="list && next" (click)="loadMore()">
+      Daha Fazla Yükle
+    </button>
   </div>
-  <h3 class="text-danger text-center" *ngIf="!list"> Kayıt Bulunamadı</h3>
-
+  <h3 class="text-danger text-center" *ngIf="!list">Kayıt Bulunamadı</h3>
 </section>

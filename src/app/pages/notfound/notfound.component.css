@@ -433,26 +433,14 @@ g#head #rightAntenna > ellipse {
             transform: rotate(-15deg);
   }
 }
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
-}
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
 
-body {
-  background: #404853;
-  font-family: "Roboto Condensed", sans-serif;
-}
+
 
 .col {
   text-align: center;
+  min-height: 45vh;
+
 }
 .col h1 {
   text-shadow: 0 3px 0px #404853, 0 6px 0px #333;

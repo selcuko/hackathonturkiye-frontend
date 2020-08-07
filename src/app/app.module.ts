@@ -10,10 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AlertModule } from 'ngx-alerts';
 
-import { HeaderComponent } from './components/header/header.component';
 import { GoogleAnalyticsGTagComponent } from './components/analytics/google-analytics.component';
-
-import { FooterComponent } from './components/footer/footer.component';
 
 import { NgxSpinnerModule } from "ngx-spinner";
 import { FormsModule } from '@angular/forms';
@@ -24,8 +21,6 @@ import { DISQUS_SHORTNAME } from 'ngx-disqus';
   declarations: [
     AppComponent,
     NotfoundComponent,
-    HeaderComponent,
-    FooterComponent,
     GoogleAnalyticsGTagComponent
   ],
   imports: [
