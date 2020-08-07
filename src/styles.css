@@ -148,3 +148,7 @@ iframe {
     letter-spacing: 0.32em;
     text-transform: uppercase;
 }
+
+.fnt-1em {
+  font-size: 1.5em;
+}
