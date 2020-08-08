@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import './assets/font-awesome/css/font-awesome.min.css';
-@import './assets/css/animate.css';
-
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
@@ -80,17 +78,6 @@ h6 {
     margin-bottom: 0;
 }
 
-.btn-primary {
-    background: #4392F1;
-    border-color: #4392F1;
-    font-size: 16px;
-    padding: 8px 15px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
 .form-control {
     border-radius: 0;
     border: 2px solid #111;
@@ -104,48 +91,6 @@ iframe {
     border: none;
 }
 
-.section-title {
-    margin-bottom: 80px;
-}
-
-.section-title h2 {
-    color: #C9F0FF;
-    font-size: 48px;
-    text-transform: none;
-}
-
-.section-title p {
-    color: #111;
-    letter-spacing: 1px;
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.page-header {
-    border: none;
-}
-
-.page-header h1 {
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 56px;
-    color: #C9F0FF;
-    font-family: 'Lora', serif;
-    text-align: center;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-variant: small-caps;
-}
-
-.page-header p {
-    font-family: 'Lora', serif;
-    font-weight: bold;
-    margin-top: 34px;
-    opacity: 0.8;
-    color: #C9F0FF;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
+.fnt-1em {
+  font-size: 1.5em;
 }

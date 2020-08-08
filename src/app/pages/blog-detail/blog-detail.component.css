@@ -75,6 +75,57 @@
   animation-duration: 300ms;
 }
 
+.page-header {
+  border: none;
+  padding-bottom: 0;
+}
+
+.page-header h1 {
+  font-weight: bold;
+  line-height: 56px;
+  color: #C9F0FF;
+  font-family: 'Lora', serif;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+a.about-button {
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  margin-top: 28px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 0 0 rgba(196, 101, 97, 0.25), 0 -2px 0 0 rgba(76, 201, 189, 0.25), 2px 0 0 0 rgba(196, 101, 97, 0.25), -2px 0 0 0 rgba(76, 201, 189, 0.25), 2px -2px 0 0 rgba(136, 151, 143, 0.5), -2px 2px 0 0 rgba(136, 151, 143, 0.5), 2px 2px 0 0 rgba(255, 51, 51, 0.75), -2px -2px 0 0 rgba(16, 251, 234, 0.75);
+}
+a.about-button:before {
+  display: none;
+}
+
+.page-header .mobile-back {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  margin-bottom: 2em;
+}
+
+.page-header .desktop-back {
+  position: fixed;
+  margin-top: 1em;
+}
+
+.page-header .blog-button{
+  position: unset;
+  float: right;
+  margin-top: 1em;
+}
+
 h1.post-title {
   font-weight: 400;
   line-height: 110%;
