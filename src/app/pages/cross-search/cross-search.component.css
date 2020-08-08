@@ -84,7 +84,7 @@ a.about-button:before {
 }
 
 .page-header .desktop-back {
-  position: fixed;
+  position: absolute;
   margin-top: 1em;
 }
 
