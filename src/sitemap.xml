@@ -1363,4 +1363,24 @@
         <loc>https://hackathonturkiye.com/blog/en-cok-kullanilan-online-is-birligi-araclari</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/nn-startup-challenge</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/my-talent-programi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/womens-safety-hackathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/gametech</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/2020-migration-challenge</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
