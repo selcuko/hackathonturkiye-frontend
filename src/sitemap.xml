@@ -1383,4 +1383,20 @@
         <loc>https://hackathonturkiye.com/etkinlik/2020-migration-challenge</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/olasiliklar-size-murphy-kanunlarini-ogretebilir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/yetenekler-yapay-zeka-ile-birlesir-mi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/imagicharm-ile-kodlama-ogren</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/vispeahen-veri-gorsellestirme</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
