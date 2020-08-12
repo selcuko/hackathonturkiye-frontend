@@ -8,246 +8,243 @@ div,
 input,
 p,
 a {
-  margin: 0px;
+    margin: 0px;
 }
 
 a,
 a:hover,
 a:focus {
-  color: inherit;
+    color: inherit;
 }
 
 ul {
-  margin-top: 5rem;
+    margin-top: 5rem;
 }
 
 ul li {
-  background-color: white;
+    background-color: white;
 }
 
 li a {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 #find,
 #blog {
-  min-height: 55vh;
+    min-height: 55vh;
 }
 
 .main {
-  margin-bottom: 3em;
+    margin-bottom: 3em;
 }
 
 .page-header {
-  border: none;
-  margin: 40px 0 20px !important;
+    border: none;
+    margin: 40px 0 20px !important;
 }
 
 .page-header h1 {
-  font-weight: bold;
-  line-height: 56px;
-  color: #c9f0ff;
-  font-family: "Lora", serif;
-  text-align: center;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-variant: small-caps;
+    font-weight: bold;
+    line-height: 56px;
+    color: #c9f0ff;
+    font-family: "Lora", serif;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-variant: small-caps;
 }
 
 a.about-button {
-  border-radius: 50px;
-  color: #fff;
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 18px;
-  line-height: 1;
-  cursor: pointer;
-  margin-top: 28px;
-  text-transform: uppercase;
-  box-shadow: 0 2px 0 0 rgba(196, 101, 97, 0.25),
-    0 -2px 0 0 rgba(76, 201, 189, 0.25), 2px 0 0 0 rgba(196, 101, 97, 0.25),
-    -2px 0 0 0 rgba(76, 201, 189, 0.25), 2px -2px 0 0 rgba(136, 151, 143, 0.5),
-    -2px 2px 0 0 rgba(136, 151, 143, 0.5), 2px 2px 0 0 rgba(255, 51, 51, 0.75),
-    -2px -2px 0 0 rgba(16, 251, 234, 0.75);
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    margin-top: 28px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 0 0 rgba(196, 101, 97, 0.25), 0 -2px 0 0 rgba(76, 201, 189, 0.25), 2px 0 0 0 rgba(196, 101, 97, 0.25), -2px 0 0 0 rgba(76, 201, 189, 0.25), 2px -2px 0 0 rgba(136, 151, 143, 0.5), -2px 2px 0 0 rgba(136, 151, 143, 0.5), 2px 2px 0 0 #c9f1ff, -2px -2px 0 0 #3b6175;
 }
+
 a.about-button:before {
-  display: none;
+    display: none;
 }
 
 .page-header .mobile-back {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-  display: block;
-  margin-bottom: 2em;
-  margin-top: 2em;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .page-header .desktop-back {
-  position: absolute;
-  margin-top: 1em;
+    position: absolute;
+    margin-top: 1em;
 }
 
 .content-title {
-  padding: 5px;
-  background-color: #fff;
+    padding: 5px;
+    background-color: #fff;
 }
 
 .content-header {
-  background-color: #4392f1;
-  padding: 10px;
-  position: relative;
+    background-color: #4392f1;
+    padding: 10px;
+    position: relative;
 }
 
 .tab-content {
-  margin-top: 7.5em;
+    margin-top: 7.5em;
 }
 
 .content-header h2 a {
-  color: white;
-  text-decoration: none;
-  transition: 0.5s;
-  font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 20px;
 }
 
 .content-header h2 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .content-footer {
-  background-color: #4392f1;
-  padding: 10px;
-  position: relative;
-  color: white;
-  text-align: center;
+    background-color: #4392f1;
+    padding: 10px;
+    position: relative;
+    color: white;
+    text-align: center;
 }
 
 aside {
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  -webkit-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
-  -moz-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
-  box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    -webkit-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
+    -moz-box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
+    box-shadow: 1px 4px 16px 3px rgba(199, 197, 199, 1);
 }
 
 .nf {
-  line-height: 20em;
-  width: 111%;
+    line-height: 20em;
+    width: 100%;
 }
 
 .event-footer-content {
-  padding: 20px;
-  line-height: 1px;
+    padding: 20px;
+    line-height: 1px;
 }
 
 .event-footer-content .author-content {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .author-content {
-  float: left;
-  margin-top: -5px;
+    float: left;
+    margin-top: -5px;
 }
 
 .user-small-img {
-  cursor: pointer;
-  width: 33px;
-  height: 33px;
-  border-radius: 100%;
-  margin-right: 10px;
-  border: 2px solid #fff;
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    margin-right: 10px;
+    border: 2px solid #fff;
 }
 
 .author {
-  font-size: 1em;
-  color: white;
+    font-size: 1em;
+    color: white;
 }
 
 .author:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .widget-sidebar {
-  background-color: #fff;
-  padding: 20px;
-  margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
 }
 
 .title-widget-sidebar {
-  font-size: 14pt;
-  border-bottom: 2px solid #e5ebef;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  margin-top: 0px;
+    font-size: 14pt;
+    border-bottom: 2px solid #e5ebef;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    margin-top: 0px;
 }
 
 .title-widget-sidebar:after {
-  border-bottom: 2px solid #4392f1;
-  width: 150px;
-  display: block;
-  position: absolute;
-  content: "";
-  padding-bottom: 10px;
+    border-bottom: 2px solid #4392f1;
+    width: 150px;
+    display: block;
+    position: absolute;
+    content: "";
+    padding-bottom: 10px;
 }
 
 .recent-post {
-  width: 100%;
-  height: 80px;
-  list-style-type: none;
+    width: 100%;
+    height: 80px;
+    list-style-type: none;
 }
 
 .post-img img {
-  width: 100px;
-  height: 70px;
-  float: left;
-  margin-right: 15px;
-  border: 3px solid #4392f1;
-  transition: 0.5s;
+    width: 100px;
+    height: 70px;
+    float: left;
+    margin-right: 15px;
+    border: 3px solid #4392f1;
+    transition: 0.5s;
 }
 
 .recent-post a {
-  text-decoration: none;
-  color: #34495e;
-  transition: 0.5s;
+    text-decoration: none;
+    color: #34495e;
+    transition: 0.5s;
 }
 
 .post-img,
 .recent-post a:hover {
-  color: #4392f1;
-  text-decoration: underline;
+    color: #4392f1;
+    text-decoration: underline;
 }
 
 .date i {
-  margin-right: 0.2em;
+    margin-right: 0.2em;
 }
 
 .time i {
-  margin-right: 0.2em;
+    margin-right: 0.2em;
 }
 
 .m-t-3 {
-  margin-top: 3%;
+    margin-top: 3%;
 }
 
 .p-10 {
-  padding-top: 3em;
+    padding-top: 3em;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  #find,
-  #blog {
-    min-height: 75vh;
-  }
+    #find,
+    #blog {
+        min-height: 75vh;
+    }
 }
 
 h1 {
-  margin-top: 40px;
-  font-weight: bold;
-  font-size: 28px;
-  color: #c9f0ff;
-  font-family: "Lora", serif;
-  text-align: center;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-variant: small-caps;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 28px;
+    color: #c9f0ff;
+    font-family: "Lora", serif;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-variant: small-caps;
 }

@@ -1,81 +1,68 @@
 <div class="space"></div>
 
 <header>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-sm-5 col-xs-5 logotype">
-        <img
-          alt="Hackathon Türkiye"
-          src="../../../assets/images/hackathon_turkiye_logo.svg"
-        />
-      </div>
-      <div class="col-md-3 text-right search-area">
-        <form class="pull-right" role="search">
-          <div class="input-group">
-             <input type="text" class="form-control search-input" id="search" name="search"
-                  placeholder="Ara..." [(ngModel)]="searchQuery">
-              <div class="input-group-btn">
-                  <button (click)="search()" class="btn btn-default search-button">
-                      <span class="glyphicon glyphicon-search"></span>
-                  </button>
-              </div>
-          </div>
-      </form>
-      </div>
-      <div class="col-md-2 text-right">
-        <a routerLink="/blog" routerLinkActive="active" class="about-button"
-          >Blog</a
-        >
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" id="logoandblog">
+                <div class="col-xs-8">
+                    <a routerLink="/ana-sayfa" routerLinkActive="active"><img alt="Hackathon Türkiye" src="../../../assets/images/hackathon_turkiye_logo.svg" style="max-width: 180px;" /></a>
+                </div>
+                <div class="headerblog col-xs-4">
+                    <a routerLink="/blog" routerLinkActive="active" class="about-button">Blog</a>
+                </div>
+            </div>
+            <div class="col-xs-12 searchareadiv">
+                <div class="col-xs-12 col-md-5 text-center search-area">
+                    <form class="pull-right" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control search-input" id="search" name="search" placeholder="Ara..." [(ngModel)]="searchQuery">
+                            <div class="input-group-btn">
+                                <button (click)="search()" class="btn btn-default search-button">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </header>
 
 <section class="container lastEvents">
-  <div class="row">
-    <div class="col-lg-12">
-        <div class="section-title text-center">
-            <h1>Güncel Hackathonlar</h1>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="section-title text-center">
+                <h1>Güncel Hackathonlar</h1>
+            </div>
         </div>
     </div>
-  </div>
-  <div class="row">
-    <div *ngFor="let xathon of events">
-      <div class="col-xs-12 col-sm-6 text-center">
-        <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag"
-                  href="{{xathon.origin_url}}">
-          <img
-            src="{{xathon.thumbnail}}"
-            alt={{xathon.name}}
-            class="img-events replace-2x"
-          />
-          <div class="intro-view">
-            {{xathon.location}}
-          </div> </a>
+    <div class="row">
+        <div *ngFor="let xathon of events">
+            <div class="col-xs-12 col-sm-6 text-center">
+                <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag" href="{{xathon.origin_url}}">
+                    <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
+                    <div class="intro-view">
+                        {{xathon.location}}
+                    </div>
+                </a>
 
-          <a *ngIf="xathon.has_details" class="intro-item"
-                  routerLink="/etkinlik/{{xathon.slug}}">
-                  <img
-            src="{{xathon.thumbnail}}"
-            alt={{xathon.name}}
-            class="img-events replace-2x"
-          />
-          <div class="intro-view">
-            {{xathon.location}}
-          </div> </a>
-        <!-- /Intro Item -->
-      </div>
-      <!-- /col -->
-    </div>
+                <a *ngIf="xathon.has_details" class="intro-item" routerLink="/etkinlik/{{xathon.slug}}">
+                    <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
+                    <div class="intro-view">
+                        {{xathon.location}}
+                    </div>
+                </a>
+                <!-- /Intro Item -->
+            </div>
+            <!-- /col -->
+        </div>
 
 
 
 
-    <div class="col-xs-12 col-sm-12 text-center">
-      <a
-        routerLink="/etkinlikler"
-        class="about-button"
-        >Daha Fazla Gör</a
+        <div class="col-xs-12 col-sm-12 text-center">
+            <a routerLink="/etkinlikler" class="about-button" style="margin-top:25px;">Daha Fazla Gör</a
       >
     </div>
   </div>
@@ -108,9 +95,7 @@
       </div>
       <div class="feac-title">Hackathon Düzenleme</div>
       <div class="feac-text">
-        The most agressive and eye catching design ever made for the template.
-        Your page will never be forgotten since it provides an amazing user
-        experience.
+        Hackathon Türkiye ekibi düzenli bir şekilde yeni nesil tema konularıyla hackathonlar düzenleyerek Türkiye çapında hackathon kültürünün yayılmasına yardımcı oluyor.
       </div>
     </div>
 
@@ -120,8 +105,7 @@
       </div>
       <div class="feac-title">Haftalık Bülten</div>
       <div class="feac-text">
-        We prepared 6 different variants of template for you to choose an ideal
-        one. Try each of ready versions and enjoy their unlimited opportunities.
+        Sizlere güncel olan hackathonları ve yeni yazılarımızı ulaştırmak için haftalık bültenimizi bilgilendirme amacıyla yayımlıyoruz.
       </div>
     </div>
 
@@ -134,8 +118,7 @@
       </div>
       <div class="feac-title">Hackathon Duyuruları</div>
       <div class="feac-text">
-        Danio provides a variety of “about” pages solving the most common tasks,
-        so you don’t have to do it manually. Choose one that fits the best.
+        Topluluğumuzun yaptığı en büyük hizmetlerden biri de sizlere dünya ve çoğunlukla Türkiye çapındaki hackathonları duyurmak ve hakkında bilgiler vermektir.
       </div>
     </div>
   </div>
@@ -149,9 +132,7 @@
       </div>
       <div class="feac-title">İçerik Üretimi</div>
       <div class="feac-text">
-        Template uses the latest CSS3 animations making the overall experience
-        smooth. It's a great way to grab the viewers' attention towards your
-        content.
+        Hackathon Türkiye ekibi hackathon alanındaki yazılar dışında teknoloji, yazılım, tasarım ve girişimcilik vb alanlarda da en güncel içerikleri sizler için hazırlıyor.
       </div>
     </div>
 
@@ -164,9 +145,7 @@
       </div>
       <div class="feac-title">Dünyadaki Hackathonlar</div>
       <div class="feac-text">
-        Template owes a pixel-perfect design and is coded with the highest
-        quality of graphics. Its images, fonts and texts become eye candy for
-        every customer.
+        Ulaşılması zor olduğu düşünülen bu hackathonları sizlere duyuruyor ve Türk katılımcıların sayısını arttırmayı planlıyoruz.
       </div>
     </div>
 
@@ -179,8 +158,7 @@
       </div>
       <div class="feac-title">İşbirlikleri, Yarışmalar</div>
       <div class="feac-text">
-        Perfect, valid, well organized and commented code makes it easy to
-        customize the product you have bought.
+        Hackathon Türkiye ekibi farklı kuruluşların düzenlemek istediği hackathonlara danışmanlık hizmeti vererek Türkiye çapında hackathon düzenlenmesine yardımcı oluyor.
       </div>
     </div>
   </div>
@@ -213,296 +191,203 @@
               ></a>
             </h4>
             <p>Founder</p>
-          </div>
         </div>
-      </div>
-      <div
-        class="col-md-3 col-sm-6 col-xs-6"
-      >
+    </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img
-            src="../../../assets/images/team/arda-ozturk.jpg"
-            class="img-responsive img-circle"
-            alt="Arda Öztürk"
-          />
-          <div class="team-details">
-            <h4>
-              Arda Öztürk
-              <a href="https://www.linkedin.com/in/arda-ozturk/" target="_blank"
-                ><i class="fa fa-linkedin" rel="nofollow"></i
+            <img src="../../../assets/images/team/arda-ozturk.jpg" class="img-responsive img-circle" alt="Arda Öztürk" />
+            <div class="team-details">
+                <h4>
+                    Arda Öztürk
+                    <a href="https://www.linkedin.com/in/arda-ozturk/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
               ></a>
-            </h4>
-            <p>Chief Executive Officer</p>
-          </div>
+                </h4>
+                <p>Chief Executive Officer</p>
+            </div>
         </div>
-      </div>
-      <div
-        class="col-md-3 col-sm-6 col-xs-6"
-      >
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img
-            src="../../../assets/images/team/irem-cetin.jpg"
-            class="img-responsive img-circle"
-            alt="İrem Çetin"
-          />
-          <div class="team-details">
-            <h4>
-              İrem Çetin
-              <a
-                href="https://www.linkedin.com/in/irem%C3%A7etin/"
-                target="_blank"
-                ><i class="fa fa-linkedin" rel="nofollow"></i
+            <img src="../../../assets/images/team/irem-cetin.jpg" class="img-responsive img-circle" alt="İrem Çetin" />
+            <div class="team-details">
+                <h4>
+                    İrem Çetin
+                    <a href="https://www.linkedin.com/in/irem%C3%A7etin/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
               ></a>
-            </h4>
-            <p>Head Of Design</p>
-          </div>
+                </h4>
+                <p>Head Of Design</p>
+            </div>
         </div>
-      </div>
-      <div
-        class="col-md-3 col-sm-6 col-xs-6"
-      >
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img
-            src="../../../assets/images/team/emre-akbaki.jpg"
-            class="img-responsive img-circle"
-            alt="Emre Akbaki"
-          />
-          <div class="team-details">
-            <h4>
-              Emre Akbaki
-              <a
-                href="https://www.linkedin.com/in/emre-akbaki-a68358b4/"
-                target="_blank"
-                ><i class="fa fa-linkedin" rel="nofollow"></i
+            <img src="../../../assets/images/team/emre-akbaki.jpg" class="img-responsive img-circle" alt="Emre Akbaki" />
+            <div class="team-details">
+                <h4>
+                    Emre Akbaki
+                    <a href="https://www.linkedin.com/in/emre-akbaki-a68358b4/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
               ></a>
-            </h4>
-            <p>Frontend Developer</p>
-          </div>
+                </h4>
+                <p>Frontend Developer</p>
+            </div>
         </div>
-      </div>
+    </div>
     </div>
     <div class="row">
-      <div
-        class="col-md-3 col-sm-6 col-xs-6"
-      >
-        <div class="team-member">
-          <img
-            src="../../../assets/images/team/omer-selcuk.jpg"
-            class="img-responsive img-circle"
-            alt="Ömer Selçuk"
-          />
-          <div class="team-details">
-            <h4>
-              Ömer Selçuk
-              <a href="https://www.linkedin.com/in/omerselcuk/" target="_blank"
-                ><i class="fa fa-linkedin" rel="nofollow"></i
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="team-member">
+                <img src="../../../assets/images/team/omer-selcuk.jpg" class="img-responsive img-circle" alt="Ömer Selçuk" />
+                <div class="team-details">
+                    <h4>
+                        Ömer Selçuk
+                        <a href="https://www.linkedin.com/in/omerselcuk/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
               ></a>
-            </h4>
-            <p>Backend & Devops</p>
-          </div>
+                    </h4>
+                    <p>Backend & Devops</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div
-        class="col-md-3 col-sm-6 col-xs-6"
-      >
-        <div class="team-member">
-          <img
-            src="../../../assets/images/team/ege-dinnen.jpg"
-            class="img-responsive img-circle"
-            alt="Ege Dinnen"
-          />
-          <div class="team-details">
-            <h4>
-              Ege Dinnen
-              <a
-                href="https://www.linkedin.com/in/ege-dinnen-1a35091ab/"
-                target="_blank"
-                ><i class="fa fa-linkedin" rel="nofollow"></i
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="team-member">
+                <img src="../../../assets/images/team/ege-dinnen.jpg" class="img-responsive img-circle" alt="Ege Dinnen" />
+                <div class="team-details">
+                    <h4>
+                        Ege Dinnen
+                        <a href="https://www.linkedin.com/in/ege-dinnen-1a35091ab/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
               ></a>
-            </h4>
-            <p>Graphic Designer</p>
-          </div>
+                    </h4>
+                    <p>Graphic Designer</p>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div
-        class="col-md-3 col-sm-6 col-xs-6"
-      >
-        <div class="team-member">
-          <img
-            src="../../../assets/images/team/senem-aksakal.jpg"
-            class="img-responsive img-circle"
-            alt="Senem Aksakal "
-          />
-          <div class="team-details">
-            <h4>
-              Senem Aksakal
-              <a
-                href="https://www.linkedin.com/in/aksakalsenem/"
-                target="_blank"
-                ><i class="fa fa-linkedin" rel="nofollow"></i
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="team-member">
+                <img src="../../../assets/images/team/senem-aksakal.jpg" class="img-responsive img-circle" alt="Senem Aksakal " />
+                <div class="team-details">
+                    <h4>
+                        Senem Aksakal
+                        <a href="https://www.linkedin.com/in/aksakalsenem/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
               ></a>
-            </h4>
-            <p>Content Editor</p>
-          </div>
+                    </h4>
+                    <p>Content Editor</p>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div
-      class="col-md-3 col-sm-6 col-xs-6"
-    >
-      <div class="team-member">
-        <img
-          src="../../../assets/images/team/ecem-safak.jpeg"
-          class="img-responsive img-circle"
-          alt="Ecem Şafak"
-        />
-        <div class="team-details">
-          <h4>
-            Ecem Şafak
-            <a
-              href="https://www.linkedin.com/in/ecem-%C5%9Fafak-789612173/"
-              target="_blank"
-              ><i class="fa fa-linkedin" rel="nofollow"></i
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="team-member">
+                <img src="../../../assets/images/team/ecem-safak.jpeg" class="img-responsive img-circle" alt="Ecem Şafak" />
+                <div class="team-details">
+                    <h4>
+                        Ecem Şafak
+                        <a href="https://www.linkedin.com/in/ecem-%C5%9Fafak-789612173/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
             ></a>
-          </h4>
-          <p>Content Writer</p>
+                    </h4>
+                    <p>Content Writer</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
     </div>
     <div class="row">
 
 
-      <div
-        class="col-md-3 col-sm-6 col-xs-6"
-      >
-        <div class="team-member">
-          <img
-            src="../../../assets/images/team/hanifi-cetinkaya.jpg"
-            class="img-responsive img-circle"
-            alt="Hanifi Çetinkaya"
-          />
-          <div class="team-details">
-            <h4>
-              Hanifi Çetinkaya
-              <a
-                href="https://www.linkedin.com/in/hanifi-cetinkaya/"
-                target="_blank"
-                ><i class="fa fa-linkedin" rel="nofollow"></i
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="team-member">
+                <img src="../../../assets/images/team/hanifi-cetinkaya.jpg" class="img-responsive img-circle" alt="Hanifi Çetinkaya" />
+                <div class="team-details">
+                    <h4>
+                        Hanifi Çetinkaya
+                        <a href="https://www.linkedin.com/in/hanifi-cetinkaya/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
               ></a>
-            </h4>
-            <p>Content Writer</p>
-          </div>
+                    </h4>
+                    <p>Content Writer</p>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div
-      class="col-md-3 col-sm-6 col-xs-6"
-    >
-      <div class="team-member">
-        <img
-          src="../../../assets/images/team/melek-kaya.jpeg"
-          class="img-responsive img-circle"
-          alt="Melek Kaya"
-        />
-        <div class="team-details">
-          <h4>
-            Melek Kaya
-            <a
-              href="https://www.linkedin.com/in/astronautmelekkaya/"
-              target="_blank"
-              rel="nofollow"
-              ><i class="fa fa-linkedin"></i
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="team-member">
+                <img src="../../../assets/images/team/melek-kaya.jpeg" class="img-responsive img-circle" alt="Melek Kaya" />
+                <div class="team-details">
+                    <h4>
+                        Melek Kaya
+                        <a href="https://www.linkedin.com/in/astronautmelekkaya/" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i
             ></a>
-          </h4>
-          <p>Content Writer</p>
+                    </h4>
+                    <p>Content Writer</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="col-md-3 col-sm-6 col-xs-6"
-    >
-      <div class="team-member">
-        <img
-          src="../../../assets/images/team/sezin-atavci.jpg"
-          class="img-responsive img-circle"
-          alt="Sezin Atavcı"
-        />
-        <div class="team-details">
-          <h4>
-            Sezin Atavcı
-            <a
-              href="https://www.linkedin.com/in/sezin-atavc%C4%B1-9280701b3/"
-              target="_blank"
-              rel="nofollow"
-              ><i class="fa fa-linkedin"></i
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="team-member">
+                <img src="../../../assets/images/team/sezin-atavci.jpg" class="img-responsive img-circle" alt="Sezin Atavcı" />
+                <div class="team-details">
+                    <h4>
+                        Sezin Atavcı
+                        <a href="https://www.linkedin.com/in/sezin-atavc%C4%B1-9280701b3/" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i
             ></a>
-          </h4>
-          <p>Content Writer</p>
+                    </h4>
+                    <p>Content Writer</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
     </div>
 
-  </div>
+    </div>
 </section>
 
 
 <section id="contact" class="contact">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12">
-              <div class="section-title text-center">
-                  <h1>İletişim / İşbirliği</h1>
-                  <p class="contact-sub">Her türlü işbirliği ve iletişiminiz için aşağıdaki formu kullanabilirsiniz
-                  </p>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-lg-12">
-              <div class="row">
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <input type="text" class="form-control"  placeholder="Adınız ve Soyadınız *" id="name"
-                              [(ngModel)]="postData.contact">
-                      </div>
-                      <div class="form-group">
-                          <input type="email" class="form-control" placeholder="Email Adresiniz *" id="email"
-                              [(ngModel)]="postData.email">
-                      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <h1>İletişim / İşbirliği</h1>
+                    <p class="contact-sub">Her türlü işbirliği ve iletişiminiz için aşağıdaki formu kullanabilirsiniz
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Adınız ve Soyadınız *" id="name" [(ngModel)]="postData.contact">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Adresiniz *" id="email" [(ngModel)]="postData.email">
+                        </div>
 
-                      <div class="col-md-6 p0">
-                          <div class="form-group">
-                              <input type="tel" class="form-control" placeholder="Telefon numaranız örn(5388155059)" id="phone"
-                                  [(ngModel)]="postData.phone">
-                          </div>
-                      </div>
-                      <div class="col-md-6 p1">
-                          <div class="form-group">
-                              <select class="form-control" [(ngModel)]="postData.category.name">
+                        <div class="col-md-6 p0">
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Telefon numaranız örn(5388155059)" id="phone" [(ngModel)]="postData.phone">
+                            </div>
+                        </div>
+                        <div class="col-md-6 p1">
+                            <div class="form-group">
+                                <select class="form-control" [(ngModel)]="postData.category.name">
                                   <option value="">Konu *</option>
                                   <option value="İşbirliği">İşbirliği</option>
                                   <option value="Öneri">Öneri</option>
                                   <option value="Şikayet">Şikayet</option>
                               </select>
-                          </div>
-                      </div>
+                            </div>
+                        </div>
 
-                  </div>
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <textarea class="form-control" placeholder="Mesajınız *" id="message"
-                              [(ngModel)]="postData.body"></textarea>
-                      </div>
-                  </div>
-                  <div class="clearfix"></div>
-                  <div class="col-lg-12 text-center">
-                      <div id="success"></div>
-                      <a (click)="submitMessage()" class="about-button"
-                      >Mesajı Gönder</a
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Mesajınız *" id="message" [(ngModel)]="postData.body"></textarea>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12 text-center">
+                        <div id="success"></div>
+                        <a (click)="submitMessage()" class="about-button">Mesajı Gönder</a
                     >
                   </div>
               </div>
@@ -514,7 +399,8 @@
 
 
 <footer class="container text-center">
-  <div class="col-md-11 col-sm-11 col-xs-12">
+  <div class="bulten col-xs-12">
+  <div class="col-md-4 col-sm-4 col-xs-12">
     <form
       action="https://hackathonturkiye.us18.list-manage.com/subscribe/post?u=e73471f6b46f14749c393649c&amp;id=744a9e6606"
       ngNoForm
@@ -558,32 +444,30 @@
       </div>
     </form>
   </div>
+</div>
   <div class="row">
     <div class="col-xs-12">
 
       <div class="social-icons">
-        <a href="https://twitter.com/turkeyhackathon" target="_blank" rel="nofollow"
-        ><i class="fa fa-twitter"></i></a>
-        <a href="https://www.facebook.com/hackathonturkiye" target="_blank" rel="nofollow"
-          ><i class="fa fa-facebook"></i
+        <a href="https://www.linkedin.com/company/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-linkedin fa-lg"></i
+          ></a>
+                        <a href="https://twitter.com/turkeyhackathon" target="_blank" rel="nofollow"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a href="https://www.instagram.com/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-instagram fa-lg"></i
+          ></a>
+                        <a href="https://www.facebook.com/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-facebook fa-lg"></i
         ></a>
-        <a href="https://www.instagram.com/hackathonturkiye" target="_blank" rel="nofollow"
-          ><i class="fa fa-instagram"></i
-        ></a>
-        <a href="https://www.linkedin.com/company/hackathonturkiye" target="_blank" rel="nofollow"
-          ><i class="fa fa-linkedin"></i
-        ></a>
-      </div>
-      <div class="support">
-        Destek için:
-        <span class="et-text"
-          ><a href="mailto:info@hackathonturkiye.com"
+
+
+                    </div>
+                    <div class="support">
+                        <span style="color: white;">Destek için:</span>
+                        <span class="et-text"><a href="mailto:info@hackathonturkiye.com"
             >info@hackathonturkiye.com</a
           ></span
         >
       </div>
       <div class="copy">
-        © Hackathon Türkiye, 2020.
+        © Dijital Kunduz, 2020.
       </div>
     </div>
   </div>
