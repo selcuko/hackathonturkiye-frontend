@@ -1427,4 +1427,28 @@
         <loc>https://hackathonturkiye.com/blog/makeathonlarda-kullanilan-aletler</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/dogus-teknoloji-datathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/fikrimiz-ideathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/trendyol-tech-talent-bootcamp</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/ip-hypercasual</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/techankara-maker-oyun</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/global-goals-jam-ankara</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
