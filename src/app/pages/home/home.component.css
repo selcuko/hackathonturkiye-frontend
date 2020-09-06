@@ -447,8 +447,17 @@ footer {
 }
 
 .discord {
-    background-color: #fff;
-    overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
 }
 
 .discord p {

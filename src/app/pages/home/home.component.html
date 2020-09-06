@@ -457,7 +457,7 @@
                     </div>
                     <!--Discord Modal Open Button-->
                     <div class="discord-button-div">
-                        <button class="discord-button" onclick="discord()">-athonlar için takım arkadaşı bul!</button>
+                        <button class="discord-button" (click)="this.dsp = 'block' ">-athonlar için takım arkadaşı bul!</button>
                     </div>
                     <!--Discord Modal Open Button End-->
                     <div class="support">
@@ -465,15 +465,12 @@
                         <span class="et-text"><a href="mailto:info@hackathonturkiye.com">info@hackathonturkiye.com</a></span>
                     </div>
                     <!--Discord Modal-->
-                    <div class="col-12 discord" id="Bar">
-                        <div id="right">
-                            <a href="#" (click)="hide(Bar);">X</a>
-                        </div>
+                    <div class="col-12 discord" [style.display]="dsp">
                         <h2>-athon takım arkadaşlarınızı bulabilirsiniz!</h2>
                         <p>Hackathon Türkiye ekibi -athonlarda takım üyelerinin uyumunun yüksek düzeyde olmasını öneriyor. İsterseniz siz de Discord kanalımıza katılarak -athonlarda daha iyi takımlar oluşturabilmek için arkadaş bulabilirsiniz.<br/></p>
                         <div class="discord-buttons">
-                            <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><button class="discord-button discord-button-open">Discord kanalımıza katıl</button></a>
-                            <button class="discord-button discord-button-close" (click)="hide(Bar)">Hayır, istemiyorum</button>
+                            <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><button (click)="this.dsp = 'none' " class="discord-button discord-button-open">Discord kanalımıza katıl</button></a>
+                            <button class="discord-button discord-button-close" (click)="this.dsp = 'none' ">Hayır, istemiyorum</button>
                         </div>
                     </div>
                     <!--Discord Modal End-->
