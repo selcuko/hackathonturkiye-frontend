@@ -446,3 +446,25 @@ footer {
     background: transparent;
     color: #fff;
 }
+
+.discord{
+    background-color: #3b6175;
+}
+.discord p{
+    color: white;
+}
+.discord h2{
+    color: #c9f1ff;
+}
+.discord-button{
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 2px 0 0 rgba(196, 101, 97, 0.25), 0 -2px 0 0 rgba(76, 201, 189, 0.25), 2px 0 0 0 rgba(196, 101, 97, 0.25), -2px 0 0 0 rgba(76, 201, 189, 0.25), 2px -2px 0 0 rgba(136, 151, 143, 0.5), -2px 2px 0 0 rgba(136, 151, 143, 0.5), 2px 2px 0 0 #c9f1ff, -2px -2px 0 0 #3b6175;
+    background: transparent;
+    color: #fff
+}
