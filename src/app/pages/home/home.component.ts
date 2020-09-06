@@ -105,4 +105,9 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  hide(hideID) 
+  {
+    hideID.myDivElementRef.nativeElement.style = 'display: none';
+  }
+
 }

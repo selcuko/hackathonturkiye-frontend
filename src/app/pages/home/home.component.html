@@ -449,40 +449,37 @@
     <div class="col-xs-12">
 
       <div class="social-icons">
-        <a href="https://www.linkedin.com/company/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-linkedin fa-lg"></i
-          ></a>
+        <a href="https://www.linkedin.com/company/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-linkedin fa-lg"></i></a>
                         <a href="https://twitter.com/turkeyhackathon" target="_blank" rel="nofollow"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a href="https://www.instagram.com/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-instagram fa-lg"></i
-          ></a>
-                        <a href="https://www.facebook.com/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-facebook fa-lg"></i
-        ></a>
-        <a href="" target="_blank" rel="nofollow">
-          <img src="../../../assets/images/discord.png"/></a>
-
-
+                        <a href="https://www.instagram.com/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-instagram fa-lg"></i></a>
+                        <a href="https://www.facebook.com/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><img src="../../../assets/images/discord.png" /></a>
                     </div>
+                    <!--Discord Modal Open Button-->
                     <div class="discord-button-div">
-                      <button class="discord-button" onclick="discord()">-athonlar için takım arkadaşı bul!</button>
+                        <button class="discord-button" onclick="discord()">-athonlar için takım arkadaşı bul!</button>
                     </div>
+                    <!--Discord Modal Open Button End-->
                     <div class="support">
                         <span style="color: white;">Destek için:</span>
-                        <span class="et-text"><a href="mailto:info@hackathonturkiye.com"
-            >info@hackathonturkiye.com</a
-          ></span
-        >
-      </div>
-      <div class="col-12 discord" id="discord">
-        <h2>-athon takım arkadaşlarınızı bulabilirsiniz!</h2>
-
-        <p>Hackathon Türkiye ekibi -athonlarda takım üyelerinin uyumunun yüksek düzeyde olmasını öneriyor. İsterseniz siz de Discord kanalımıza katılarak -athonlarda daha iyi takımlar oluşturabilmek için arkadaş bulabilirsiniz.<br/></p>
-        <div class="discord-buttons">
-        <button class="discord-button discord-button-open" onclick="">Discord kanalımıza katıl</button>
-        <button class="discord-button discord-button-close" onclick="">Hayır, istemiyorum</button>
-      </div>
-    </div>
-      <div class="copy">
-        © Dijital Kunduz, 2020.
-      </div>
-    </div>
-  </div>
-</footer>
+                        <span class="et-text"><a href="mailto:info@hackathonturkiye.com">info@hackathonturkiye.com</a></span>
+                    </div>
+                    <!--Discord Modal-->
+                    <div class="col-12 discord" id="Bar">
+                        <div id="right">
+                            <a href="#" (click)="hide(Bar);">X</a>
+                        </div>
+                        <h2>-athon takım arkadaşlarınızı bulabilirsiniz!</h2>
+                        <p>Hackathon Türkiye ekibi -athonlarda takım üyelerinin uyumunun yüksek düzeyde olmasını öneriyor. İsterseniz siz de Discord kanalımıza katılarak -athonlarda daha iyi takımlar oluşturabilmek için arkadaş bulabilirsiniz.<br/></p>
+                        <div class="discord-buttons">
+                            <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><button class="discord-button discord-button-open">Discord kanalımıza katıl</button></a>
+                            <button class="discord-button discord-button-close" (click)="hide(Bar)">Hayır, istemiyorum</button>
+                        </div>
+                    </div>
+                    <!--Discord Modal End-->
+                    <div class="copy">
+                        © Dijital Kunduz, 2020.
+                    </div>
+                </div>
+            </div>
+            </footer>

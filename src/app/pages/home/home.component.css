@@ -319,7 +319,6 @@ footer {
 
 .section-title h1 {
     color: #C9F0FF;
-    font-size: 48px;
     text-transform: none;
 }
 
@@ -447,16 +446,20 @@ footer {
     color: #fff;
 }
 
-.discord{
-    background-color: #3b6175;
+.discord {
+    background-color: #fff;
+    overflow: hidden;
 }
-.discord p{
-    color: white;
+
+.discord p {
+    color: #111;
 }
-.discord h2{
-    color: #c9f1ff;
+
+.discord h2 {
+    color: #3b6175;
 }
-.discord-button{
+
+.discord-button {
     border-radius: 50px;
     display: inline-block;
     padding: 10px 15px;
@@ -467,4 +470,33 @@ footer {
     box-shadow: 0 2px 0 0 rgba(196, 101, 97, 0.25), 0 -2px 0 0 rgba(76, 201, 189, 0.25), 2px 0 0 0 rgba(196, 101, 97, 0.25), -2px 0 0 0 rgba(76, 201, 189, 0.25), 2px -2px 0 0 rgba(136, 151, 143, 0.5), -2px 2px 0 0 rgba(136, 151, 143, 0.5), 2px 2px 0 0 #c9f1ff, -2px -2px 0 0 #3b6175;
     background: transparent;
     color: #fff
+}
+
+.discord-button-open {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: #3b6175
+}
+
+.discord-button-close {
+    font-size: 12px;
+    color: #3b6175;
+    margin-bottom: 10px;
+}
+
+.discord a {
+    color: #111;
+    text-decoration: none;
+}
+
+.discord a:hover {
+    text-decoration: underline;
+}
+
+.discord #right {
+    float: right;
+    width: 30px;
+    height: 20px;
+    text-align: center;
 }
