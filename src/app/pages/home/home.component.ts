@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  dsp: 'block';
+  dsp: any = 'block';
   postData = {
     category: {
       name: ''
