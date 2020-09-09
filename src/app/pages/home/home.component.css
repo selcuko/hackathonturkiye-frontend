@@ -458,6 +458,7 @@ footer {
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .discord p {
@@ -509,3 +510,58 @@ footer {
     height: 20px;
     text-align: center;
 }
+.team-button{
+    bottom: 20px;
+    position: fixed;
+    z-index: 10;
+    right:24px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 50%;
+    transition: ease-in-out 0.3s;
+}
+.bulletin-button{
+    bottom: 20px;
+    position: fixed;
+    z-index: 10;
+    left:24px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 50%;
+    transition: ease-in-out 0.3s;
+}
+.team-button:hover{
+    opacity: 100%;
+    transition: ease-in-out 0.3s;
+}
+.bulletin-button:hover{
+    opacity: 100%;
+    transition: ease-in-out 0.3s;
+}
+.bulletin {
+    background-color: #fff;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .bulletin p {
+      color: #111;
+  }
+  
+  .bulletin h2 {
+      color: #3b6175;
+  }
+  .bulletin-close{
+      margin-top: 10px;
+  }
