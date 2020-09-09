@@ -458,6 +458,7 @@ footer {
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .discord p {
@@ -508,4 +509,32 @@ footer {
     width: 30px;
     height: 20px;
     text-align: center;
+}
+.team-button{
+    bottom: 20px;
+    position: fixed;
+    z-index: 10;
+    right:24px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 50%;
+}
+.bulletin-button{
+    bottom: 20px;
+    position: fixed;
+    z-index: 10;
+    left:24px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 50%;
+}
+.team-button:hover{
+    opacity: 100%;
+    transition: ease-in-out 0.3s;
+}
+.bulletin-button:hover{
+    opacity: 100%;
+    transition: ease-in-out 0.3s;
 }

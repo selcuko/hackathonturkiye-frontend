@@ -465,14 +465,6 @@
                         <span class="et-text"><a href="mailto:info@hackathonturkiye.com">info@hackathonturkiye.com</a></span>
                     </div>
                     <!--Discord Modal-->
-                    <div class="col-12 discord" [style.display]="dsp">
-                        <h2>-athon takım arkadaşlarınızı bulabilirsiniz!</h2>
-                        <p>Hackathon Türkiye ekibi -athonlarda takım üyelerinin uyumunun yüksek düzeyde olmasını öneriyor. İsterseniz siz de Discord kanalımıza katılarak -athonlarda daha iyi takımlar oluşturabilmek için arkadaş bulabilirsiniz.<br/></p>
-                        <div class="discord-buttons">
-                            <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><button (click)="this.dsp = 'none' " class="discord-button discord-button-open">Discord kanalımıza katıl</button></a>
-                            <button class="discord-button discord-button-close" (click)="this.dsp = 'none' ">Hayır, istemiyorum</button>
-                        </div>
-                    </div>
                     <!--Discord Modal End-->
                     <div class="copy">
                         © Dijital Kunduz, 2020.
@@ -480,3 +472,18 @@
                 </div>
             </div>
             </footer>
+            <div class="col-2 team-button">
+              <img src="../../../assets/images/team.png" (click)="this.dsp = 'block'"/>
+            </div>
+            <div class="col-12 discord" [style.display]="dsp">
+              <h2>-athon takım arkadaşlarınızı bulabilirsiniz!</h2>
+              <p>Hackathon Türkiye ekibi -athonlarda takım üyelerinin uyumunun yüksek düzeyde olmasını öneriyor. İsterseniz siz de Discord kanalımıza katılarak -athonlarda daha iyi takımlar oluşturabilmek için arkadaş bulabilirsiniz.<br/></p>
+              <div class="discord-buttons">
+                  <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><button (click)="this.dsp = 'none' " class="discord-button discord-button-open">Discord kanalımıza katıl</button></a>
+                  <button class="discord-button discord-button-close" (click)="this.dsp = 'none' ">Hayır, istemiyorum</button>
+              </div>
+          </div>
+            <div class="col-2 bulletin-button">
+              <img src="../../../assets/images/bulletin.png"/>
+            </div>
+            
