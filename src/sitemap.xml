@@ -1480,7 +1480,43 @@
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://hackathonturkiye.com/blog/online-hackathonlarda-uretilmis-10-inovatif-koronavirus-cozumu</loc>
+        <loc>https://hackathonturkiye.com/blog/kolay-para-kazanma-yollari-artik-illegal-degil</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/otto-game-jam</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/happy-game-jam</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/monster-gaming-lab-oyun-girisimi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/media-markt-startup-challenge</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/tasarim-odakli-yenilik-yarismasi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/startup-campus</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/gamfed-4-oyunlastirma-konferansi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/siber-kariyer-sertfika-programi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/istanbul-react-bootcamp</loc>
         <changefreq>weekly</changefreq>
     </url>
 </urlset>
