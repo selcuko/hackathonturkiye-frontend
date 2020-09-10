@@ -6,7 +6,8 @@
         <a routerLink="/ana-sayfa" class="about-button text-center hidden-md hidden-lg mobile-back">Ana Sayfa</a>
 
         <div class="col-md-12">
-          <a routerLink="/etkinlikler" class="about-button blog-button text-left hidden-xs hidden-sm desktop-back">Etkinlikler</a>
+          <a routerLink="/etkinlikler"
+            class="about-button blog-button text-left hidden-xs hidden-sm desktop-back">Etkinlikler</a>
           <a routerLink="/ana-sayfa" class="about-button text-left hidden-xs hidden-sm desktop-back">Ana Sayfa</a>
         </div>
       </div>
@@ -18,7 +19,17 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="row">
         <div class="event" *ngIf="event">
-          <h1>{{event.name}}</h1>
+
+          <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <h1>{{event.name}}</h1>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3"> 
+              <a target="_blank" rel="nofollow" class="pull-right btn btn-primary readmore btn-lg gtag"
+                href="{{event.origin_url}}">Şimdi Başvur</a>
+            </div>
+          </div>
+
           <p class="line">
             {{event.description}}
           </p>
@@ -29,10 +40,6 @@
 
           <hr>
 
-          <div class="apply">
-            <a target="_blank" rel="nofollow" class="btn btn-primary readmore btn-lg gtag" href="{{event.origin_url}}">Şimdi
-              Başvur</a>
-          </div>
 
           <hr>
 
