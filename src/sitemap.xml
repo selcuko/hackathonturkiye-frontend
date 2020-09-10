@@ -1519,4 +1519,8 @@
         <loc>https://hackathonturkiye.com/etkinlik/istanbul-react-bootcamp</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/back2theschool-ideathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
