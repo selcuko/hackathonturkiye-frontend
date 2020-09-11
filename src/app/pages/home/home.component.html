@@ -1,69 +1,71 @@
 <div class="space"></div>
 
 <header>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12" id="logoandblog">
-                <div class="col-xs-8">
-                    <a routerLink="/ana-sayfa" routerLinkActive="active"><img alt="Hackathon Türkiye" src="../../../assets/images/hackathon_turkiye_logo.svg" style="max-width: 180px;" /></a>
-                </div>
-                <div class="headerblog col-xs-4">
-                    <a routerLink="/blog" routerLinkActive="active" class="about-button">Blog</a>
-                </div>
-            </div>
-            <div class="col-xs-12 searchareadiv">
-                <div class="col-xs-12 col-md-5 text-center search-area">
-                    <form class="pull-right" role="search">
-                        <div class="input-group">
-                            <input type="text" class="form-control search-input" id="search" name="search" placeholder="Ara..." [(ngModel)]="searchQuery">
-                            <div class="input-group-btn">
-                                <button (click)="search()" class="btn btn-default search-button">
-                <span class="glyphicon glyphicon-search"></span>
-            </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12" id="logoandblog">
+        <div class="col-xs-8">
+          <a routerLink="/ana-sayfa" routerLinkActive="active"><img alt="Hackathon Türkiye"
+              src="../../../assets/images/hackathon_turkiye_logo.svg" style="max-width: 180px;" /></a>
         </div>
+        <div class="headerblog col-xs-4">
+          <a routerLink="/blog" routerLinkActive="active" class="about-button">Blog</a>
+        </div>
+      </div>
+      <div class="col-xs-12 searchareadiv">
+        <div class="col-xs-12 col-md-5 text-center search-area">
+          <form class="pull-right" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control search-input" id="search" name="search" placeholder="Ara..."
+                [(ngModel)]="searchQuery">
+              <div class="input-group-btn">
+                <button (click)="search()" class="btn btn-default search-button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 </header>
 
 <section class="container lastEvents">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="section-title text-center">
-                <h1>Güncel Hackathonlar</h1>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="section-title text-center">
+        <h1>Güncel Hackathonlar</h1>
+      </div>
     </div>
-    <div class="row">
-        <div *ngFor="let xathon of events">
-            <div class="col-xs-12 col-sm-6 text-center">
-                <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag" href="{{xathon.origin_url}}">
-                    <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
-                    <div class="intro-view">
-                        {{xathon.location}}
-                    </div>
-                </a>
+  </div>
+  <div class="row">
+    <div *ngFor="let xathon of events">
+      <div class="col-xs-12 col-sm-6 text-center">
+        <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag"
+          href="{{xathon.origin_url}}">
+          <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
+          <div class="intro-view">
+            {{xathon.location}}
+          </div>
+        </a>
 
-                <a *ngIf="xathon.has_details" class="intro-item" routerLink="/etkinlik/{{xathon.slug}}">
-                    <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
-                    <div class="intro-view">
-                        {{xathon.location}}
-                    </div>
-                </a>
-                <!-- /Intro Item -->
-            </div>
-            <!-- /col -->
-        </div>
+        <a *ngIf="xathon.has_details" class="intro-item" routerLink="/etkinlik/{{xathon.slug}}">
+          <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
+          <div class="intro-view">
+            {{xathon.location}}
+          </div>
+        </a>
+        <!-- /Intro Item -->
+      </div>
+      <!-- /col -->
+    </div>
 
 
 
 
-        <div class="col-xs-12 col-sm-12 text-center">
-            <a routerLink="/etkinlikler" class="about-button" style="margin-top:25px;">Daha Fazla Gör</a
-      >
+    <div class="col-xs-12 col-sm-12 text-center">
+      <a routerLink="/etkinlikler" class="about-button" style="margin-top:25px;">Daha Fazla Gör</a>
     </div>
   </div>
 </section>
@@ -71,9 +73,9 @@
 <section class="container text-center feachers" id="feachers">
   <div class="row">
     <div class="col-lg-12">
-        <div class="section-title text-center">
-            <h1>Hackathon Türkiye Hakkında</h1>
-        </div>
+      <div class="section-title text-center">
+        <h1>Hackathon Türkiye Hakkında</h1>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -88,14 +90,12 @@
 
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="feac-image">
-        <img
-          src="../../../assets/images/intro/organize.svg"
-          alt="hackathon düzenleme"
-        />
+        <img src="../../../assets/images/intro/organize.svg" alt="hackathon düzenleme" />
       </div>
       <div class="feac-title">Hackathon Düzenleme</div>
       <div class="feac-text">
-        Hackathon Türkiye ekibi düzenli bir şekilde yeni nesil tema konularıyla hackathonlar düzenleyerek Türkiye çapında hackathon kültürünün yayılmasına yardımcı oluyor.
+        Hackathon Türkiye ekibi düzenli bir şekilde yeni nesil tema konularıyla hackathonlar düzenleyerek Türkiye
+        çapında hackathon kültürünün yayılmasına yardımcı oluyor.
       </div>
     </div>
 
@@ -105,60 +105,53 @@
       </div>
       <div class="feac-title">Haftalık Bülten</div>
       <div class="feac-text">
-        Sizlere güncel olan hackathonları ve yeni yazılarımızı ulaştırmak için haftalık bültenimizi bilgilendirme amacıyla yayımlıyoruz.
+        Sizlere güncel olan hackathonları ve yeni yazılarımızı ulaştırmak için haftalık bültenimizi bilgilendirme
+        amacıyla yayımlıyoruz.
       </div>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-4">
       <div class="feac-image">
-        <img
-          src="../../../assets/images/intro/announcements.svg"
-          alt="Hackathon Duyuruları"
-        />
+        <img src="../../../assets/images/intro/announcements.svg" alt="Hackathon Duyuruları" />
       </div>
       <div class="feac-title">Hackathon Duyuruları</div>
       <div class="feac-text">
-        Topluluğumuzun yaptığı en büyük hizmetlerden biri de sizlere dünya ve çoğunlukla Türkiye çapındaki hackathonları duyurmak ve hakkında bilgiler vermektir.
+        Topluluğumuzun yaptığı en büyük hizmetlerden biri de sizlere dünya ve çoğunlukla Türkiye çapındaki hackathonları
+        duyurmak ve hakkında bilgiler vermektir.
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="feac-image">
-        <img
-          src="../../../assets/images/intro/content.svg"
-          alt="İçerik Üretimi"
-        />
+        <img src="../../../assets/images/intro/content.svg" alt="İçerik Üretimi" />
       </div>
       <div class="feac-title">İçerik Üretimi</div>
       <div class="feac-text">
-        Hackathon Türkiye ekibi hackathon alanındaki yazılar dışında teknoloji, yazılım, tasarım ve girişimcilik vb alanlarda da en güncel içerikleri sizler için hazırlıyor.
+        Hackathon Türkiye ekibi hackathon alanındaki yazılar dışında teknoloji, yazılım, tasarım ve girişimcilik vb
+        alanlarda da en güncel içerikleri sizler için hazırlıyor.
       </div>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="feac-image">
-        <img
-          src="../../../assets/images/intro/around_the_world.svg"
-          alt="Dünyadaki Hackathonlar"
-        />
+        <img src="../../../assets/images/intro/around_the_world.svg" alt="Dünyadaki Hackathonlar" />
       </div>
       <div class="feac-title">Dünyadaki Hackathonlar</div>
       <div class="feac-text">
-        Ulaşılması zor olduğu düşünülen bu hackathonları sizlere duyuruyor ve Türk katılımcıların sayısını arttırmayı planlıyoruz.
+        Ulaşılması zor olduğu düşünülen bu hackathonları sizlere duyuruyor ve Türk katılımcıların sayısını arttırmayı
+        planlıyoruz.
       </div>
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-4">
       <div class="feac-image">
-        <img
-          src="../../../assets/images/intro/collaboration.svg"
-          alt="İşbirlikleri, Yarışmalar"
-        />
+        <img src="../../../assets/images/intro/collaboration.svg" alt="İşbirlikleri, Yarışmalar" />
       </div>
       <div class="feac-title">İşbirlikleri, Yarışmalar</div>
       <div class="feac-text">
-        Hackathon Türkiye ekibi farklı kuruluşların düzenlemek istediği hackathonlara danışmanlık hizmeti vererek Türkiye çapında hackathon düzenlenmesine yardımcı oluyor.
+        Hackathon Türkiye ekibi farklı kuruluşların düzenlemek istediği hackathonlara danışmanlık hizmeti vererek
+        Türkiye çapında hackathon düzenlenmesine yardımcı oluyor.
       </div>
     </div>
   </div>
@@ -168,172 +161,201 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-          <div class="section-title text-center">
-              <h1>Hackathon Türkiye Yönetimi</h1>
-          </div>
+        <div class="section-title text-center">
+          <h1>Hackathon Türkiye Yönetimi</h1>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div
-        class="col-md-3 col-sm-6 col-xs-6"
-      >
+      <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img
-            src="../../../assets/images/team/ugur-atmaca.jpg"
-            class="img-responsive img-circle"
-            alt="Uğur Atmaca"
-          />
+          <img src="../../../assets/images/team/ugur-atmaca.jpg" class="img-responsive img-circle" alt="Uğur Atmaca" />
           <div class="team-details">
             <h4>
               Uğur Atmaca
-              <a href="https://www.linkedin.com/in/atmacaugur/" target="_blank"
-                ><i class="fa fa-linkedin" rel="nofollow"></i
-              ></a>
+              <a href="https://www.linkedin.com/in/atmacaugur/" target="_blank"><i class="fa fa-linkedin"
+                  rel="nofollow"></i></a>
             </h4>
             <p>Founder</p>
+          </div>
         </div>
-    </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-            <img src="../../../assets/images/team/arda-ozturk.jpg" class="img-responsive img-circle" alt="Arda Öztürk" />
-            <div class="team-details">
-                <h4>
-                    Arda Öztürk
-                    <a href="https://www.linkedin.com/in/arda-ozturk/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
-              ></a>
-                </h4>
-                <p>Chief Executive Officer</p>
-            </div>
+          <img src="../../../assets/images/team/arda-ozturk.jpg" class="img-responsive img-circle" alt="Arda Öztürk" />
+          <div class="team-details">
+            <h4>
+              Arda Öztürk
+              <a href="https://www.linkedin.com/in/arda-ozturk/" target="_blank"><i class="fa fa-linkedin"
+                  rel="nofollow"></i></a>
+            </h4>
+            <p>Chief Executive Officer</p>
+          </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-            <img src="../../../assets/images/team/irem-cetin.jpg" class="img-responsive img-circle" alt="İrem Çetin" />
-            <div class="team-details">
-                <h4>
-                    İrem Çetin
-                    <a href="https://www.linkedin.com/in/irem%C3%A7etin/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
-              ></a>
-                </h4>
-                <p>Head Of Design</p>
-            </div>
+          <img src="../../../assets/images/team/irem-cetin.jpg" class="img-responsive img-circle" alt="İrem Çetin" />
+          <div class="team-details">
+            <h4>
+              İrem Çetin
+              <a href="https://www.linkedin.com/in/irem%C3%A7etin/" target="_blank"><i class="fa fa-linkedin"
+                  rel="nofollow"></i></a>
+            </h4>
+            <p>Head Of Design</p>
+          </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-            <img src="../../../assets/images/team/emre-akbaki.jpg" class="img-responsive img-circle" alt="Emre Akbaki" />
-            <div class="team-details">
-                <h4>
-                    Emre Akbaki
-                    <a href="https://www.linkedin.com/in/emre-akbaki-a68358b4/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
-              ></a>
-                </h4>
-                <p>Head Of Development</p>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-6">
-            <div class="team-member">
-                <img src="../../../assets/images/team/ege-dinnen.jpg" class="img-responsive img-circle" alt="Ege Dinnen" />
-                <div class="team-details">
-                    <h4>
-                        Ege Dinnen
-                        <a href="https://www.linkedin.com/in/ege-dinnen-1a35091ab/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
-              ></a>
-                    </h4>
-                    <p>Junior Manager & Frontend Developer</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-6">
-            <div class="team-member">
-                <img src="../../../assets/images/team/senem-aksakal.jpg" class="img-responsive img-circle" alt="Senem Aksakal " />
-                <div class="team-details">
-                    <h4>
-                        Senem Aksakal
-                        <a href="https://www.linkedin.com/in/aksakalsenem/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
-              ></a>
-                    </h4>
-                    <p>Head Of Content</p>
-                </div>
-            </div>
-        </div>
-    
-        <div class="col-md-3 col-sm-6 col-xs-6">
-            <div class="team-member">
-                <img src="../../../assets/images/team/hanifi-cetinkaya.jpg" class="img-responsive img-circle" alt="Hanifi Çetinkaya" />
-                <div class="team-details">
-                    <h4>
-                        Hanifi Çetinkaya
-                        <a href="https://www.linkedin.com/in/hanifi-cetinkaya/" target="_blank"><i class="fa fa-linkedin" rel="nofollow"></i
-              ></a>
-                    </h4>
-                    <p>Head Of E-Learning</p>
-                </div>
-            </div>
+          <img src="../../../assets/images/team/emre-akbaki.jpg" class="img-responsive img-circle" alt="Emre Akbaki" />
+          <div class="team-details">
+            <h4>
+              Emre Akbaki
+              <a href="https://www.linkedin.com/in/emre-akbaki-a68358b4/" target="_blank"><i class="fa fa-linkedin"
+                  rel="nofollow"></i></a>
+            </h4>
+            <p>Head Of Development</p>
+          </div>
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="team-member">
+          <img src="../../../assets/images/team/ege-dinnen.jpg" class="img-responsive img-circle" alt="Ege Dinnen" />
+          <div class="team-details">
+            <h4>
+              Ege Dinnen
+              <a href="https://www.linkedin.com/in/ege-dinnen-1a35091ab/" target="_blank"><i class="fa fa-linkedin"
+                  rel="nofollow"></i></a>
+            </h4>
+            <p>Junior Manager & Frontend Developer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="team-member">
+          <img src="../../../assets/images/team/senem-aksakal.jpg" class="img-responsive img-circle"
+            alt="Senem Aksakal " />
+          <div class="team-details">
+            <h4>
+              Senem Aksakal
+              <a href="https://www.linkedin.com/in/aksakalsenem/" target="_blank"><i class="fa fa-linkedin"
+                  rel="nofollow"></i></a>
+            </h4>
+            <p>Head Of Content</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="team-member">
+          <img src="../../../assets/images/team/hanifi-cetinkaya.jpg" class="img-responsive img-circle"
+            alt="Hanifi Çetinkaya" />
+          <div class="team-details">
+            <h4>
+              Hanifi Çetinkaya
+              <a href="https://www.linkedin.com/in/hanifi-cetinkaya/" target="_blank"><i class="fa fa-linkedin"
+                  rel="nofollow"></i></a>
+            </h4>
+            <p>Head Of E-Learning</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="team-member">
+          <img src="../../../assets/images/team/gamze-atmaca.jpeg" class="img-responsive img-circle"
+            alt="Gamze Atmaca" />
+          <div class="team-details">
+            <h4>
+              Gamze Atmaca <a href="https://www.linkedin.com/in/gamze-atmaca-6a312523/" target="_blank"><i
+                  class="fa fa-linkedin" rel="nofollow"></i></a>
+            </h4>
+            <p>Head Of Public Relations
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="team-member">
+          <img src="../../../assets/images/team/irem-bayram.jpeg" class="img-responsive img-circle"
+            alt="İrem Bayram" />
+          <div class="team-details">
+            <h4>
+              İrem Bayram <a href="https://www.linkedin.com/in/irem-bayram/" target="_blank"><i class="fa fa-linkedin"
+                  rel="nofollow"></i></a>
+            </h4>
+            <p>Head Of Social Media
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
 <section id="contact" class="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title text-center">
-                    <h1>İletişim / İşbirliği</h1>
-                    <p class="contact-sub">Her türlü işbirliği ve iletişiminiz için aşağıdaki formu kullanabilirsiniz
-                    </p>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center">
+          <h1>İletişim / İşbirliği</h1>
+          <p class="contact-sub">Her türlü işbirliği ve iletişiminiz için aşağıdaki formu kullanabilirsiniz
+          </p>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Adınız ve Soyadınız *" id="name" [(ngModel)]="postData.contact">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email Adresiniz *" id="email" [(ngModel)]="postData.email">
-                        </div>
-
-                        <div class="col-md-6 p0">
-                            <div class="form-group">
-                                <input type="tel" class="form-control" placeholder="Telefon numaranız örn(5388155059)" id="phone" [(ngModel)]="postData.phone">
-                            </div>
-                        </div>
-                        <div class="col-md-6 p1">
-                            <div class="form-group">
-                                <select class="form-control" [(ngModel)]="postData.category.name">
-                                  <option value="">Konu *</option>
-                                  <option value="İşbirliği">İşbirliği</option>
-                                  <option value="Öneri">Öneri</option>
-                                  <option value="Şikayet">Şikayet</option>
-                              </select>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Mesajınız *" id="message" [(ngModel)]="postData.body"></textarea>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="col-lg-12 text-center">
-                        <div id="success"></div>
-                        <a (click)="submitMessage()" class="about-button">Mesajı Gönder</a
-                    >
-                  </div>
-              </div>
-          </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Adınız ve Soyadınız *" id="name"
+                [(ngModel)]="postData.contact">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email Adresiniz *" id="email"
+                [(ngModel)]="postData.email">
+            </div>
+
+            <div class="col-md-6 p0">
+              <div class="form-group">
+                <input type="tel" class="form-control" placeholder="Telefon numaranız örn(5388155059)" id="phone"
+                  [(ngModel)]="postData.phone">
+              </div>
+            </div>
+            <div class="col-md-6 p1">
+              <div class="form-group">
+                <select class="form-control" [(ngModel)]="postData.category.name">
+                  <option value="">Konu *</option>
+                  <option value="İşbirliği">İşbirliği</option>
+                  <option value="Öneri">Öneri</option>
+                  <option value="Şikayet">Şikayet</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Mesajınız *" id="message"
+                [(ngModel)]="postData.body"></textarea>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-lg-12 text-center">
+            <div id="success"></div>
+            <a (click)="submitMessage()" class="about-button">Mesajı Gönder</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </section>
@@ -341,137 +363,101 @@
 
 <footer class="container text-center">
   <div class="bulten col-xs-12">
-  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <form
+        action="https://hackathonturkiye.us18.list-manage.com/subscribe/post?u=e73471f6b46f14749c393649c&amp;id=744a9e6606"
+        ngNoForm method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+        target="_blank" novalidate>
+        <div class="input-group">
+          <input type="email" value="" name="EMAIL" placeholder="Bülten için e-posta adresinizi giriniz"
+            class="form-control send-input" id="mce-EMAIL" />
+
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_e73471f6b46f14749c393649c_744a9e6606" tabindex="-1" value="" />
+          </div>
+
+          <div class="input-group-btn">
+            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+              class="btn btn-primary send-mail">
+              <span class="glyphicon glyphicon-envelope"></span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/hackathonturkiye" target="_blank" rel="nofollow"><i
+            class="fa fa-linkedin fa-lg"></i></a>
+        <a href="https://twitter.com/turkeyhackathon" target="_blank" rel="nofollow"><i
+            class="fa fa-twitter fa-lg"></i></a>
+        <a href="https://www.instagram.com/hackathonturkiye" target="_blank" rel="nofollow"><i
+            class="fa fa-instagram fa-lg"></i></a>
+        <a href="https://www.facebook.com/hackathonturkiye" target="_blank" rel="nofollow"><i
+            class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><img
+            src="../../../assets/images/discord.png" /></a>
+      </div>
+      <!--Discord Modal Open Button-->
+      <div class="discord-button-div">
+        <button class="discord-button" (click)="this.ddsp = 'block' ">*athonlar için takım arkadaşı bul!</button>
+      </div>
+      <!--Discord Modal Open Button End-->
+      <div class="support">
+        <span style="color: white;">Destek için:</span>
+        <span class="et-text"><a href="mailto:info@hackathonturkiye.com">info@hackathonturkiye.com</a></span>
+      </div>
+      <div class="copy">
+        © Dijital Kunduz, 2020.
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="col-2 team-button">
+  <img src="../../../assets/images/team.png" (click)="this.ddsp = 'block'" />
+</div>
+<div class="col-12 discord" [style.display]="ddsp">
+  <h2>*athon takım arkadaşlarınızı bulabilirsiniz!</h2>
+  <p>Hackathon Türkiye ekibi *athonlarda takım üyelerinin uyumunun yüksek düzeyde olmasını öneriyor. İsterseniz siz de
+    Discord kanalımıza katılarak -athonlarda daha iyi takımlar oluşturabilmek için arkadaş bulabilirsiniz.<br /></p>
+  <div class="discord-buttons">
+    <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><button (click)="this.ddsp = 'none' "
+        class="discord-button discord-button-open">Discord kanalımıza katıl</button></a>
+    <button class="discord-button discord-button-close" (click)="this.ddsp = 'none' ">Hayır, istemiyorum</button>
+  </div>
+</div>
+<div class="col-2 bulletin-button">
+  <img src="../../../assets/images/bulletin.png" (click)="this.bdsp = 'block'" />
+</div>
+<div class="col-12 bulletin" [style.display]="bdsp">
+  <h2>Haftalık bültenimize katılabilirsiniz!</h2>
+  <p>Her hafta yepyeni ve yaratıcı blog yazıları çıkartıyoruz. Yeni yazılarımızdan oluşan bültenimize abone olarak
+    gelişmeleri takip edebilirsiniz.<br /></p>
+  <div class="discord-buttons">
     <form
       action="https://hackathonturkiye.us18.list-manage.com/subscribe/post?u=e73471f6b46f14749c393649c&amp;id=744a9e6606"
-      ngNoForm
-      method="post"
-      id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form"
-      class="validate"
-      target="_blank"
-      novalidate
-    >
+      ngNoForm method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+      target="_blank" novalidate>
       <div class="input-group">
-        <input
-          type="email"
-          value=""
-          name="EMAIL"
-          placeholder="Bülten için e-posta adresinizi giriniz"
-          class="form-control send-input"
-          id="mce-EMAIL"
-        />
+        <input type="email" value="" name="EMAIL" placeholder="Bülten için e-posta adresinizi giriniz"
+          class="form-control send-input" id="mce-EMAIL" />
 
         <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input
-            type="text"
-            name="b_e73471f6b46f14749c393649c_744a9e6606"
-            tabindex="-1"
-            value=""
-          />
+          <input type="text" name="b_e73471f6b46f14749c393649c_744a9e6606" tabindex="-1" value="" />
         </div>
 
         <div class="input-group-btn">
-          <button
-            type="submit"
-            value="Subscribe"
-            name="subscribe"
-            id="mc-embedded-subscribe"
-            class="btn btn-primary send-mail"
-          >
+          <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+            class="btn btn-primary send-mail">
             <span class="glyphicon glyphicon-envelope"></span>
           </button>
         </div>
       </div>
     </form>
+    <button class="discord-button discord-button-close bulletin-close" (click)="this.bdsp = 'none' ">Hayır,
+      istemiyorum</button>
   </div>
 </div>
-  <div class="row">
-    <div class="col-xs-12">
-
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/company/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-linkedin fa-lg"></i></a>
-                        <a href="https://twitter.com/turkeyhackathon" target="_blank" rel="nofollow"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a href="https://www.instagram.com/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-instagram fa-lg"></i></a>
-                        <a href="https://www.facebook.com/hackathonturkiye" target="_blank" rel="nofollow"><i class="fa fa-facebook fa-lg"></i></a>
-                        <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><img src="../../../assets/images/discord.png" /></a>
-                    </div>
-                    <!--Discord Modal Open Button-->
-                    <div class="discord-button-div">
-                        <button class="discord-button" (click)="this.ddsp = 'block' ">*athonlar için takım arkadaşı bul!</button>
-                    </div>
-                    <!--Discord Modal Open Button End-->
-                    <div class="support">
-                        <span style="color: white;">Destek için:</span>
-                        <span class="et-text"><a href="mailto:info@hackathonturkiye.com">info@hackathonturkiye.com</a></span>
-                    </div>
-                    <div class="copy">
-                        © Dijital Kunduz, 2020.
-                    </div>
-                </div>
-            </div>
-            </footer>
-            <div class="col-2 team-button">
-              <img src="../../../assets/images/team.png" (click)="this.ddsp = 'block'"/>
-            </div>
-            <div class="col-12 discord" [style.display]="ddsp">
-              <h2>*athon takım arkadaşlarınızı bulabilirsiniz!</h2>
-              <p>Hackathon Türkiye ekibi *athonlarda takım üyelerinin uyumunun yüksek düzeyde olmasını öneriyor. İsterseniz siz de Discord kanalımıza katılarak -athonlarda daha iyi takımlar oluşturabilmek için arkadaş bulabilirsiniz.<br/></p>
-              <div class="discord-buttons">
-                  <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><button (click)="this.ddsp = 'none' " class="discord-button discord-button-open">Discord kanalımıza katıl</button></a>
-                  <button class="discord-button discord-button-close" (click)="this.ddsp = 'none' ">Hayır, istemiyorum</button>
-              </div>
-          </div>
-            <div class="col-2 bulletin-button">
-              <img src="../../../assets/images/bulletin.png" (click)="this.bdsp = 'block'"/>
-            </div>
-            <div class="col-12 bulletin" [style.display]="bdsp">
-              <h2>Haftalık bültenimize katılabilirsiniz!</h2>
-              <p>Her hafta yepyeni ve yaratıcı blog yazıları çıkartıyoruz. Yeni yazılarımızdan oluşan bültenimize abone olarak gelişmeleri takip edebilirsiniz.<br/></p>
-              <div class="discord-buttons">
-                <form
-                action="https://hackathonturkiye.us18.list-manage.com/subscribe/post?u=e73471f6b46f14749c393649c&amp;id=744a9e6606"
-                ngNoForm
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                class="validate"
-                target="_blank"
-                novalidate
-              >
-                <div class="input-group">
-                  <input
-                    type="email"
-                    value=""
-                    name="EMAIL"
-                    placeholder="Bülten için e-posta adresinizi giriniz"
-                    class="form-control send-input"
-                    id="mce-EMAIL"
-                  />
-          
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input
-                      type="text"
-                      name="b_e73471f6b46f14749c393649c_744a9e6606"
-                      tabindex="-1"
-                      value=""
-                    />
-                  </div>
-          
-                  <div class="input-group-btn">
-                    <button
-                      type="submit"
-                      value="Subscribe"
-                      name="subscribe"
-                      id="mc-embedded-subscribe"
-                      class="btn btn-primary send-mail"
-                    >
-                      <span class="glyphicon glyphicon-envelope"></span>
-                    </button>
-                  </div>
-                </div>
-              </form>
-                  <button class="discord-button discord-button-close bulletin-close" (click)="this.bdsp = 'none' ">Hayır, istemiyorum</button>
-              </div>
-          </div>
-            
