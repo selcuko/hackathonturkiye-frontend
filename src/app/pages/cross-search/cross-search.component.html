@@ -1,247 +1,51 @@
 <div class="page-header">
-    <div class="row">
+  <div class="overlay">
+    <div class="container">
+      <div class="row">
+        <a routerLink="/ana-sayfa" class="about-button text-center hidden-md hidden-lg mobile-back">Ana Sayfa</a>
         <div class="col-md-12">
-            <a routerLink="/ana-sayfa" class="about-button text-center hidden-md hidden-lg mobile-back">Ana Sayfa</a>
-            <a routerLink="/ana-sayfa" class="about-button text-left hidden-xs hidden-sm desktop-back">Ana Sayfa</a>
-            <h1>{{ slug }} için bulunan</h1>
+          <a routerLink="/ana-sayfa" class="about-button text-left hidden-xs hidden-sm desktop-back">Ana Sayfa</a>
+          <h1>{{ slug }} için bulunan</h1>
         </div>
-    </div>
-</div>
-
-<div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="row">
-        <ul class="nav nav-pills nav-justified">
-            <li #blog_selector class="active"><a (click)="openBlog()">Blog</a></li>
-            <li #find_selector><a (click)="openFind()">Yarışma</a></li>
-        </ul>
-    </div>
-</div>
-<div class="tabs">
-    <div class="row">
-        <div class="tab-content">
-            <div #blog class="tab-pane fade in active">
-                <div *ngIf="srctype !== 'search' && crossesPost">
-                    <div class="p-10">
-                        <div class="col-lg-6 col-md-6" *ngFor="let item of crossesPost">
-                            <aside>
-                                <div class="content-header">
-                                    <div class="text-center">
-                                        <h2>
-                                            <a href="/blog/{{ item.slug }}">{{ item.title }}</a>
-                                        </h2>
-                                    </div>
-                                </div>
-                                <img src="{{ item.thumbnail }}" class="img-responsive" alt="{{ item.title }}" />
-                                <div class="content-title">
-                                    <div class="text-center">
-                                        <p>{{ item.summary }}</p>
-                                    </div>
-                                </div>
-                                <div class="content-footer">
-                                    <div class="author-content">
-                                        <img class="user-small-img" src="{{ item.author.profile.pic }}" />
-                                        <span><a
-                        class="author"
-                        href="/blog/?author__username={{
-                          item.author.username
-                        }}"
-                        >{{ item.author.first_name }}</a
-                      ></span
-                    >
-                  </div>
-                  <span class="time"
-                    ><i class="fa fa-clock-o"></i>{{ item.time }} Dk</span
-                  >
-                  <span class="pull-right date"
-                    ><i class="fa fa-calendar"></i
-                    >{{ item.published_at | date: "dd/MM/yyyy" }}</span
-                  >
-                </div>
-              </aside>
-            </div>
-          </div>
-        </div>
-        <div *ngIf="srctype === 'search'">
-          <div *ngFor="let search of searchresults" class="p-10">
-            <div class="col-lg-6 col-md-6" *ngFor="let item of search.in_posts">
-              <aside>
-                <div class="content-header">
-                  <div class="text-center">
-                    <h2>
-                      <a href="/blog/{{ item.slug }}">{{ item.title }}</a>
-                    </h2>
-                  </div>
-                </div>
-                <img
-                  src="{{ item.thumbnail }}"
-                  class="img-responsive"
-                  alt="{{ item.title }}"
-                />
-                <div class="content-title">
-                  <div class="text-center">
-                    <p>{{ item.summary }}</p>
-                  </div>
-                </div>
-                <div class="content-footer">
-                  <div class="author-content">
-                    <img
-                      class="user-small-img"
-                      src="{{ item.author.profile.pic }}"
-                    />
-                    <span
-                      ><a
-                        class="author"
-                        href="/blog/?author__username={{
-                          item.author.username
-                        }}"
-                        >{{ item.author.first_name }}</a
-                      ></span
-                    >
-                  </div>
-                  <span class="time"
-                    ><i class="fa fa-clock-o"></i>{{ item.time }} Dk</span
-                  >
-                  <span class="pull-right date"
-                    ><i class="fa fa-calendar"></i
-                    >{{ item.published_at | date: "dd/MM/yyyy" }}</span
-                  >
-                </div>
-              </aside>
-            </div>
-            <h2
-              class="text-danger text-center nf"
-              *ngIf="search.in_posts.length === 0"
-            >
-              Kayıt Bulunamadı
-            </h2>
-          </div>
-        </div>
-        <h2
-          class="text-danger text-center nf"
-          *ngIf="srctype !== 'search' && crossesPost.length === 0"
-        >
-          Kayıt Bulunamadı
-        </h2>
-        <h2
-          class="text-danger text-center nf"
-          *ngIf="srctype === 'search' && searchresults.length === 0"
-        >
-          Kayıt Bulunamadı
-        </h2>
-      </div>
-      <div #find class="tab-pane fade">
-        <div *ngIf="srctype !== 'search' && crossesEvents">
-          <div class="p-10">
-            <div class="col-lg-6 col-md-6" *ngFor="let item of crossesEvents">
-              <aside>
-                <div class="content-header">
-                  <div class="text-center">
-                    <h2>
-                      <a
-                        *ngIf="!item.has_details"
-                        target="_blank"
-                        class="btn btn-primary readmore btn-lg"
-                        href="{{ item.origin_url }}"
-                        >{{ item.name }}</a
-                      >
-                      <a
-                        *ngIf="item.has_details"
-                        class="btn btn-primary readmore btn-lg"
-                        routerLink="/etkinlik/{{ item.slug }}"
-                        >{{ item.name }}</a
-                      >
-                    </h2>
-                  </div>
-                </div>
-                <img
-                  src="{{ item.thumbnail }}"
-                  class="img-responsive"
-                  alt="{{ item.name }}"
-                />
-                <div class="content-title">
-                  <div class="text-center">
-                    <p>{{ item.description }}</p>
-                  </div>
-                </div>
-                <div class="content-footer event-footer-content">
-                  <div class="author-content">
-                    <span>{{ item.location }}</span>
-                                    </div>
-                                    <span class="pull-right date">{{ getDateTurkish(item.starts_at) }} -
-                    {{ getDateTurkish(item.ends_at) }}</span
-                  >
-                </div>
-              </aside>
-            </div>
-          </div>
-        </div>
-        <div *ngIf="srctype === 'search'">
-          <div *ngFor="let search of searchresults" class="p-10">
-            <div
-              class="col-lg-6 col-md-6"
-              *ngFor="let item of search.in_events"
-            >
-              <aside>
-                <div class="content-header">
-                  <div class="text-center">
-                    <h2>
-                      <a
-                        *ngIf="!item.has_details"
-                        target="_blank"
-                        class="btn btn-primary readmore btn-lg"
-                        href="{{ item.origin_url }}"
-                        >{{ item.name }}</a
-                      >
-                      <a
-                        *ngIf="item.has_details"
-                        class="btn btn-primary readmore btn-lg"
-                        routerLink="/etkinlik/{{ item.slug }}"
-                        >{{ item.name }}</a
-                      >
-                    </h2>
-                  </div>
-                </div>
-                <img
-                  src="{{ item.thumbnail }}"
-                  class="img-responsive"
-                  alt="{{ item.name }}"
-                />
-                <div class="content-title">
-                  <div class="text-center">
-                    <p>{{ item.description }}</p>
-                  </div>
-                </div>
-                <div class="content-footer event-footer-content">
-                  <div class="author-content">
-                    <span>{{ item.location }}</span>
-                                </div>
-                                <span class="pull-right date">{{ getDateTurkish(item.starts_at) }} -
-                    {{ getDateTurkish(item.ends_at) }}</span
-                  >
-                </div>
-              </aside>
-            </div>
-            <h2
-              class="text-danger text-center nf"
-              *ngIf="search.in_events.length === 0"
-            >
-              Kayıt Bulunamadı
-            </h2>
-          </div>
-        </div>
-        <h2
-          class="text-danger text-center nf"
-          *ngIf="srctype !== 'search' && crossesEvents.length === 0"
-        >
-          Kayıt Bulunamadı
-        </h2>
-        <h2
-          class="text-danger text-center nf"
-          *ngIf="srctype === 'search' && searchresults.length === 0"
-        >
-          Kayıt Bulunamadı
-        </h2>
       </div>
     </div>
   </div>
 </div>
+
+<section id="find-section" class="find-section">
+  <div class="container">
+    <div class="post" *ngFor="let xathon of events;">
+
+      <div class="row">
+        <div class="col-md-4 p0">
+          <div class="find-img">
+            <img src="{{xathon.thumbnail}}" class="img-responsive" alt={{xathon.name}}>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="find-header">
+            <h2>{{getBlogDef(xathon)}} {{ xathon.title}}</h2>
+          </div>
+
+          <div class="find-tag">
+            <div class="tagcloud" *ngIf="xathon.tags">
+              <div *ngFor="let eventTag of xathon.tags;">
+                <a routerLink="/etiket/{{eventTag.slug}}/tag">{{eventTag.name}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="find-text">
+            <p>{{getDescription(xathon.description)}}
+            </p>
+          </div>
+
+          <div class="detail">
+            <a class="btn btn-primary readmore btn-lg" routerLink="{{getUrl(xathon)}}">İncele</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-danger text-center" *ngIf="!events || events.length === 0"> Kayıt Bulunamadı</h3>
+  </div>
+</section>
