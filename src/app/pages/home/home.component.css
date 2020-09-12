@@ -105,7 +105,8 @@ a.intro-item:hover .intro-view {
 }
 
 .et-text {
-  color: #3ff;
+  color: rgb(239 239 255 / 90%);
+  ;
 }
 
 .intro-title {
@@ -121,8 +122,8 @@ a.intro-item:hover .intro-view {
 }
 
 .feac-title {
-  color: floralwhite;
-  font-weight: 500;
+  color: #C9F0FF;
+  font-weight: bold;
   font-size: 18px;
   line-height: 1.4;
   text-transform: uppercase;
@@ -131,10 +132,9 @@ a.intro-item:hover .intro-view {
 .feac-text {
   font-weight: lighter;
   font-size: 16px;
-  color: #10fbea;
+  color: rgb(239 239 255);
   line-height: 1.76;
   margin-top: 15px;
-  letter-spacing: -0.2px;
 }
 
 .feachers .col-xs-12 {
@@ -215,10 +215,6 @@ footer {
 
 .p0 {
   padding: 0px;
-}
-
-.p1 {
-  padding-right: 0px;
 }
 
 .searchareadiv {
@@ -363,23 +359,22 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .p1 {
-    padding-left: 0px;
-  }
-
   .search-area {
     padding-top: 0;
   }
+  .corp .wrapper-corp img:first-child {
+    margin-top: 10px !important;
+   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .p1 {
-    padding-left: 0px;
-  }
-
   .search-area {
     padding-top: 0;
   }
+  .corp .wrapper-corp img:first-child {
+    margin-top: 15px;
+    padding-right: 10px;
+   }
 }
 
 .team-details i {
@@ -581,4 +576,39 @@ footer {
 
 .bulletin-close {
   margin-top: 10px;
+}
+
+.corp {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.corp .section-title {
+  margin-bottom: 20px;
+}
+
+.corp .wrapper-corp {
+  margin: 20px;
+  display: flex;
+  border-color: #c9f1ffcf;
+  border-style: inset;
+}
+
+.corp .wrapper-corp .item {
+  margin: 10px;
+  padding: 0;
+}
+
+.corp .wrapper-corp .item:first-child {
+  border-right: 1px solid #ffffffb8;
+}
+
+.corp .wrapper-corp img:first-child {
+ margin-top: 25px;
+ padding-right: 10px;
+}
+
+.corp .wrapper-corp .item .dk {
+  width: 45%;
+  margin-top: 0;
 }
