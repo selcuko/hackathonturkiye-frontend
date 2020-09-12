@@ -18,9 +18,7 @@ export class CrossSearchComponent implements OnInit {
 
   slug: string = '';
   srctype: string = '';
-  crossesPost: any;
-  searchresults: any;
-  crossesEvents: any;
+  events: any;
   months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
   constructor(
@@ -31,36 +29,59 @@ export class CrossSearchComponent implements OnInit {
     private seoService: SeoService,
     private alertService: AlertService) {
 
-      this.router.routeReuseStrategy.shouldReuseRoute = function () {
-        return false;
-      };
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
 
-      this.route.params.subscribe(url => {
-        this.slug = url['param'] || '';
-        this.srctype = url['type'] || '';
-      });
+    this.route.params.subscribe(url => {
+      this.slug = url['param'] || '';
+      this.srctype = url['type'] || '';
+    });
   }
 
   ngOnInit(): void {
-   this.getResults();
+    this.getResults();
   }
 
-  openBlog() {
-    this.el_blog.nativeElement.classList.add('in');
-    this.el_blog.nativeElement.classList.add('active');
-    this.el_blog_selector.nativeElement.classList.add('active');
-    this.el_find.nativeElement.classList.remove('in');
-    this.el_find.nativeElement.classList.remove('active');
-    this.el_find_selector.nativeElement.classList.remove('active');
+  getUrl(event) {
+    if (event.type === "blogpost") {
+      return "/blog/" + event.slug;
+    } else {
+      return "/etkinlik/" + event.slug;
+    }
   }
 
-  openFind() {
-    this.el_blog_selector.nativeElement.classList.remove('active');
-    this.el_blog.nativeElement.classList.remove('in');
-    this.el_blog.nativeElement.classList.remove('active');
-    this.el_find.nativeElement.classList.add('in');
-    this.el_find.nativeElement.classList.add('active');
-    this.el_find_selector.nativeElement.classList.add('active');
+  getDescription(description) {
+    if (description.length < 100) {
+      return description;
+    }
+
+    return description.substring(0, 97) + '...';
+  }
+
+  getBlogDef(event) {
+
+    if (event.type === "blogpost") {
+      return "[Blog] ";
+    } else if (event.type === "ideathon") {
+      return "[Ideathon] ";
+    } else if (event.type === "hackathon") {
+      return "[Hackathon] ";
+    } else if (event.type === "gamejam") {
+      return "[Game Jam] ";
+    } else if (event.type === "makeathon") {
+      return "[Makeathon] ";
+    } else if (event.type === "datathon") {
+      return "[Datathon] ";
+    } else if (event.type === "siber") {
+      return "[Siber Güvenlik] ";
+    } else if (event.type === "educathon") {
+      return "[Educathon] ";
+    } else if (event.type === "webinar") {
+      return "[Webinar] ";
+    } else if (event.type === "workshop") {
+      return "[Workshop] ";
+    }
   }
 
   getResults() {
@@ -68,14 +89,55 @@ export class CrossSearchComponent implements OnInit {
     let url: string;
     this.srctype === 'search' ? url = 'tagsearch/?inexact=' + this.slug : url = 'tagsearch/' + this.slug;
     this.httpService.search(url).subscribe((response) => {
-      if(this.srctype === 'search') {
-       this.searchresults = response.results;
+
+      if (this.srctype === 'search') {
+
+        if (response.results.length > 0) {
+          this.events = response.results[0].in_posts.map(function (post) {
+            return {
+              title: post.title,
+              slug: post.slug,
+              thumbnail: post.thumbnail,
+              tags: post.tags,
+              type: "blogpost",
+              description: post.summary
+            }
+          });
+          this.events = this.events.concat(response.results[0].in_events.map(function (event) {
+            return {
+              title: event.name,
+              slug: event.slug, //change to slug
+              thumbnail: event.thumbnail,
+              tags: event.tags,
+              type: event.etype.name,
+              description: event.description
+            }
+          }));
+        }
       }
       else {
-        this.crossesPost = response.in_posts;
-        this.crossesEvents = response.in_events;
+        this.events = response.in_posts.map(function (post) {
+          return {
+            title: post.title,
+            slug: post.slug,
+            thumbnail: post.thumbnail,
+            tags: post.tags,
+            type: "blogpost",
+            description: post.summary
+          }
+        });
+        this.events = this.events.concat(response.in_events.map(function (event) {
+          return {
+            title: event.name,
+            slug: event.slug,
+            thumbnail: event.thumbnail,
+            tags: event.tags,
+            type: event.etype.name,
+            description: event.description
+          }
+        }));
       }
-    this.spinner.hide();
+      this.spinner.hide();
     },
       (error: any) => {
         this.alertService.danger(error);
@@ -89,6 +151,6 @@ export class CrossSearchComponent implements OnInit {
     dateStr += this.months[date.getMonth()] + " ";
     return dateStr;
   }
-  
+
 
 }
