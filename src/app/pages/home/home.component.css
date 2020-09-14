@@ -320,6 +320,11 @@ footer {
   text-transform: none;
 }
 
+.section-title h2 {
+  color: #C9F0FF;
+  text-transform: none;
+}
+
 .section-title p {
   color: whitesmoke;
   margin-top: 1em;
@@ -334,6 +339,18 @@ footer {
 }
 
 .page-header h1 {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 56px;
+  color: #C9F0FF;
+  font-family: 'Lora', serif;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+.page-header h2 {
   font-weight: bold;
   font-size: 64px;
   line-height: 56px;

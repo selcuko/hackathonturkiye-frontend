@@ -1571,4 +1571,16 @@
         <loc>https://hackathonturkiye.com/etiket/sunum/tag</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/mvvm-model-view-viewmodel-nedir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/discord-nedir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/slack-nedir</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
