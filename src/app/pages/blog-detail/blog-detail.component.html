@@ -7,7 +7,8 @@
 
         <div class="col-md-12">
           <a routerLink="/blog" class="about-button blog-button text-left hidden-xs hidden-sm desktop-back">Blog</a>
-          <a routerLink="/ana-sayfa" class="about-button text-left hidden-xs hidden-sm desktop-back pull-right">Ana Sayfa</a>
+          <a routerLink="/ana-sayfa" class="about-button text-left hidden-xs hidden-sm desktop-back pull-right">Ana
+            Sayfa</a>
         </div>
       </div>
     </div>
@@ -16,94 +17,86 @@
 
 <!-- Start Blog Page Section -->
 <section class="blog-detail">
-    <div class="container">
-        <div class="row">
-            <!-- Start Blog Body Section -->
-            <div class="col-md-12 col-sm-12 col-xs-12 blog-body">
-                <div *ngIf="blogdetail && !loading">
-                    <div class="blog-post">
+  <div class="container">
+    <div class="row">
+      <!-- Start Blog Body Section -->
+      <div class="col-md-12 col-sm-12 col-xs-12 blog-body">
+        <div *ngIf="blogdetail && !loading">
+          <div class="blog-post">
 
-                        <h1 class="post-title">{{blogdetail.title}} <span class="time"> {{blogdetail.time}} Dk</span>
-                        </h1>
+            <h1 class="post-title">{{blogdetail.title}} <span class="time"> {{blogdetail.time}} Dk</span>
+            </h1>
 
 
-                        <ul class="post-meta">
-                            <li><i class="fa fa-clock-o"></i>{{blogdetail.published_at | date:"dd/MM/yyyy"}}</li>
-                            <li><img class="user-small-img" src="{{blogdetail.author.profile.pic}}"><a
-                                href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.first_name}}</a>
-                            </li>
-                            <div class="tag-area" *ngFor="let tag of blogdetail.tags">
-                                <li><i class="fa fa-tags"></i><a routerLink="/etiket/{{tag.slug}}/tag">{{tag.name}}</a></li>
-                            </div>
-                            <div class="pull-right social">
-                                <li>
-                                    <a target="_blank"
-                                        href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{slug}}/">
-                                        <i class="fa fa-linkedin fnt-1em"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank"
-                                        href="https://twitter.com/intent/tweet?text={{blogdetail.title}}+https://hackathonturkiye.com/blog/{{slug}}/">
-                                        <i class="fa fa-twitter fnt-1em"> </i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank"
-                                        href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{slug}}/&amp;p[title]={{blogdetail.title}}&amp;p[images][0]={{blogdetail.thumbnail}}&amp;v=1">
-                                        <i class="fa fa-facebook fnt-1em"></i>
-                                    </a>
-                                </li>
-                            </div>
+            <ul class="post-meta">
+              <li><i class="fa fa-clock-o"></i>{{blogdetail.published_at | date:"dd/MM/yyyy"}}</li>
+              <li><img class="user-small-img" src="{{blogdetail.author.profile.pic}}"><a
+                  href="/blog/?author__username={{blogdetail.author.username}}">{{blogdetail.author.first_name}}</a>
+              </li>
+              <div class="tag-area" *ngFor="let tag of blogdetail.tags">
+                <li><i class="fa fa-tags"></i><a routerLink="/etiket/{{tag.slug}}/tag">{{tag.name}}</a></li>
+              </div>
+              <div class="pull-right social">
+                <li>
+                  <a target="_blank"
+                    href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://hackathonturkiye.com/blog/{{slug}}/">
+                    <i class="fa fa-linkedin fnt-1em"></i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank"
+                    href="https://twitter.com/intent/tweet?text={{blogdetail.title}}+https://hackathonturkiye.com/blog/{{slug}}/">
+                    <i class="fa fa-twitter fnt-1em"> </i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank"
+                    href="https://www.facebook.com/sharer.php?u=https://hackathonturkiye.com/blog/{{slug}}/&amp;p[title]={{blogdetail.title}}&amp;p[images][0]={{blogdetail.thumbnail}}&amp;v=1">
+                    <i class="fa fa-facebook fnt-1em"></i>
+                  </a>
+                </li>
+              </div>
 
-                        </ul>
-                        <p class="post-content" [innerHTML]="blogdetail.body | safe: 'html'"></p>
-                    </div>
-                    <!-- Start Blog Author Section -->
-                    <div class="blog-author">
-                        <h3>Yazar Hakkında</h3>
-                        <div class="media">
-                            <div class="media-left">
-                                    <img class="media-object" src="{{blogdetail.author.profile.pic}}"
-                                        alt="{{blogdetail.author.username}}">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">{{blogdetail.author.first_name}}
-                                    {{blogdetail.author.last_name}}
-                                    <span class="pull-right">
-                                        <ul class="post-meta">
-                                            <div class="social">
-                                                <li *ngIf="blogdetail.author.profile.instagram"><a
-                                                        href="{{blogdetail.author.profile.instagram}}"
-                                                        target="_blank"><i class="fa fa-instagram"></i></a></li>
-                                                <li *ngIf="blogdetail.author.profile.facebook"><a
-                                                        href="{{blogdetail.author.profile.facebook}}" target="_blank"><i
-                                                            class="fa fa-facebook"></i></a></li>
-                                                <li *ngIf="blogdetail.author.profile.linkedin"><a
-                                                        href="{{blogdetail.author.profile.linkedin}}" target="_blank"><i
-                                                            class="fa fa-linkedin"></i></a></li>
-                                                <li *ngIf="blogdetail.author.profile.twitter"><a
-                                                        href="{{blogdetail.author.profile.twitter}}" target="_blank"><i
-                                                            class="fa fa-twitter"></i></a></li>
-                                            </div>
-                                        </ul>
-                                    </span>
-                                </h4>
-                                <p>{{blogdetail.author.profile.bio}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Blog Author Section -->
-
-                    <disqus [identifier]="pageId"></disqus>
-
-                </div>
-
-                <h3 class="text-danger text-center" *ngIf="!blogdetail && !loading"> Kayıt Bulunamadı</h3>
-
+            </ul>
+            <p class="post-content" [innerHTML]="blogdetail.body | safe: 'html'"></p>
+          </div>
+          <!-- Start Blog Author Section -->
+          <div class="blog-author">
+            <h3>Yazar Hakkında</h3>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" src="{{blogdetail.author.profile.pic}}" alt="{{blogdetail.author.username}}">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">{{blogdetail.author.first_name}}
+                  {{blogdetail.author.last_name}}
+                  <span class="pull-right">
+                    <ul class="post-meta">
+                      <div class="social">
+                        <li *ngIf="blogdetail.author.profile.instagram"><a
+                            href="{{blogdetail.author.profile.instagram}}" target="_blank"><i
+                              class="fa fa-instagram"></i></a></li>
+                        <li *ngIf="blogdetail.author.profile.facebook"><a href="{{blogdetail.author.profile.facebook}}"
+                            target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li *ngIf="blogdetail.author.profile.linkedin"><a href="{{blogdetail.author.profile.linkedin}}"
+                            target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li *ngIf="blogdetail.author.profile.twitter"><a href="{{blogdetail.author.profile.twitter}}"
+                            target="_blank"><i class="fa fa-twitter"></i></a></li>
+                      </div>
+                    </ul>
+                  </span>
+                </h4>
+                <p>{{blogdetail.author.profile.bio}}</p>
+              </div>
             </div>
+          </div>
+          <!-- End Blog Author Section -->
+
+          <disqus [identifier]="pageId"></disqus>
 
         </div>
+
+      </div>
     </div>
 </section>
 <!-- End Blog Page Section -->
