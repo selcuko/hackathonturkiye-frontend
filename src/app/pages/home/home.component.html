@@ -43,7 +43,7 @@
     <div *ngFor="let xathon of events">
       <div class="col-xs-12 col-sm-6 text-center">
         <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag"
-          href="{{xathon.origin_url}}">
+          href="{{xathon.url}}">
           <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
           <div class="intro-view">
             {{xathon.location}}
