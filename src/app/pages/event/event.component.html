@@ -41,7 +41,7 @@
 
             <div class="panel mr-1 col-md-2 col-sm-2 col-xs-12">
               <div class="panel-body">
-                Son Başvuru: <p><strong>{{getDateTurkish(event.starts_at)}}</strong></p>
+                Son Başvuru: <p><strong>{{getDateTurkish(event.deadline || event.starts_at)}}</strong></p>
               </div>
             </div>
 
