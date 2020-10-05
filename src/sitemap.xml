@@ -1651,4 +1651,8 @@
         <loc>https://hackathonturkiye.com/etkinlik/net-coding-challenge</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/daha-iyi-fikir-uretmek-ugruna-beyin-firtinasi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
