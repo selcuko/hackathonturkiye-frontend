@@ -15,6 +15,7 @@ export class EventComponent implements OnInit {
   pageId: string = '';
   slug: string = "";
   event: any;
+  months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
   constructor(
     private route: ActivatedRoute,
@@ -30,6 +31,13 @@ export class EventComponent implements OnInit {
   ngOnInit(): void {
     this.getEvent();
     this.pageId = this.slug;
+  }
+
+  getDateTurkish(dateTime) {
+    let date = new Date(dateTime);
+    let dateStr = date.getDate() + " ";
+    dateStr += this.months[date.getMonth()] + " ";
+    return dateStr;
   }
 
   getEvent() {

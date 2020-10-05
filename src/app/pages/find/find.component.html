@@ -157,7 +157,7 @@
     </div>
 
     <div class="text-center">
-      <button class="btn btn-success" *ngIf="events && next" (click)="loadMore()">Daha Fazla Yükle</button>
+      <a class="about-button" *ngIf="events && next" (click)="loadMore()">Daha Fazla Yükle</a>
     </div>
 
     <h3 class="text-danger text-center" *ngIf="!events || events.length === 0"> Kayıt Bulunamadı</h3>

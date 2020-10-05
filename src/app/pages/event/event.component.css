@@ -1,6 +1,5 @@
 .event-detail {
     min-height: 80vh;
-    padding-top: 25px;
     padding-bottom: 40px;
 }
 
@@ -12,6 +11,23 @@
 .page-header {
     border: none;
     padding-bottom: 0;
+    margin: 3% 0 1%;
+}
+
+.panel {
+    margin-bottom: 4px;
+}
+
+.mb-1 {
+    margin-bottom: 12px;
+}
+
+.p-1 {
+    padding: 1%;
+}
+
+.mr-1 {
+    margin-right: 1%;
 }
 
 .page-header h1 {
@@ -62,13 +78,13 @@ a.about-button:before {
 }
 
 .img-responsive {
-    width: 40%;
-    float: left;
-    padding-right: 2%;
-}
-
-.ebody {
-    padding-left: 1%;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: 620px;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .line {

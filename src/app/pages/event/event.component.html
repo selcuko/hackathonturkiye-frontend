@@ -20,13 +20,41 @@
       <div class="row">
         <div class="event" *ngIf="event">
 
-          <div class="row">
+          <img src="{{event.thumbnail}}" class="img-responsive" alt={{event.name}}>
+
+          <div class="row mb-1">
             <div class="col-md-8 col-sm-8 col-xs-12">
               <h1>{{event.name}}</h1>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-12"> 
-              <a target="_blank" rel="nofollow" class="pull-right btn btn-primary readmore btn-lg gtag"
+            <div class="col-md-3 col-sm-3 col-xs-12 pull-right">
+              <a target="_blank" rel="nofollow" class="btn btn-primary readmore btn-lg btn-block gtag"
                 href="{{event.origin_url}}">Şimdi Başvur</a>
+            </div>
+          </div>
+
+          <div class="row p-1">
+            <div class="panel mr-1 col-md-2 col-sm-2 col-xs-12">
+              <div class="panel-body">
+                Etkinlik Konumu: <p><strong>{{event.location}}</strong></p>
+              </div>
+            </div>
+
+            <div class="panel mr-1 col-md-2 col-sm-2 col-xs-12">
+              <div class="panel-body">
+                Son Başvuru: <p><strong>{{getDateTurkish(event.starts_at)}}</strong></p>
+              </div>
+            </div>
+
+            <div class="panel mr-1 col-md-2 col-sm-2 col-xs-12">
+              <div class="panel-body">
+                Başlangıç Tarihi: <p><strong>{{getDateTurkish(event.starts_at)}}</strong></p>
+              </div>
+            </div>
+
+            <div class="panel mr-1 col-md-2 col-sm-2 col-xs-12">
+              <div class="panel-body">
+                Bitiş Tarihi: <p><strong>{{getDateTurkish(event.ends_at)}}</strong></p>
+              </div>
             </div>
           </div>
 
@@ -34,12 +62,9 @@
             {{event.description}}
           </p>
 
-          <img src="{{event.thumbnail}}" class="img-responsive" alt={{event.name}}>
-
-          <div [innerHTML]="event.body" class="ebody"></div>
+          <div [innerHTML]="event.body"></div>
 
           <hr>
-
 
           <hr>
 

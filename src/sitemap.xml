@@ -1627,4 +1627,32 @@
         <loc>https://hackathonturkiye.com/etkinlik/kuantum-teknolojileri-hackathonu</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/bir-zamanlarin-enigmasi-su-an-kuantum-bilgisayari</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/hackathonun-biyografisi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog?author__username=ali</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog?author__username=ecem</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/ml-days-hackathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/net-coding-challenge</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/blog/daha-iyi-fikir-uretmek-ugruna-beyin-firtinasi</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
