@@ -42,8 +42,7 @@
   <div class="row">
     <div *ngFor="let xathon of events">
       <div class="col-xs-12 col-sm-6 text-center">
-        <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag"
-          href="{{xathon.url}}">
+        <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag" href="{{xathon.url}}">
           <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
           <div class="intro-view">
             {{xathon.location}}
@@ -247,15 +246,14 @@
 
       <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img src="../../../assets/images/team/burak-arslan.jpg" class="img-responsive img-circle"
-            alt="Burak Arslan" />
+          <img src="../../../assets/images/team/irem-bayram.jpeg" class="img-responsive img-circle" alt="İrem Bayram" />
           <div class="team-details">
             <h4>
-              Burak Arslan
-              <a href="https://www.linkedin.com/in/burak-arslan-513a08173/" target="_blank"><i class="fa fa-linkedin"
+              İrem Bayram <a href="https://www.linkedin.com/in/irem-bayram/" target="_blank"><i class="fa fa-linkedin"
                   rel="nofollow"></i></a>
             </h4>
-            <p>Head Of E-Learning</p>
+            <p>Head Of Social Media
+            </p>
           </div>
         </div>
       </div>
@@ -278,14 +276,15 @@
     <div class="row">
       <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img src="../../../assets/images/team/irem-bayram.jpeg" class="img-responsive img-circle" alt="İrem Bayram" />
+          <img src="../../../assets/images/team/burak-arslan.jpg" class="img-responsive img-circle"
+            alt="Burak Arslan" />
           <div class="team-details">
             <h4>
-              İrem Bayram <a href="https://www.linkedin.com/in/irem-bayram/" target="_blank"><i class="fa fa-linkedin"
+              Burak Arslan
+              <a href="https://www.linkedin.com/in/burak-arslan-513a08173/" target="_blank"><i class="fa fa-linkedin"
                   rel="nofollow"></i></a>
             </h4>
-            <p>Head Of Social Media
-            </p>
+            <p>Head Of E-Learning</p>
           </div>
         </div>
       </div>
@@ -364,8 +363,8 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 item">
           <a href="http://dijitalkunduz.com" class="gtag swing" target="_blank" rel="nofollow">
-          <img class="img-responsive dk" src="../../../assets/images/dk.png" alt="Dijital Kunduz">
-        </a>
+            <img class="img-responsive dk" src="../../../assets/images/dk.png" alt="Dijital Kunduz">
+          </a>
         </div>
       </div>
     </div>
@@ -470,9 +469,9 @@
         </div>
       </div>
     </form>
-  <div class="col-md-12">
-    <button class="discord-button discord-button-close bulletin-close" (click)="this.bdsp = 'none' ">Hayır,
-      istemiyorum</button>
+    <div class="col-md-12">
+      <button class="discord-button discord-button-close bulletin-close" (click)="this.bdsp = 'none' ">Hayır,
+        istemiyorum</button>
     </div>
   </div>
 </div>
