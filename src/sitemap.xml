@@ -1703,4 +1703,32 @@
         <loc>https://hackathonturkiye.com/etkinlik/akilli-sehirler-ideathonu</loc>
         <changefreq>weekly</changefreq>
     </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/just-in-case-hackathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/demiryolu-ideathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/machine-learning-challenge</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/hackathor-1083</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/teknolojistik-fikir-yarismasi-2020</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/hult-prize-mini-ideathon</loc>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://hackathonturkiye.com/etkinlik/hackzone</loc>
+        <changefreq>weekly</changefreq>
+    </url>
 </urlset>
