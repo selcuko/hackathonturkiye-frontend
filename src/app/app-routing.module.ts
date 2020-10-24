@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotfoundComponent } from "./pages/notfound/notfound.component";
 
 const routes: Routes = [
-  { path: 'ana-sayfa', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+  { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
   { path: 'blog', loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule) },
   { path: 'blog/?author__username:user', loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule) },
   { path: 'etkinlikler', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule) },
@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'etkinlik/:slug', loadChildren: () => import('./pages/event/event.module').then(m => m.EventModule) },
   { path: 'blog/:slug', loadChildren: () => import('./pages/blog-detail/blog-detail.module').then(m => m.BlogDetailModule) },
   { path: 'etiket/:param/:type', loadChildren: () => import('./pages/cross-search/cross-search.module').then(m => m.CrossSearchModule) },
-  { path: '', redirectTo: '/ana-sayfa', pathMatch: 'full' }, // Redirect to `home`
+  { path: 'ana-sayfa', redirectTo: '/', pathMatch: 'full' }, // Redirect to `home`
   { path: '**', component: NotfoundComponent },  // Wrong route for a 404 page
 ];
 

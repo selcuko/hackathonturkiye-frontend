@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   getTopPosts() {
       this.spinner.show();
-      this.httpService.search('events/?order_by=starts_at&status=future').subscribe((e) => {
+      this.httpService.search('events/?limit=8&order_by=starts_at&status=future').subscribe((e) => {
         this.events = e.results;
         this.spinner.hide();
       },

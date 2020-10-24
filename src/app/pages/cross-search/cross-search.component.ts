@@ -106,7 +106,7 @@ export class CrossSearchComponent implements OnInit {
           this.events = this.events.concat(response.results[0].in_events.map(function (event) {
             return {
               title: event.name,
-              slug: event.slug, //change to slug
+              slug: event.slug, 
               thumbnail: event.thumbnail,
               tags: event.tags,
               type: event.etype.name,

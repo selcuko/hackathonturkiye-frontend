@@ -130,7 +130,7 @@ a.intro-item:hover .intro-view {
 }
 
 .feac-text {
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 16px;
   color: rgb(239 239 255);
   line-height: 1.76;
@@ -320,6 +320,11 @@ footer {
   text-transform: none;
 }
 
+.section-title h2 {
+  color: #C9F0FF;
+  text-transform: none;
+}
+
 .section-title p {
   color: whitesmoke;
   margin-top: 1em;
@@ -334,6 +339,18 @@ footer {
 }
 
 .page-header h1 {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 56px;
+  color: #C9F0FF;
+  font-family: 'Lora', serif;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+.page-header h2 {
   font-weight: bold;
   font-size: 64px;
   line-height: 56px;
@@ -362,9 +379,6 @@ footer {
   .search-area {
     padding-top: 0;
   }
-  .corp .wrapper-corp img:first-child {
-    margin-top: 10px !important;
-   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -592,23 +606,100 @@ footer {
   display: flex;
   border-color: #c9f1ffcf;
   border-style: inset;
+  border-radius: 30px;
 }
 
 .corp .wrapper-corp .item {
   margin: 10px;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .corp .wrapper-corp .item:first-child {
-  border-right: 1px solid #ffffffb8;
+  border-right:  solid #ffffffb8;
 }
 
 .corp .wrapper-corp img:first-child {
- margin-top: 25px;
  padding-right: 10px;
 }
 
 .corp .wrapper-corp .item .dk {
-  width: 45%;
   margin-top: 0;
+}
+
+.swing:hover
+{
+        -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+}
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }

@@ -191,6 +191,8 @@ export class FindComponent implements OnInit {
       url += "&location=" + this.eventLoc;
     }
 
+    url += "&limit=16";
+
     this.httpService.search(url).subscribe((e) => {
       this.next = e.next;
       this.events = e.results;

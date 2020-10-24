@@ -42,8 +42,7 @@
   <div class="row">
     <div *ngFor="let xathon of events">
       <div class="col-xs-12 col-sm-6 text-center">
-        <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag"
-          href="{{xathon.origin_url}}">
+        <a *ngIf="!xathon.has_details" target="_blank" rel="nofollow" class="intro-item gtag" href="{{xathon.url}}">
           <img src="{{xathon.thumbnail}}" alt={{xathon.name}} class="img-events replace-2x" />
           <div class="intro-view">
             {{xathon.location}}
@@ -56,13 +55,8 @@
             {{xathon.location}}
           </div>
         </a>
-        <!-- /Intro Item -->
       </div>
-      <!-- /col -->
     </div>
-
-
-
 
     <div class="col-xs-12 col-sm-12 text-center">
       <a routerLink="/etkinlikler" class="about-button" style="margin-top:25px;">Daha Fazla Gör</a>
@@ -74,7 +68,7 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="section-title text-center">
-        <h1>Hackathon Türkiye Hakkında</h1>
+        <h2>Hackathon Türkiye Hakkında</h2>
       </div>
     </div>
   </div>
@@ -162,7 +156,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="section-title text-center">
-          <h1>Hackathon Türkiye Yönetimi</h1>
+          <h2>Hackathon Türkiye Yönetimi</h2>
         </div>
       </div>
     </div>
@@ -230,7 +224,7 @@
               <a href="https://www.linkedin.com/in/ege-dinnen-1a35091ab/" target="_blank"><i class="fa fa-linkedin"
                   rel="nofollow"></i></a>
             </h4>
-            <p>Junior Manager & Frontend Developer</p>
+            <p>Junior Manager</p>
           </div>
         </div>
       </div>
@@ -252,26 +246,25 @@
 
       <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img src="../../../assets/images/team/hanifi-cetinkaya.jpg" class="img-responsive img-circle"
-            alt="Hanifi Çetinkaya" />
+          <img src="../../../assets/images/team/irem-bayram.jpeg" class="img-responsive img-circle" alt="İrem Bayram" />
           <div class="team-details">
             <h4>
-              Hanifi Çetinkaya
-              <a href="https://www.linkedin.com/in/hanifi-cetinkaya/" target="_blank"><i class="fa fa-linkedin"
+              İrem Bayram <a href="https://www.linkedin.com/in/irem-bayram/" target="_blank"><i class="fa fa-linkedin"
                   rel="nofollow"></i></a>
             </h4>
-            <p>Head Of E-Learning</p>
+            <p>Head Of Social Media
+            </p>
           </div>
         </div>
       </div>
 
       <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img src="../../../assets/images/team/gamze-atmaca.jpeg" class="img-responsive img-circle"
-            alt="Gamze Atmaca" />
+          <img src="../../../assets/images/team/gamze-elif-benli.jpeg" class="img-responsive img-circle"
+            alt="Gamze Elif Benli" />
           <div class="team-details">
             <h4>
-              Gamze Atmaca <a href="https://www.linkedin.com/in/gamze-atmaca-6a312523/" target="_blank"><i
+              Gamze Elif Benli <a href="https://www.linkedin.com/in/gamze-elif-benli-2029ab149/" target="_blank"><i
                   class="fa fa-linkedin" rel="nofollow"></i></a>
             </h4>
             <p>Head Of Public Relations
@@ -283,15 +276,15 @@
     <div class="row">
       <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="team-member">
-          <img src="../../../assets/images/team/irem-bayram.jpeg" class="img-responsive img-circle"
-            alt="İrem Bayram" />
+          <img src="../../../assets/images/team/burak-arslan.jpg" class="img-responsive img-circle"
+            alt="Burak Arslan" />
           <div class="team-details">
             <h4>
-              İrem Bayram <a href="https://www.linkedin.com/in/irem-bayram/" target="_blank"><i class="fa fa-linkedin"
+              Burak Arslan
+              <a href="https://www.linkedin.com/in/burak-arslan-513a08173/" target="_blank"><i class="fa fa-linkedin"
                   rel="nofollow"></i></a>
             </h4>
-            <p>Head Of Social Media
-            </p>
+            <p>Head Of E-Learning</p>
           </div>
         </div>
       </div>
@@ -305,7 +298,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="section-title text-center">
-          <h1>İletişim / İşbirliği</h1>
+          <h2>İletişim / İşbirliği</h2>
           <p class="contact-sub">Her türlü işbirliği ve iletişiminiz için aşağıdaki formu kullanabilirsiniz
           </p>
         </div>
@@ -357,17 +350,21 @@
       </div>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 corp">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 corp" id="isbirligi">
     <div class="row">
       <div class="section-title text-center">
-        <h1>İşbirliklerimiz</h1>
+        <h2>İşbirliklerimiz</h2>
       </div>
       <div class="wrapper-corp">
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 item">
-          <img class="img-responsive" src="../../../assets/images/mobilerdev.png" alt="Mobilerdev">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 item">
+          <a href="https://www.mobiler.dev/?ref=hackathonturkiye" class="gtag swing" target="_blank" rel="nofollow">
+            <img class="img-responsive" src="../../../assets/images/mobiler-dev.png" alt="mobiler.dev">
+          </a>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 item">
-          <img class="img-responsive dk" src="../../../assets/images/dk.png" alt="Dijital Kunduz">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 item">
+          <a href="http://dijitalkunduz.com" class="gtag swing" target="_blank" rel="nofollow">
+            <img class="img-responsive dk" src="../../../assets/images/dk.png" alt="Dijital Kunduz">
+          </a>
         </div>
       </div>
     </div>
@@ -413,6 +410,10 @@
             class="fa fa-instagram fa-lg"></i></a>
         <a href="https://www.facebook.com/hackathonturkiye" target="_blank" rel="nofollow"><i
             class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://open.spotify.com/show/1oVDPJCFiwj243HPPpyrS4" target="_blank" rel="nofollow"><i
+            class="fa fa-spotify fa-lg"></i></a>
+        <a href="https://www.youtube.com/channel/UCmQuLbQsVJtmYmzVWAzNJAA" target="_blank" rel="nofollow"><i
+            class="fa fa-youtube fa-lg"></i></a>
         <a href="https://discord.gg/pkxCHUA" target="_blank" rel="nofollow"><img
             src="../../../assets/images/discord.png" /></a>
       </div>
@@ -464,7 +465,9 @@
         </div>
       </div>
     </form>
-    <button class="discord-button discord-button-close bulletin-close" (click)="this.bdsp = 'none' ">Hayır,
-      istemiyorum</button>
+    <div class="col-md-12">
+      <button class="discord-button discord-button-close bulletin-close" (click)="this.bdsp = 'none' ">Hayır,
+        istemiyorum</button>
+    </div>
   </div>
 </div>
