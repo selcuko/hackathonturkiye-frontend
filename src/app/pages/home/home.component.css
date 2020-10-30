@@ -276,16 +276,28 @@ footer {
 .contact .form-group input.form-control {
   height: auto;
   border-radius: 10px;
+  border-color: #c9f1ffcf;
+  border-style: inset;
 }
 
 .contact .form-group select.form-control {
   height: 65px;
   border-radius: 10px;
+  border-color: #c9f1ffcf;
+  border-style: inset;
+}
+
+@media (min-width: 990px){
+  .contact #phone {
+  width: 220px;
+  }
 }
 
 .contact .form-group textarea.form-control {
   height: 243px;
   border-radius: 10px;
+  border-color: #c9f1ffcf;
+  border-style: inset;
 }
 
 .contact::-webkit-input-placeholder {
