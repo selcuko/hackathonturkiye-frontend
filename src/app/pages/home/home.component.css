@@ -275,14 +275,17 @@ footer {
 
 .contact .form-group input.form-control {
   height: auto;
+  border-radius: 10px;
 }
 
 .contact .form-group select.form-control {
   height: 65px;
+  border-radius: 10px;
 }
 
 .contact .form-group textarea.form-control {
   height: 243px;
+  border-radius: 10px;
 }
 
 .contact::-webkit-input-placeholder {
