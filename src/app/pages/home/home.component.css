@@ -632,10 +632,6 @@ footer {
   align-items: center;
 }
 
-.corp .wrapper-corp .item:first-child {
-
-}
-
 .corp .wrapper-corp img:first-child {
  padding-right: 10px;
 }
@@ -646,10 +642,10 @@ footer {
 
 .swing:hover
 {
-        -webkit-animation: swing 1s ease;
-        animation: swing 1s ease;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 
 @-webkit-keyframes swing
