@@ -632,6 +632,12 @@ footer {
   align-items: center;
 }
 
+.supCorp1 {
+  border-right-style: solid;
+  color: #c9f1ffcf;
+  border-radius: 1px;
+}
+
 .corp .wrapper-corp img:first-child {
  padding-right: 10px;
 }
