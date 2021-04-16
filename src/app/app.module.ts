@@ -15,8 +15,6 @@ import { GoogleAnalyticsGTagComponent } from './components/analytics/google-anal
 import { NgxSpinnerModule } from "ngx-spinner";
 import { FormsModule } from '@angular/forms';
 
-import { DISQUS_SHORTNAME } from 'ngx-disqus';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,11 +28,9 @@ import { DISQUS_SHORTNAME } from 'ngx-disqus';
     BrowserAnimationsModule,
     NgxSpinnerModule,
     HttpClientModule,
-    AlertModule.forRoot({maxMessages: 1, timeout: 2000, position: 'left'})
+    AlertModule.forRoot({ maxMessages: 1, timeout: 2000, position: 'left' })
   ],
-  providers: [
-    { provide: DISQUS_SHORTNAME, useValue: 'hackathon-turkiye' }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
