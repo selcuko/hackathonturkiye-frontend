@@ -619,9 +619,6 @@ footer {
 .corp .wrapper-corp {
   margin: 20px;
   display: flex;
-  border-color: #c9f1ffcf;
-  border-style: inset;
-  border-radius: 30px;
 }
 
 .corp .wrapper-corp .item {
@@ -630,12 +627,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.supCorp1 {
-  border-right-style: solid;
-  color: #c9f1ffcf;
-  border-radius: 1px;
 }
 
 .corp .wrapper-corp img:first-child {
