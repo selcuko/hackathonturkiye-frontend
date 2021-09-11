@@ -5,6 +5,7 @@ import { NotfoundComponent } from "./pages/notfound/notfound.component";
 const routes: Routes = [
   { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
   { path: 'blog', loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule) },
+  { path: 'halloffame', loadChildren: () => import('./pages/halloffame/halloffame.module').then(m => m.HallOfFameModule) },
   { path: 'blog/?author__username:user', loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogModule) },
   { path: 'etkinlikler', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule) },
   { path: 'etkinlikler/:etype', loadChildren: () => import('./pages/find/find.module').then(m => m.FindModule) },
