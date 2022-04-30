@@ -1,7 +1,3 @@
-header {
-  padding: 0px 0 64px;
-}
-
 .space {
   position: fixed;
   width: 400vw;
@@ -217,16 +213,6 @@ footer {
   padding: 0px;
 }
 
-.searchareadiv {
-  display: flex;
-  justify-content: center;
-}
-
-.search-area {
-  padding-top: 0em;
-  display: grid;
-}
-
 .search-button {
   height: 34px;
   border: 1px solid #0000007a;
@@ -390,16 +376,7 @@ footer {
   text-transform: uppercase;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .search-area {
-    padding-top: 0;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 1024px) {
-  .search-area {
-    padding-top: 0;
-  }
   .corp .wrapper-corp img:first-child {
     margin-top: 15px;
     padding-right: 10px;

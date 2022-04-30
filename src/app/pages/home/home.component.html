@@ -1,31 +1,16 @@
 <div class="space"></div>
 
-<header>
+<header class="p0">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12" id="logoandblog">
+      <div class="col-xs-12 p0" id="logoandblog">
         <div class="col-xs-8">
           <a target="_blank" class="gtag" href="https://bit.ly/htpoweredby"><img
               alt="Hackathon Türkiye" src="../../../assets/images/hackathon_turkiye_logo.png"
-              style="max-width: 180px;" /></a>
+              style="max-width: 120px;" /></a>
         </div>
         <div class="headerblog col-xs-4">
           <a routerLink="/blog" routerLinkActive="active" class="about-button">Blog</a>
-        </div>
-      </div>
-      <div class="col-xs-12 searchareadiv">
-        <div class="col-xs-12 col-md-5 text-center search-area">
-          <form class="pull-right" role="search">
-            <div class="input-group">
-              <input type="text" class="form-control search-input" id="search" name="search" placeholder="Ara..."
-                [(ngModel)]="searchQuery">
-              <div class="input-group-btn">
-                <button (click)="search()" class="btn btn-default search-button">
-                  <span class="glyphicon glyphicon-search"></span>
-                </button>
-              </div>
-            </div>
-          </form>
         </div>
       </div>
     </div>

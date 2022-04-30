@@ -49,8 +49,7 @@ ul li:last-child {
 }
 
 .find-img img {
-    width: 546px;
-    height: 257px;
+    height: 36vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,7 +71,7 @@ h2 {
 
 .post-text {
     position: absolute;
-    top: 91.1%;
+    top: 91.7%;
     background: #4392F1;
     height: 46px;
     width: 100%;
@@ -140,10 +139,6 @@ table {
 
 .find-table {
     margin-top: 25px;
-    margin-right: 15px;
-}
-
-.mr-15 {
     margin-right: 15px;
 }
 
