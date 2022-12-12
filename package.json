@@ -26,7 +26,7 @@
     "@angular/router": "~9.1.7",
     "@nguniversal/express-engine": "^9.1.1",
     "bootstrap": "^3.4.1",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "ngx-alerts": "^9.0.2",
     "ngx-spinner": "^9.0.2",
     "rxjs": "~6.5.4",
